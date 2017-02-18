@@ -10,8 +10,6 @@ public class PanOnTouch : MonoBehaviour {
 
 	private IDisposable touch;
 
-	//private IObservable<Vector3> displacement;
-
 	private Vector3 velocity;
 
 	private IDisposable inertia;
@@ -43,7 +41,13 @@ public class PanOnTouch : MonoBehaviour {
 					.Where(_ => Input.touchCount > TouchIndex)
 					.Select(_ => Input.GetTouch(TouchIndex))
 					.Pairwise()
-					.Select(t => transform.TransformDirection((Vector3)(t.Previous.position - t.Current.position) * cam.orthographicSize / cam.pixelHeight * 2f))
+					.Select(t => { 
+						var d = (Vector3)(t.Previous.position - t.Current.position) * cam.orthographicSize / cam.pixelHeight * 2f;
+
+						var c = d / Mathf.Sin(0.5f * Mathf.PI - Mathf.Deg2Rad * Vector3.Angle(transform.up, Vector3.up));
+
+						return c;
+					})
 					.Select(d => new Vector3(
 						constraintX ? 0.0f : d.x,
 						constraintY ? 0.0f : d.y,

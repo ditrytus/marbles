@@ -211,7 +211,7 @@ MonoBehaviour:
   constraintX: 1
   constraintY: 0
   constraintZ: 1
-  glide: 10
+  glide: 2
 --- !u!1 &430151928
 GameObject:
   m_ObjectHideFlags: 0
