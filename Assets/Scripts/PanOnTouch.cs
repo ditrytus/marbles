@@ -2,7 +2,7 @@
 using UniRx;
 using System;
 
-public class PanOnTouch : MonoBehaviour {
+public class PanOnTouch : RxBehaviour {
 
 	const int TouchIndex = 0;
 
@@ -29,7 +29,7 @@ public class PanOnTouch : MonoBehaviour {
 			.Where(_ => Input.touchCount > TouchIndex)
 			.Select(_ => Input.GetTouch(TouchIndex));
 
-		oneTouch
+		var sub1 = oneTouch
 			.Where(t => t.phase == TouchPhase.Began)
 			.Subscribe(__ => {
 				if (inertia != null)
@@ -58,7 +58,7 @@ public class PanOnTouch : MonoBehaviour {
 					});
 			});
 
-		oneTouch
+		var sub2 = oneTouch
 			.Where(t => t.phase == TouchPhase.Ended | t.phase == TouchPhase.Canceled)
 			.Subscribe(_ => {
 				touch.Dispose();
@@ -71,5 +71,7 @@ public class PanOnTouch : MonoBehaviour {
 						transform.position += v;
 					});
 			});
+
+		AddSubscriptions(sub1, sub2);
 	}
 }
