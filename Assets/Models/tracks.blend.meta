@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 7c82216c727db477984957259eb7c459
+timeCreated: 1487966104
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Circle
+    100002: Track
+    100004: TrackBevel
+    100006: TrackBevel_old
+    100008: //RootNode
+    100010: Track_test
+    100012: Track_test_curve
+    100014: Track_test_mesh
+    100016: Track2_mesh
+    100018: Track2_mesh_001
+    100020: Track2_mesh_002
+    100022: Track2_mesh_003
+    100024: Track2_mesh_004
+    100026: Track2_old_way
+    100028: Track2_path
+    100030: Track_001
+    100032: Track_mesh
+    100034: Circle_001
+    100036: Circle_002
+    100038: Circle_003
+    100040: NurbsCircle
+    100042: TrackBevel_old_001
+    100044: UnitCircle
+    100046: NurbsCircle_001
+    100048: NurbsCircle_002
+    100050: NurbsCircle_003
+    100052: NurbsCircle_004
+    100054: RoundThickBevel
+    100056: Track_spiral_mesh
+    100058: Track_spiral_path
+    100060: TriangleThickBevel
+    100062: TriangleThinBevel
+    400000: Circle
+    400002: Track
+    400004: TrackBevel
+    400006: TrackBevel_old
+    400008: //RootNode
+    400010: Track_test
+    400012: Track_test_curve
+    400014: Track_test_mesh
+    400016: Track2_mesh
+    400018: Track2_mesh_001
+    400020: Track2_mesh_002
+    400022: Track2_mesh_003
+    400024: Track2_mesh_004
+    400026: Track2_old_way
+    400028: Track2_path
+    400030: Track_001
+    400032: Track_mesh
+    400034: Circle_001
+    400036: Circle_002
+    400038: Circle_003
+    400040: NurbsCircle
+    400042: TrackBevel_old_001
+    400044: UnitCircle
+    400046: NurbsCircle_001
+    400048: NurbsCircle_002
+    400050: NurbsCircle_003
+    400052: NurbsCircle_004
+    400054: RoundThickBevel
+    400056: Track_spiral_mesh
+    400058: Track_spiral_path
+    400060: TriangleThickBevel
+    400062: TriangleThinBevel
+    2300000: Circle
+    2300002: Track
+    2300004: TrackBevel
+    2300006: TrackBevel_old
+    2300008: Track_test
+    2300010: Track_test_curve
+    2300012: Track_test_mesh
+    2300014: Track2_mesh
+    2300016: Track2_mesh_001
+    2300018: Track2_mesh_002
+    2300020: Track2_mesh_003
+    2300022: Track2_mesh_004
+    2300024: Track2_old_way
+    2300026: Track2_path
+    2300028: Track_001
+    2300030: Track_mesh
+    2300032: Circle_001
+    2300034: Circle_002
+    2300036: Circle_003
+    2300038: NurbsCircle
+    2300040: TrackBevel_old_001
+    2300042: UnitCircle
+    2300044: NurbsCircle_001
+    2300046: NurbsCircle_002
+    2300048: NurbsCircle_003
+    2300050: NurbsCircle_004
+    2300052: RoundThickBevel
+    2300054: Track_spiral_mesh
+    2300056: Track_spiral_path
+    2300058: TriangleThickBevel
+    2300060: TriangleThinBevel
+    3300000: Circle
+    3300002: Track
+    3300004: TrackBevel
+    3300006: TrackBevel_old
+    3300008: Track_test
+    3300010: Track_test_curve
+    3300012: Track_test_mesh
+    3300014: Track2_mesh
+    3300016: Track2_mesh_001
+    3300018: Track2_mesh_002
+    3300020: Track2_mesh_003
+    3300022: Track2_mesh_004
+    3300024: Track2_old_way
+    3300026: Track2_path
+    3300028: Track_001
+    3300030: Track_mesh
+    3300032: Circle_001
+    3300034: Circle_002
+    3300036: Circle_003
+    3300038: NurbsCircle
+    3300040: TrackBevel_old_001
+    3300042: UnitCircle
+    3300044: NurbsCircle_001
+    3300046: NurbsCircle_002
+    3300048: NurbsCircle_003
+    3300050: NurbsCircle_004
+    3300052: RoundThickBevel
+    3300054: Track_spiral_mesh
+    3300056: Track_spiral_path
+    3300058: TriangleThickBevel
+    3300060: TriangleThinBevel
+    4300000: TrackBevel
+    4300002: Circle
+    4300004: TrackBevel_old
+    4300006: Track
+    4300008: Track_test
+    4300010: Track_test_mesh
+    4300012: Track_test_curve
+    4300014: Track2_old_way
+    4300016: Track2_mesh_004
+    4300018: Track2_mesh_003
+    4300020: Track2_mesh_002
+    4300022: Track2_mesh_001
+    4300024: Track2_mesh
+    4300026: Track2_path
+    4300028: Track_001
+    4300030: Track_mesh
+    4300032: NurbsCircle
+    4300034: Circle_003
+    4300036: Circle_002
+    4300038: Circle_001
+    4300040: UnitCircle
+    4300042: TrackBevel_old_001
+    4300044: TriangleThickBevel
+    4300046: Track_spiral_mesh
+    4300048: NurbsCircle_004
+    4300050: NurbsCircle_003
+    4300052: NurbsCircle_002
+    4300054: NurbsCircle_001
+    4300056: TriangleThinBevel
+    4300058: RoundThickBevel
+    4300060: Track_spiral_path
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
