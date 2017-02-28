@@ -37,6 +37,8 @@ ModelImporter:
     100058: Track_spiral_path
     100060: TriangleThickBevel
     100062: TriangleThinBevel
+    100064: LargerTriangleWithCircle
+    100066: Triangles
     400000: Circle
     400002: Track
     400004: TrackBevel
@@ -69,6 +71,8 @@ ModelImporter:
     400058: Track_spiral_path
     400060: TriangleThickBevel
     400062: TriangleThinBevel
+    400064: LargerTriangleWithCircle
+    400066: Triangles
     2300000: Circle
     2300002: Track
     2300004: TrackBevel
