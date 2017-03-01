@@ -5,14 +5,19 @@ using System;
 public class SpawnOnInterval : RxBehaviour {
 	public float interval;
 
+	public int maxCount = -1;
+
 	public GameObject prefab;
 
-	public Transform spawnPoint;
+	public GameObject spawnPoint;
 
 	void Start () {
-		var sub1 =Observable.Interval(TimeSpan.FromSeconds(interval))
+		var intervalObservable = Observable.Interval(TimeSpan.FromSeconds(interval));
+		intervalObservable = maxCount < 0 ? intervalObservable : intervalObservable.Take(maxCount);
+		var sub1 = intervalObservable
 			.Subscribe(_ => {
-				Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
+				var obj = Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+				obj.layer = this.gameObject.layer;
 			});
 		AddSubscriptions(sub1);
 	}
