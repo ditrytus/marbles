@@ -15,19 +15,15 @@ public class InstantiateOnTap : RxBehaviour {
 	void Start () {
 		var sub1 = Observable.EveryUpdate()
 			.Where(_ => Input.touchCount > 0)
-			.Subscribe(_ => {
-				foreach(var touch in Input.touches)
+			.SelectMany(_ => Input.touches)
+			.Where(touch => touch.phase == TouchPhase.Began)
+			.Subscribe(touch => {
+				var ray = camera.ScreenPointToRay(touch.position);
+				RaycastHit hit;
+				if (Physics.Raycast(ray, out hit, float.MaxValue, layer.value))
 				{
-					if (touch.phase == TouchPhase.Began)
-					{
-						var ray = camera.ScreenPointToRay(touch.position);
-						RaycastHit hit;
-						if (Physics.Raycast(ray, out hit, float.MaxValue, layer.value))
-						{
-							Debug.Log(hit.collider.gameObject.name + " hit!");
-							Instantiate(prefab, hit.point, Random.rotation);
-						}
-					}
+					Debug.Log(hit.collider.gameObject.name + " hit!");
+					Instantiate(prefab, hit.point, Random.rotation);
 				}
 			});
 
