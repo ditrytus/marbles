@@ -14,11 +14,7 @@ public class PanOnTouch : RxBehaviour {
 
 	private IDisposable inertia;
 
-	public bool constraintX;
-
-	public bool constraintY;
-
-	public bool constraintZ;
+	public AxesFilter constraint = AxesFilter.All;
 
 	public float glide;
 
@@ -49,9 +45,9 @@ public class PanOnTouch : RxBehaviour {
 						return c;
 					})
 					.Select(d => new Vector3(
-						constraintX ? 0.0f : d.x,
-						constraintY ? 0.0f : d.y,
-						constraintZ ? 0.0f : d.z))
+						constraint.x ? 0.0f : d.x,
+						constraint.y ? 0.0f : d.y,
+						constraint.z ? 0.0f : d.z))
 					.Subscribe(v => {
 						velocity = v;
 						transform.position += v;

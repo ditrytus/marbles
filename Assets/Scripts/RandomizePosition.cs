@@ -5,11 +5,7 @@ using UniRx;
 
 public class RandomizePosition : RxBehaviour {
 
-	public bool randomizeX = true;
-
-	public bool randomizeY = true;
-
-	public bool randomizeZ = true;
+	public AxesFilter randomize = AxesFilter.All;
 
 	public float radius = 1.0f;
 
@@ -23,9 +19,9 @@ public class RandomizePosition : RxBehaviour {
 				var point = Random.insideUnitSphere * radius;
 
 				transform.position = new Vector3(
-					randomizeX ? originalPosition.x + point.x : transform.position.x,
-					randomizeY ? originalPosition.y + point.y : transform.position.y,
-					randomizeZ ? originalPosition.z + point.z : transform.position.z);
+					randomize.x ? originalPosition.x + point.x : transform.position.x,
+					randomize.y ? originalPosition.y + point.y : transform.position.y,
+					randomize.z ? originalPosition.z + point.z : transform.position.z);
 			});
 
 		AddSubscriptions(sub1);
