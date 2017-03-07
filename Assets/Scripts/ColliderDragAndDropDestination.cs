@@ -21,11 +21,9 @@ public class ColliderDragAndDropDestination : MonoBehaviour, IDragAndDropDestina
 		
 		if (!hit.HasValue)
 		{
-			Debug.Log("Drop not accepted.");
 			return false;
 		}
 
-		Debug.Log("Drop accepted!");
 		draggedObject.transform.position = hit.Value.point;
 		draggedObject.layer = acceptingLayer;
 		
