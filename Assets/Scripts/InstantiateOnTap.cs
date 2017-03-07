@@ -14,7 +14,6 @@ public class InstantiateOnTap : RxBehaviour {
 
 	void Start () {
 		var sub1 = Observable.EveryUpdate()
-			.Where(_ => Input.touchCount > 0)
 			.SelectMany(_ => Input.touches)
 			.Where(touch => touch.phase == TouchPhase.Began)
 			.Subscribe(touch => {
@@ -22,7 +21,6 @@ public class InstantiateOnTap : RxBehaviour {
 				RaycastHit hit;
 				if (Physics.Raycast(ray, out hit, float.MaxValue, layer.value))
 				{
-					Debug.Log(hit.collider.gameObject.name + " hit!");
 					Instantiate(prefab, hit.point, Random.rotation);
 				}
 			});

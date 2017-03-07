@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4549792924814612}
   - component: {fileID: 135551813397247220}
   - component: {fileID: 114817452432074070}
+  - component: {fileID: 114171476186457680}
   m_Layer: 5
   m_Name: ContainerVolume
   m_TagString: Untagged
@@ -104,7 +105,7 @@ GameObject:
   - component: {fileID: 4054285694517802}
   - component: {fileID: 65413657374471146}
   - component: {fileID: 114401376010879828}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ForceField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,6 +328,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114171476186457680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1226560261810484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82494b13ad5774e0091b55339ba7b0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  container: {fileID: 114817452432074070}
+  dragAndDropCollider: {fileID: 135551813397247220}
+  returnPoint: {fileID: 4120616996896426}
 --- !u!114 &114401376010879828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,9 +366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f587ba7c72ab24cb080db272802aba75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomizeX: 1
-  randomizeY: 0
-  randomizeZ: 1
+  randomize:
+    x: 1
+    y: 1
+    z: 1
   radius: 2.7
 --- !u!114 &114539106709009676
 MonoBehaviour:
