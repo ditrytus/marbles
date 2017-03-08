@@ -18,7 +18,6 @@ public class ContainerDragAndDropSource : MonoBehaviour, IDragAndDropSource
     public GameObject GetDraggedObject(Touch touch)
     {
         var ray = camera.ScreenPointToRay(touch.position);
-		//RaycastHit hit;
 		var hit = Physics.RaycastAll(ray, float.MaxValue)
 			.Cast<RaycastHit?>()
 			.SingleOrDefault(h => h.Value.collider == dragAndDropCollider);

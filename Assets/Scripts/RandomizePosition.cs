@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-public class RandomizePosition : RxBehaviour {
+public class RandomizePosition : MonoBehaviour {
 
 	public AxesFilter randomize = AxesFilter.All;
 
@@ -13,18 +13,16 @@ public class RandomizePosition : RxBehaviour {
 
 	void Start () {
 		originalPosition = transform.position;
-		
-		var sub1 = Observable.EveryUpdate()
-			.Subscribe(_ => {
-				var point = Random.insideUnitSphere * radius;
+	}
 
-				transform.position = new Vector3(
-					randomize.x ? originalPosition.x + point.x : transform.position.x,
-					randomize.y ? originalPosition.y + point.y : transform.position.y,
-					randomize.z ? originalPosition.z + point.z : transform.position.z);
-			});
+	void Update()
+	{
+		var point = Random.insideUnitSphere * radius;
 
-		AddSubscriptions(sub1);
+		transform.position = new Vector3(
+			randomize.x ? originalPosition.x + point.x : transform.position.x,
+			randomize.y ? originalPosition.y + point.y : transform.position.y,
+			randomize.z ? originalPosition.z + point.z : transform.position.z);
 	}
 
 	void OnDrawGizmos()

@@ -11,7 +11,7 @@ public class DispenserController : RxBehaviour
 
 	void Start () {
 		var sub1  = trigger.SpawningFinished.Subscribe(_ => {
-			objectToDisable.SetActive(false);
+			objectToDisable.Disable();
 		});
 
 		AddSubscriptions(sub1);
