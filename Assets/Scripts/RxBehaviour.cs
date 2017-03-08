@@ -10,8 +10,13 @@ public class RxBehaviour : MonoBehaviour {
         subscriptions.AddRange(items);
     }
 
-	protected virtual void OnDestroy()
+	protected void OnDestroy()
 	{
-		subscriptions.ForEach(s => s.Dispose());
+		CancelSubscriptions();
 	}
+
+    protected void CancelSubscriptions()
+    {
+        subscriptions.ForEach(s => s.Dispose());
+    }
 }

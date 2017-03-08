@@ -6,7 +6,7 @@ public class PanOnTouch : RxBehaviour {
 
 	const int TouchIndex = 0;
 
-	private Camera cam;
+	public Camera cam;
 
 	private IDisposable touch;
 
@@ -19,7 +19,6 @@ public class PanOnTouch : RxBehaviour {
 	public float glide;
 
 	void Start () {
-		cam = GetComponent<Camera>();
 
 		var oneTouch = Observable.EveryUpdate()
 			.Where(_ => Input.touchCount > TouchIndex)
@@ -40,7 +39,7 @@ public class PanOnTouch : RxBehaviour {
 					.Select(t => { 
 						var d = (Vector3)(t.Previous.position - t.Current.position) * cam.orthographicSize / cam.pixelHeight * 2f;
 
-						var c = d / Mathf.Sin(0.5f * Mathf.PI - Mathf.Deg2Rad * Vector3.Angle(transform.up, Vector3.up));
+						var c = d / Mathf.Sin(0.5f * Mathf.PI - Mathf.Deg2Rad * Vector3.Angle(cam.transform.up, Vector3.up));
 
 						return c;
 					})
@@ -50,7 +49,7 @@ public class PanOnTouch : RxBehaviour {
 						constraint.z ? 0.0f : d.z))
 					.Subscribe(v => {
 						velocity = v;
-						transform.position += v;
+						cam.transform.position += v;
 					});
 			});
 
@@ -64,10 +63,20 @@ public class PanOnTouch : RxBehaviour {
 					.Scan((t,d) => t + d)
 					.Select(time => Vector3.Lerp(velocity, Vector3.zero, time / glide))
 					.Subscribe(v => {
-						transform.position += v;
+						cam.transform.position += v;
 					});
 			});
 
 		AddSubscriptions(sub1, sub2);
+	}
+
+	void OnDisable()
+	{
+		CancelSubscriptions();
+	}
+
+	void OnEnable()
+	{
+		Start();
 	}
 }

@@ -286,7 +286,6 @@ GameObject:
   - component: {fileID: 392843197}
   - component: {fileID: 392843196}
   - component: {fileID: 392843195}
-  - component: {fileID: 392843200}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -358,26 +357,11 @@ Transform:
   m_LocalRotation: {x: 0.18909544, y: 0, z: 0, w: 0.98195875}
   m_LocalPosition: {x: 2.6, y: 40.48, z: -94.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1602111400}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 21.8, y: 0, z: 0}
---- !u!114 &392843200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 392843194}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37ddc191f70ef4a32a302d3a64588c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  constraint:
-    x: 1
-    y: 0
-    z: 0
-  glide: 2
 --- !u!1 &430151928
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +564,7 @@ GameObject:
   - component: {fileID: 1018542440}
   - component: {fileID: 1018542438}
   - component: {fileID: 1018542441}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: DropZone
   m_TagString: DropZone
   m_Icon: {fileID: 0}
@@ -666,13 +650,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1018542434}
-  m_LocalRotation: {x: -0.3994919, y: 0.58344346, z: 0.58344346, w: -0.3994919}
-  m_LocalPosition: {x: -0, y: -0, z: 8.560001}
-  m_LocalScale: {x: 4.76, y: 8.95, z: 1}
+  m_LocalRotation: {x: 0.39407796, y: -0.57972306, z: -0.58711374, w: 0.40487176}
+  m_LocalPosition: {x: -0.01, y: 0, z: 7.83}
+  m_LocalScale: {x: 4.76, y: 6.12, z: 1}
   m_Children: []
   m_Father: {fileID: 320439062}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 22.84, z: 0}
+  m_LocalEulerAnglesHint: {x: -21.2, y: -88.94, z: -90.00001}
 --- !u!33 &1018542440
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -704,6 +688,7 @@ GameObject:
   - component: {fileID: 1067009553}
   - component: {fileID: 1067009554}
   - component: {fileID: 1067009555}
+  - component: {fileID: 1067009556}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -730,7 +715,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067009552}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3921b2649e3f4bceb7dbe274d1ec3e1, type: 3}
   m_Name: 
@@ -753,6 +738,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sourceObject: {fileID: 202271522}
   destinationObject: {fileID: 1018542434}
+--- !u!114 &1067009556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1067009552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01ffc94d82ae44c849e86fa8937b9e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragAndDropControllers:
+  - {fileID: 1067009555}
+  objectsToDisable:
+  - {fileID: 1602111399}
 --- !u!1 &1147227422
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +831,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1602111399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1602111400}
+  - component: {fileID: 1602111401}
+  m_Layer: 0
+  m_Name: PanController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1602111400
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602111399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 392843199}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1602111401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602111399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ddc191f70ef4a32a302d3a64588c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 392843198}
+  constraint:
+    x: 0
+    y: 0
+    z: 1
+  glide: 2
 --- !u!1 &1760673598
 GameObject:
   m_ObjectHideFlags: 0

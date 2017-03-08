@@ -27,60 +27,70 @@ public class DragAndDropController : RxBehaviour
         }
     }
 
+    private Subject<DragAndDropPhase> phasesSubject = new Subject<DragAndDropPhase>();
+
+    public IObservable<DragAndDropPhase> Phases
+    {
+        get
+        {
+            return phasesSubject;
+        }
+    }    
+
     private GameObject draggedObject;
 
     private int? draggingFingerId;
 
-    void Start()
-    {
-        // var touches = Observable.EveryUpdate()
-        //     .SelectMany(_ => Input.touches)
-        //     .Take(1);
-
-        // var containerTouched = touches            
-        //     .Where(t => t.phase == TouchPhase.Began)
-        //     .Select(t => souceCamera.ScreenPointToRay(t.position))
-        //     .SelectMany(r => Physics.RaycastAll(r, float.MaxValue, sourceLayer.value))
-        //     .Where(h => h.collider == sourceContainer.gameObject.GetComponent<Collider>());
-
-        // var sub1 = containerTouched.Subscribe(_ => {
-        //     var marble = sourceContainer.content.FirstOrDefault();
-        //     DestroyImmediate(marble);
-        // });
-
-        // AddSubscriptions(sub1);
-    }
-
     void Update()
     {
-        foreach(var touch in Input.touches)
+        foreach (var touch in Input.touches)
         {
             if (touch.phase == TouchPhase.Began)
             {
                 draggedObject = Source.GetDraggedObject(touch);
                 if (draggedObject != null)
                 {
-                    draggingFingerId = touch.fingerId;
-                    Source.RemoveObject(draggedObject);
+                    StartDrag(touch);
                 }
             }
-            else if (
-                touch.fingerId == draggingFingerId 
-                && (
-                    touch.phase == TouchPhase.Canceled
-                    || touch.phase == TouchPhase.Ended
-                ))
+            else if (touch.fingerId == draggingFingerId)
             {
-                draggingFingerId = null;
-                if ((
-                    touch.phase == TouchPhase.Ended
-                    && !Destination.TryAccept(touch, draggedObject)
-                    )
-                    || touch.phase == TouchPhase.Canceled)
+                if (touch.phase == TouchPhase.Canceled)
                 {
-                    Source.ReturnObject(draggedObject);
+                    CancelDrag();
+                }
+                else if (touch.phase == TouchPhase.Ended)
+                {
+                    if (Destination.TryAccept(touch, draggedObject))
+                    {
+                        AcceptDrag();
+                    }
+                    else
+                    {
+                        CancelDrag();
+                    }
                 }
             }
         }
+    }
+
+    private void AcceptDrag()
+    {
+        draggingFingerId = null;
+        phasesSubject.OnNext(DragAndDropPhase.Accepted);
+    }
+
+    private void CancelDrag()
+    {
+        draggingFingerId = null;
+        Source.ReturnObject(draggedObject);
+        phasesSubject.OnNext(DragAndDropPhase.Canceled);
+    }
+
+    private void StartDrag(Touch touch)
+    {
+        draggingFingerId = touch.fingerId;
+        Source.RemoveObject(draggedObject);
+        phasesSubject.OnNext(DragAndDropPhase.Started);
     }
 }
