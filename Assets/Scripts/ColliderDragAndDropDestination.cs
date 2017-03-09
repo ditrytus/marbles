@@ -12,6 +12,11 @@ public class ColliderDragAndDropDestination : MonoBehaviour, IDragAndDropDestina
 
     public bool TryAccept(Touch touch, GameObject draggedObject)
     {
+		if (!this.enabled)
+		{
+			return false;
+		}
+
 		var acceptingLayer = acceptingCollider.gameObject.layer;
 
         var ray = camera.ScreenPointToRay(touch.position);
