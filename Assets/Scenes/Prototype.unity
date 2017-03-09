@@ -175,11 +175,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1226560261810484, guid: 14916dbe2b7a4470893a2c438dc78bba,
     type: 2}
   m_PrefabInternal: {fileID: 1846829621}
---- !u!135 &202271525 stripped
-SphereCollider:
-  m_PrefabParentObject: {fileID: 135551813397247220, guid: 14916dbe2b7a4470893a2c438dc78bba,
-    type: 2}
-  m_PrefabInternal: {fileID: 1846829621}
 --- !u!1 &320439058
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1826375848
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1087,16 +1082,6 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 190757981}
-    - target: {fileID: 114171476186457680, guid: 14916dbe2b7a4470893a2c438dc78bba,
-        type: 2}
-      propertyPath: dragAndDropCollider
-      value: 
-      objectReference: {fileID: 202271525}
-    - target: {fileID: 135551813397247220, guid: 14916dbe2b7a4470893a2c438dc78bba,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14916dbe2b7a4470893a2c438dc78bba, type: 2}
   m_IsPrefabParent: 0

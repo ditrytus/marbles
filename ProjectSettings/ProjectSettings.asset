@@ -456,6 +456,7 @@ PlayerSettings:
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 1
     UNet: 1
   cloudProjectId: 09efbb3a-e468-4a7b-92fb-c5ad35ea3b08
   projectName: marbles
