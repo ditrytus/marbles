@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using System.Linq;
+using System;
 
 public class DisableOnDragAndDrop : RxBehaviour {
 
@@ -22,7 +23,7 @@ public class DisableOnDragAndDrop : RxBehaviour {
 			});
 
 		var sub2 = allPhases
-			.Where(p => p == DragAndDropPhase.Canceled || p == DragAndDropPhase.Accepted)
+			.Where(p => p.IsOver())
 			.Subscribe(_ => {
 				objectsToDisable.ForEach(o => o.Enable());
 			});

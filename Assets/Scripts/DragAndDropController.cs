@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using UniRx;
 using System.Linq;
+using System;
 
 public class DragAndDropController : RxBehaviour
 {
@@ -35,9 +36,27 @@ public class DragAndDropController : RxBehaviour
         {
             return phasesSubject;
         }
-    }    
+    }
+
+    private Subject<Touch> touchesSubject = new Subject<Touch>();
+
+    public IObservable<Touch> Touches
+    {
+        get
+        {
+            return touchesSubject;
+        }
+    }
 
     private GameObject draggedObject;
+
+    public GameObject DraggedObject
+    {
+        get
+        {
+            return draggedObject;
+        }
+    }
 
     private int? draggingFingerId;
 
@@ -70,8 +89,17 @@ public class DragAndDropController : RxBehaviour
                         CancelDrag();
                     }
                 }
+                else if (touch.phase == TouchPhase.Moved)
+                {
+                    DragMoved(touch);
+                }
             }
         }
+    }
+
+    private void DragMoved(Touch touch)
+    {
+        touchesSubject.OnNext(touch);
     }
 
     private void AcceptDrag()
@@ -92,5 +120,6 @@ public class DragAndDropController : RxBehaviour
         draggingFingerId = touch.fingerId;
         Source.RemoveObject(draggedObject);
         phasesSubject.OnNext(DragAndDropPhase.Started);
+        DragMoved(touch);
     }
 }

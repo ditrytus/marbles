@@ -1,7 +1,10 @@
+using System;
+
+[Flags]
 public enum DragAndDropPhase
 {
     Started,
-
     Accepted,
-    Canceled
+    Canceled,
+    Over = Accepted | Canceled
 }
