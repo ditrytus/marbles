@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class FaceAt : MonoBehaviour {
 
-	public Transform observedObject;
+	public GameObject observedObject;
+
+	public AxesFilter filter = AxesFilter.All;
 
 	void Update()
 	{
-		this.transform.LookAt(observedObject);
+		this.transform.rotation = Quaternion.LookRotation(observedObject.transform.position.Filter(filter));
 		this.transform.forward = -this.transform.forward;
 	}
 }

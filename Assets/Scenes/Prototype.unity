@@ -410,7 +410,7 @@ Camera:
   far clip plane: 1000
   field of view: 24
   orthographic: 1
-  orthographic size: 13.3
+  orthographic size: 13.300205
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -657,7 +657,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421a442ce96e74691934427a3401d6d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  observedObject: {fileID: 392843199}
+  observedObject: {fileID: 392843194}
+  filter:
+    x: 1
+    y: 0
+    z: 1
 --- !u!64 &1018542437
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -680,9 +684,9 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1018542434}
-  m_LocalRotation: {x: 0.39407796, y: -0.57972306, z: -0.58711374, w: 0.40487176}
-  m_LocalPosition: {x: -0.01, y: 0, z: 7.83}
-  m_LocalScale: {x: 3.75, y: 6.12, z: 1}
+  m_LocalRotation: {x: 0.39407796, y: -0.5797231, z: -0.58711374, w: 0.40487176}
+  m_LocalPosition: {x: -0.010007858, y: 0, z: 9.680002}
+  m_LocalScale: {x: 5.75, y: 11.120003, z: 1}
   m_Children: []
   m_Father: {fileID: 320439062}
   m_RootOrder: 0
@@ -888,9 +892,9 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1504511626}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 7.99}
-  m_LocalScale: {x: 3.3, y: 3.3, z: 4}
+  m_LocalRotation: {x: -0, y: -0, z: 0.000000084293696, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: 10.080004}
+  m_LocalScale: {x: 3.8000069, y: 3.800006, z: 6.4100094}
   m_Children: []
   m_Father: {fileID: 320439062}
   m_RootOrder: 1
@@ -952,7 +956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 392843198}
   constraint:
-    x: 0
+    x: 1
     y: 0
     z: 1
   glide: 2
@@ -1210,8 +1214,8 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2040850189}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 6.14}
+  m_LocalRotation: {x: -0, y: -0, z: 0.000000084293696, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: 8.340004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 320439062}
@@ -1241,5 +1245,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7, y: 7, z: 11}
+  m_Size: {x: 7, y: 7, z: 14.34}
   m_Center: {x: 0, y: 0, z: 0}

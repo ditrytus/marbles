@@ -33,10 +33,7 @@ public class PanOnTouch : RxBehaviour {
 
 				var c = d / Mathf.Sin(0.5f * Mathf.PI - Mathf.Deg2Rad * Vector3.Angle(cam.transform.up, Vector3.up));
 
-				velocity = new Vector3(
-					constraint.x ? 0.0f : d.x,
-					constraint.y ? 0.0f : d.y,
-					constraint.z ? 0.0f : d.z);
+				velocity = c.Constrain(constraint);
 				
 				cam.transform.position -= velocity;
 			}
