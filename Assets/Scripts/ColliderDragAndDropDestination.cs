@@ -6,7 +6,7 @@ using System.Linq;
 
 public class ColliderDragAndDropDestination : MonoBehaviour, IDragAndDropDestination {
 
-	public Camera camera;
+	public new Camera camera;
 
 	public Collider acceptingCollider;
 

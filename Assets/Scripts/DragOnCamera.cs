@@ -5,7 +5,7 @@ using UniRx;
 
 public class DragOnCamera : RxBehaviour {
 
-	public Camera camera;
+	public new Camera camera;
 
 	public DragAndDropController dragAndDropController;
 

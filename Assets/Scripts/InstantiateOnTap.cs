@@ -5,7 +5,7 @@ using UniRx;
 
 public class InstantiateOnTap : RxBehaviour {
 
-	public Camera camera;
+	public new Camera camera;
 	
 	public GameObject prefab;
 

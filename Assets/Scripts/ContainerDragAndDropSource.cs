@@ -7,7 +7,7 @@ using System.Linq;
 
 public class ContainerDragAndDropSource : MonoBehaviour, IDragAndDropSource
 {
-	public Camera camera;
+	public new Camera camera;
 	
 	public ContainerController container;
 
