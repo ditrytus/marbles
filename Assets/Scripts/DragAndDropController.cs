@@ -37,13 +37,13 @@ public class DragAndDropController : RxBehaviour
         }
     }
 
-    private Subject<Touch> touchesSubject = new Subject<Touch>();
+    private Subject<Vector3> movesSubject = new Subject<Vector3>();
 
-    public IObservable<Touch> Touches
+    public IObservable<Vector3> Moves
     {
         get
         {
-            return touchesSubject;
+            return movesSubject;
         }
     }
 
@@ -59,66 +59,111 @@ public class DragAndDropController : RxBehaviour
 
     private int? draggingFingerId;
 
+    public int dragMouseButton = 0;
+
+    private bool isMouseDragging = false;
+
     void Update()
+    {
+        if (Input.touchSupported)
+        {
+            DragWithTouch();
+        }
+        else
+        {
+            DragWithMouse();
+        }
+    }
+
+    private void DragWithMouse()
+    {
+        if (Input.GetMouseButton(dragMouseButton))
+        {
+            if (!isMouseDragging && Input.GetMouseButtonDown(dragMouseButton))
+            {
+                isMouseDragging = StartDrag(Input.mousePosition);
+            }
+
+            DragMoved(Input.mousePosition);
+        }
+
+        if (Input.GetMouseButtonUp(dragMouseButton) && isMouseDragging)
+        {
+            EndDrag(Input.mousePosition);
+            isMouseDragging = false;
+        }
+    }
+
+    private void DragWithTouch()
     {
         foreach (var touch in Input.touches)
         {
             if (touch.phase == TouchPhase.Began)
             {
-                draggedObject = Source.GetDraggedObject(touch);
-                if (draggedObject != null)
+                if (draggingFingerId == null && StartDrag(touch.position))
                 {
-                    StartDrag(touch);
+                    draggingFingerId = touch.fingerId;
                 }
             }
             else if (touch.fingerId == draggingFingerId)
             {
                 if (touch.phase == TouchPhase.Canceled)
                 {
+                    draggingFingerId = null;
                     CancelDrag();
                 }
                 else if (touch.phase == TouchPhase.Ended)
                 {
-                    if (Destination.TryAccept(touch, draggedObject))
-                    {
-                        AcceptDrag();
-                    }
-                    else
-                    {
-                        CancelDrag();
-                    }
+                    draggingFingerId = null;
+
+                    EndDrag(touch.position);
                 }
                 else if (touch.phase == TouchPhase.Moved)
                 {
-                    DragMoved(touch);
+                    DragMoved(touch.position);
                 }
             }
         }
     }
 
-    private void DragMoved(Touch touch)
+    private void EndDrag(Vector2 position)
     {
-        touchesSubject.OnNext(touch);
+        if (Destination.TryAccept(position, draggedObject))
+        {
+            AcceptDrag();
+        }
+        else
+        {
+            CancelDrag();
+        }
+    }
+
+    private void DragMoved(Vector3 position)
+    {
+        movesSubject.OnNext(position);
     }
 
     private void AcceptDrag()
     {
-        draggingFingerId = null;
         phasesSubject.OnNext(DragAndDropPhase.Accepted);
     }
 
     private void CancelDrag()
     {
-        draggingFingerId = null;
         Source.ReturnObject(draggedObject);
         phasesSubject.OnNext(DragAndDropPhase.Canceled);
     }
 
-    private void StartDrag(Touch touch)
+    private bool StartDrag(Vector2 position)
     {
-        draggingFingerId = touch.fingerId;
-        Source.RemoveObject(draggedObject);
-        phasesSubject.OnNext(DragAndDropPhase.Started);
-        DragMoved(touch);
+        draggedObject = Source.GetDraggedObject(position);
+        if (draggedObject != null)
+        {
+            Source.RemoveObject(draggedObject);
+            phasesSubject.OnNext(DragAndDropPhase.Started);
+            DragMoved(position);
+            return true;
+        }
+        return false;
     }
 }

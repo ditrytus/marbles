@@ -10,7 +10,7 @@ public class ColliderDragAndDropDestination : MonoBehaviour, IDragAndDropDestina
 
 	public Collider acceptingCollider;
 
-    public bool TryAccept(Touch touch, GameObject draggedObject)
+    public bool TryAccept(Vector2 position, GameObject draggedObject)
     {
 		if (!this.enabled)
 		{
@@ -19,7 +19,7 @@ public class ColliderDragAndDropDestination : MonoBehaviour, IDragAndDropDestina
 
 		var acceptingLayer = acceptingCollider.gameObject.layer;
 
-        var ray = camera.ScreenPointToRay(touch.position);
+        var ray = camera.ScreenPointToRay(position);
 		var hit = Physics.RaycastAll(ray, float.MaxValue)
 			.Cast<RaycastHit?>()
 			.SingleOrDefault(h => h.Value.collider == acceptingCollider);

@@ -3,5 +3,5 @@ using System;
 
 public interface IDragAndDropDestination
 {
-    bool TryAccept(Touch touch, GameObject draggedObject);
+    bool TryAccept(Vector2 position, GameObject draggedObject);
 }

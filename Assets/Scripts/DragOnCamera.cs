@@ -30,11 +30,14 @@ public class DragOnCamera : RxBehaviour {
 				draggedObject.layer = originalLayer;
 			});
 
-		var sub3 = dragAndDropController.Touches
-			.Subscribe(touch => {
-				var point = camera.ScreenToViewportPoint(touch.position);
+		var sub3 = dragAndDropController.Moves
+			.Subscribe(position => {
+				var point = camera.ScreenToViewportPoint(position);
 				point.z = 5;
-				draggedObject.transform.position = camera.ViewportToWorldPoint(point);
+				if (draggedObject != null)
+				{
+					draggedObject.transform.position = camera.ViewportToWorldPoint(point);
+				}
 			});
 
 		AddSubscriptions(sub1, sub2, sub3);

@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using UniRx;
 using System;
 using System.Linq;
 
-public class PanOnTouch : RxBehaviour {
+public class PanOnTouch : MonoBehaviour {
 
 	public Camera cam;
 
@@ -17,43 +16,109 @@ public class PanOnTouch : RxBehaviour {
 
 	private float glidedTime = 0;
 
+	public int mousePanButton = 0;
+
+	private Vector3? previousMousePosition = new Vector3();
+
 	void Update()
-	{
-		if (Input.touchCount > 0)
+    {
+		if (Input.touchSupported)
+        {
+            PanWithTouch();
+        }
+        else
+        {
+            PanWithMouse();
+        }
+    }
+
+    private void PanWithMouse()
+    {
+        if (Input.GetMouseButton(mousePanButton))
+        {
+            if (Input.GetMouseButtonDown(mousePanButton))
+            {
+                EndGlide();
+            }
+
+			if (previousMousePosition.HasValue)
+			{
+            	Pan(Input.mousePosition - previousMousePosition.Value);
+			}
+
+            previousMousePosition = Input.mousePosition;
+        }
+        else if (Input.GetMouseButtonUp(mousePanButton))
+        {
+            StartGlide();
+        }
+
+		if (!Input.GetMouseButton(mousePanButton))
 		{
-			isGliding = false;
+			previousMousePosition = null;
 		}
 
-		if (Input.touchCount == 1)
-		{
-			var touch = Input.touches.First();
-			if (touch.phase == TouchPhase.Moved)
-			{
-				var d = (Vector3)(touch.deltaPosition) * cam.orthographicSize / cam.pixelHeight * 2f;
+        Glide();
+    }
 
-				var c = d / Mathf.Sin(0.5f * Mathf.PI - Mathf.Deg2Rad * Vector3.Angle(cam.transform.up, Vector3.up));
+    private void PanWithTouch()
+    {
+        if (Input.touchCount > 0)
+        {
+            EndGlide();
+        }
 
-				velocity = c.Constrain(constraint);
-				
-				cam.transform.position -= velocity;
-			}
-			else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
-			{
-				isGliding = true;
-				glidedTime = 0;
-			}
-		}
-		
-		if (isGliding)
-		{
-			glidedTime += Time.deltaTime;
+        if (Input.touchCount == 1)
+        {
+            var touch = Input.touches.First();
+            if (touch.phase == TouchPhase.Moved)
+            {
+                var delta = touch.deltaPosition;
+                Pan(delta);
+            }
+            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            {
+                StartGlide();
+            }
+        }
 
-			cam.transform.position -= Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
+        Glide();
+    }
 
-			if (glidedTime > glide)
-			{
-				isGliding = false;
-			}
-		}
-	}
+    private void Glide()
+    {
+        if (isGliding)
+        {
+            glidedTime += Time.deltaTime;
+
+            cam.transform.position -= Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
+
+            if (glidedTime > glide)
+            {
+                isGliding = false;
+            }
+        }
+    }
+
+    private void StartGlide()
+    {
+        isGliding = true;
+        glidedTime = 0;
+    }
+
+    private void Pan(Vector2 delta)
+    {
+        var d = (Vector3)(delta) * cam.orthographicSize / cam.pixelHeight * 2f;
+
+        var c = d / Mathf.Sin(0.5f * Mathf.PI - Mathf.Deg2Rad * Vector3.Angle(cam.transform.up, Vector3.up));
+
+        velocity = c.Constrain(constraint);
+
+        cam.transform.position -= velocity;
+    }
+
+    private void EndGlide()
+    {
+        isGliding = false;
+    }
 }

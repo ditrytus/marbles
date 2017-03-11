@@ -810,6 +810,7 @@ MonoBehaviour:
     y: 0
     z: 1
   glide: 2
+  mousePanButton: 0
 --- !u!1 &1760673598
 GameObject:
   m_ObjectHideFlags: 0
