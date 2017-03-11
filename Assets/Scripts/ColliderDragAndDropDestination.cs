@@ -6,7 +6,7 @@ using System.Linq;
 
 public class ColliderDragAndDropDestination : MonoBehaviour, IDragAndDropDestination {
 
-	public new Camera camera;
+	public Camera acceptingCamera;
 
 	public Collider acceptingCollider;
 
@@ -19,7 +19,7 @@ public class ColliderDragAndDropDestination : MonoBehaviour, IDragAndDropDestina
 
 		var acceptingLayer = acceptingCollider.gameObject.layer;
 
-        var ray = camera.ScreenPointToRay(position);
+        var ray = acceptingCamera.ScreenPointToRay(position);
 		var hit = Physics.RaycastAll(ray, float.MaxValue)
 			.Cast<RaycastHit?>()
 			.SingleOrDefault(h => h.Value.collider == acceptingCollider);

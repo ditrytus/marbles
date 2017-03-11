@@ -5,7 +5,7 @@ using UniRx;
 
 public class InstantiateOnTap : RxBehaviour {
 
-	public new Camera camera;
+	public Camera tapCamera;
 	
 	public GameObject prefab;
 
@@ -16,7 +16,7 @@ public class InstantiateOnTap : RxBehaviour {
 			.SelectMany(_ => Input.touches)
 			.Where(touch => touch.phase == TouchPhase.Began)
 			.Subscribe(touch => {
-				var ray = camera.ScreenPointToRay(touch.position);
+				var ray = tapCamera.ScreenPointToRay(touch.position);
 				RaycastHit hit;
 				if (Physics.Raycast(ray, out hit, float.MaxValue, layer.value))
 				{

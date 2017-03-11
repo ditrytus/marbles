@@ -7,7 +7,7 @@ using System.Linq;
 
 public class ContainerDragAndDropSource : MonoBehaviour, IDragAndDropSource
 {
-	public new Camera camera;
+	public Camera sourceCamera;
 	
 	public ContainerController container;
 
@@ -17,7 +17,7 @@ public class ContainerDragAndDropSource : MonoBehaviour, IDragAndDropSource
 
     public GameObject GetDraggedObject(Vector2 position)
     {
-        var ray = camera.ScreenPointToRay(position);
+        var ray = sourceCamera.ScreenPointToRay(position);
 		var hit = Physics.RaycastAll(ray, float.MaxValue)
 			.Cast<RaycastHit?>()
 			.SingleOrDefault(h => h.Value.collider == dragAndDropCollider);

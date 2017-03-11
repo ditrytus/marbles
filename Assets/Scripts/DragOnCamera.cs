@@ -5,7 +5,7 @@ using UniRx;
 
 public class DragOnCamera : RxBehaviour {
 
-	public new Camera camera;
+	public Camera dragCamera;
 
 	public DragAndDropController dragAndDropController;
 
@@ -21,7 +21,7 @@ public class DragOnCamera : RxBehaviour {
 				draggedObject = dragAndDropController.DraggedObject;
 
 				originalLayer = draggedObject.layer;
-				draggedObject.layer = camera.gameObject.layer;
+				draggedObject.layer = dragCamera.gameObject.layer;
 			});
 
 		var sub2 = dragAndDropController.Phases
@@ -30,16 +30,22 @@ public class DragOnCamera : RxBehaviour {
 				draggedObject.layer = originalLayer;
 			});
 
-		var sub3 = dragAndDropController.Moves
+		var sub3 = dragAndDropController.Phases
+			.Where(p => p.IsOver())
+			.Subscribe(_ => {
+				draggedObject = null;
+			});
+
+		var sub4 = dragAndDropController.Moves
 			.Subscribe(position => {
-				var point = camera.ScreenToViewportPoint(position);
+				var point = dragCamera.ScreenToViewportPoint(position);
 				point.z = 5;
 				if (draggedObject != null)
 				{
-					draggedObject.transform.position = camera.ViewportToWorldPoint(point);
+					draggedObject.transform.position = dragCamera.ViewportToWorldPoint(point);
 				}
 			});
 
-		AddSubscriptions(sub1, sub2, sub3);
+		AddSubscriptions(sub1, sub2, sub3, sub4);
 	}
 }

@@ -61,7 +61,13 @@ public class DragAndDropController : RxBehaviour
 
     public int dragMouseButton = 0;
 
-    private bool isMouseDragging = false;
+    private bool IsDragging 
+    {
+        get
+        {
+            return draggedObject != null;
+        }
+    }
 
     void Update()
     {
@@ -79,18 +85,17 @@ public class DragAndDropController : RxBehaviour
     {
         if (Input.GetMouseButton(dragMouseButton))
         {
-            if (!isMouseDragging && Input.GetMouseButtonDown(dragMouseButton))
+            if (!IsDragging && Input.GetMouseButtonDown(dragMouseButton))
             {
-                isMouseDragging = StartDrag(Input.mousePosition);
+                StartDrag(Input.mousePosition);
             }
 
             DragMoved(Input.mousePosition);
         }
 
-        if (Input.GetMouseButtonUp(dragMouseButton) && isMouseDragging)
+        if (Input.GetMouseButtonUp(dragMouseButton) && IsDragging)
         {
             EndDrag(Input.mousePosition);
-            isMouseDragging = false;
         }
     }
 
@@ -136,6 +141,7 @@ public class DragAndDropController : RxBehaviour
         {
             CancelDrag();
         }
+        draggedObject = null;
     }
 
     private void DragMoved(Vector3 position)
@@ -160,10 +166,11 @@ public class DragAndDropController : RxBehaviour
         if (draggedObject != null)
         {
             Source.RemoveObject(draggedObject);
-            phasesSubject.OnNext(DragAndDropPhase.Started);
             DragMoved(position);
+            phasesSubject.OnNext(DragAndDropPhase.Started);
             return true;
         }
+        
         return false;
     }
 }
