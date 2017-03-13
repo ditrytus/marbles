@@ -406,6 +406,11 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114390528845460638, guid: 02eb00d2cac304217957c2671a255138,
+        type: 2}
+      propertyPath: acceptingCamera
+      value: 
+      objectReference: {fileID: 392843198}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02eb00d2cac304217957c2671a255138, type: 2}
   m_IsPrefabParent: 0
@@ -567,7 +572,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 895910016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -28.7, y: 0, z: 0}
   m_LocalScale: {x: 80, y: 80, z: 80}
   m_Children: []
   m_Father: {fileID: 1147227423}
@@ -658,6 +663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sourceObject: {fileID: 202271522}
   destinationObject: {fileID: 1018542434}
+  dragMouseButton: 0
 --- !u!114 &1067009556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4638c056385984e8dbd9cbd53762563d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 165483878}
+  dragCamera: {fileID: 165483878}
   dragAndDropController: {fileID: 1067009555}
 --- !u!1 &1147227422
 GameObject:
@@ -773,6 +779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1602111400}
   - component: {fileID: 1602111401}
+  - component: {fileID: 1602111402}
   m_Layer: 0
   m_Name: PanController
   m_TagString: Untagged
@@ -799,17 +806,34 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1602111399}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37ddc191f70ef4a32a302d3a64588c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 392843198}
+  glide: 2
   constraint:
     x: 1
     y: 0
     z: 1
+--- !u!114 &1602111402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602111399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f743f7ee3054295a512434e7fa1787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 392843198}
   glide: 2
+  constraint:
+    x: 1
+    y: 0
+    z: 1
   mousePanButton: 0
 --- !u!1 &1760673598
 GameObject:
@@ -1069,6 +1093,11 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 114171476186457680, guid: 14916dbe2b7a4470893a2c438dc78bba,
+        type: 2}
+      propertyPath: sourceCamera
+      value: 
+      objectReference: {fileID: 190757981}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14916dbe2b7a4470893a2c438dc78bba, type: 2}
   m_IsPrefabParent: 0
