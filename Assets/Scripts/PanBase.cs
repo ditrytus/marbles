@@ -14,18 +14,34 @@ public abstract class PanBase : MonoBehaviour
 
 	public AxesFilter constraint = AxesFilter.All;
 
+    public AxesRanges boundary;
+
     public void Glide()
     {
         if (isGliding)
         {
             glidedTime += Time.deltaTime;
 
-            cam.transform.position -= Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
+            if (!boundary.Contains(GlidedCamPos))
+            {
+                velocity = -velocity;
+            }
+
+            cam.transform.position = GlidedCamPos;
+
 
             if (glidedTime > glide)
             {
                 isGliding = false;
             }
+        }
+    }
+
+    private Vector3 GlidedCamPos
+    {
+        get
+        {
+            return cam.transform.position - Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
         }
     }
 
@@ -43,7 +59,9 @@ public abstract class PanBase : MonoBehaviour
 
         velocity = c.Constrain(constraint);
 
-        cam.transform.position -= velocity;
+        var movedPos = cam.transform.position - velocity;
+
+        cam.transform.position = movedPos.Clamp(boundary);
     }
 
     public void EndGlide()
