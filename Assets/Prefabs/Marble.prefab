@@ -23,8 +23,9 @@ GameObject:
   - component: {fileID: 23485256896362318}
   - component: {fileID: 54154252688024540}
   - component: {fileID: 135378198450274258}
+  - component: {fileID: 114181449041037972}
   m_Layer: 0
-  m_Name: GreenMarble
+  m_Name: Marble
   m_TagString: Marble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,6 +97,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114181449041037972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b154fdcb4ab4aca971875e9dc40ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 4
+  purpleMaterial: {fileID: 2100000, guid: 3779dd903262442cb95be94dee483001, type: 2}
+  yellowMaterial: {fileID: 2100000, guid: 81aad75dd88dc4559893fd98a4a8c159, type: 2}
+  greenMaterial: {fileID: 2100000, guid: 34797ba91d87e41b9a500bddcd07760a, type: 2}
+  redMaterial: {fileID: 2100000, guid: 202db3ea59a254363ba5fb82afa37790, type: 2}
+  blueMaterial: {fileID: 2100000, guid: 06d5291130a4941e39b5405a346167c3, type: 2}
 --- !u!135 &135378198450274258
 SphereCollider:
   m_ObjectHideFlags: 1
