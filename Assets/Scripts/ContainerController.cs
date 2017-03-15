@@ -6,11 +6,10 @@ using UniRx.Triggers;
 
 public class ContainerController : RxBehaviour {
 
-	public List<GameObject> content;
+	public ReactiveCollection<GameObject> content = new ReactiveCollection<GameObject>();
 
-	void Start () {
-		content = new List<GameObject>();
-
+	void Start ()
+	{
 		var sub1 = this.OnTriggerEnterAsObservable()
 			.Subscribe(x => {
 				content.Add(x.gameObject);
@@ -23,6 +22,6 @@ public class ContainerController : RxBehaviour {
 				Debug.Log(string.Format("Object {0} removed from container {1}", x.gameObject, this.gameObject));
 			});
 
-		AddSubscriptions(sub1, sub2);
+		AddSubscriptions(content, sub1, sub2);
 	}
 }
