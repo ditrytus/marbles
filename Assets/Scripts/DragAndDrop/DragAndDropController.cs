@@ -168,9 +168,11 @@ public class DragAndDropController : RxBehaviour
             Source.RemoveObject(draggedObject);
             DragMoved(position);
             phasesSubject.OnNext(DragAndDropPhase.Started);
+            Debug.Log("Drag started.");
             return true;
         }
         
+        Debug.Log("Drag missed.");
         return false;
     }
 }
