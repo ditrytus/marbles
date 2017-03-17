@@ -8,14 +8,14 @@ public class ContainerController : RxBehaviour {
 
 	public ReactiveCollection<GameObject> content = new ReactiveCollection<GameObject>();
 
-	protected virtual IObservable<Collider> FilterOnEnter(IObservable<Collider> onEnter)
+	protected virtual IObservable<Collider> ProcessOnEnter(IObservable<Collider> onEnter)
 	{
 		return onEnter;
 	}
 
-	void Start ()
+	protected void Start ()
 	{
-		var sub1 = FilterOnEnter(this.OnTriggerEnterAsObservable())
+		var sub1 = ProcessOnEnter(this.OnTriggerEnterAsObservable())
 			.Subscribe(x => {
 				content.Add(x.gameObject);
 				Debug.Log(string.Format("Object {0} added to container {1}", x.gameObject, this.gameObject));

@@ -24,6 +24,9 @@ GameObject:
   - component: {fileID: 54154252688024540}
   - component: {fileID: 135378198450274258}
   - component: {fileID: 114181449041037972}
+  - component: {fileID: 114579278988169264}
+  - component: {fileID: 114261433990335378}
+  - component: {fileID: 114557874212926742}
   m_Layer: 0
   m_Name: Marble
   m_TagString: Marble
@@ -109,11 +112,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 4
+--- !u!114 &114261433990335378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6260c7b706ac1401d80292044b781cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   purpleMaterial: {fileID: 2100000, guid: 3779dd903262442cb95be94dee483001, type: 2}
   yellowMaterial: {fileID: 2100000, guid: 81aad75dd88dc4559893fd98a4a8c159, type: 2}
   greenMaterial: {fileID: 2100000, guid: 34797ba91d87e41b9a500bddcd07760a, type: 2}
   redMaterial: {fileID: 2100000, guid: 202db3ea59a254363ba5fb82afa37790, type: 2}
   blueMaterial: {fileID: 2100000, guid: 06d5291130a4941e39b5405a346167c3, type: 2}
+--- !u!114 &114557874212926742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb2fe01585d344dea567b88b9184e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114579278988169264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478d62995df1549828bc22ef2f882906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 2
+  radiusRange:
+    min: 0
+    max: 0.5
+  wiggleTime: 5
 --- !u!135 &135378198450274258
 SphereCollider:
   m_ObjectHideFlags: 1
