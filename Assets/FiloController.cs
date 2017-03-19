@@ -83,17 +83,19 @@ public class FiloController : RxBehaviour {
 		}
 		if (state == FiloState.SwitchingDown)
 		{
-			SetRotation(Mathf.LerpAngle(upPositionAngle, downPositionAngle, TimeRatio));
+			SetRotation(Mathf.LerpAngle(upPositionAngle, downPositionAngle, Mathf.Pow(TimeRatio, 2)));
 			if (CurrentTime >= switchTime)
 			{
+				SetRotation(downPositionAngle);
 				state = FiloState.Releasing;
 			}
 		}
 		if (state == FiloState.SwitchingUp)
 		{
-			SetRotation(Mathf.Lerp(downPositionAngle, upPositionAngle, TimeRatio));
+			SetRotation(Mathf.Lerp(downPositionAngle, upPositionAngle, Mathf.Pow(TimeRatio, 2)));
 			if (CurrentTime >= switchTime)
 			{
+				SetRotation(upPositionAngle);
 				state = FiloState.Gathering;
 			}
 		}
@@ -106,12 +108,4 @@ public class FiloController : RxBehaviour {
 			eulerAngles.y,
 			eulerAngles.z);
     }
-
-	// private void SetRotation(float newZAngle)
-    // {
-    //     transform.localEulerAngles = new Vector3(
-	// 		transform.localRotation.eulerAngles.x,
-	// 		transform.localRotation.eulerAngles.y,
-	// 		newZAngle);
-    // }
 }
