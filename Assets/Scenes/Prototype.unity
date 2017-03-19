@@ -290,7 +290,7 @@ Camera:
   far clip plane: 1000
   field of view: 24
   orthographic: 1
-  orthographic size: 13.3
+  orthographic size: 17.77
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -353,7 +353,7 @@ MonoBehaviour:
   downPositionAngle: -100
   container: {fileID: 167328039}
   switchTime: 1
-  slowDownFactor: 2
+  slowDownFactor: 0.01
 --- !u!114 &167328039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +754,7 @@ Camera:
   far clip plane: 1000
   field of view: 24
   orthographic: 1
-  orthographic size: 13.300205
+  orthographic size: 17.77
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
