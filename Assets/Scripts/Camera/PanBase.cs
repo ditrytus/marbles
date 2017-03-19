@@ -22,12 +22,24 @@ public abstract class PanBase : MonoBehaviour
         {
             glidedTime += Time.deltaTime;
 
-            if (!boundary.Contains(GlidedCamPos))
+            var glidedCamPos = GetGlidedCamPos(velocity);
+
+            if (!boundary.Contains(glidedCamPos))
             {
-                velocity = -velocity;
+                var axesOutsideBoundary = glidedCamPos.GetAxesOutOfRangeOrOnEdge(boundary);
+                if (axesOutsideBoundary.HasAll)
+                {
+                    velocity = -velocity;
+                } 
+                else
+                {
+                    velocity = velocity.Constrain(axesOutsideBoundary);
+                }
+                
+                glidedCamPos = GetGlidedCamPos(velocity);
             }
 
-            cam.transform.position = GlidedCamPos;
+            cam.transform.position = glidedCamPos;
 
 
             if (glidedTime > glide)
@@ -37,12 +49,9 @@ public abstract class PanBase : MonoBehaviour
         }
     }
 
-    private Vector3 GlidedCamPos
+    private Vector3 GetGlidedCamPos(Vector3 velocity)
     {
-        get
-        {
-            return cam.transform.position - Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
-        }
+        return cam.transform.position - Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
     }
 
     public void StartGlide()

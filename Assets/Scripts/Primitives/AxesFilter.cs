@@ -19,4 +19,20 @@ public struct AxesFilter
     public bool x;
     public bool y;
     public bool z;
+
+    public bool HasAny
+    {
+        get
+        {
+            return x || y || z;
+        }
+    }
+
+    public bool HasAll
+    {
+        get
+        {
+            return x && y && x;
+        }
+    }
 }

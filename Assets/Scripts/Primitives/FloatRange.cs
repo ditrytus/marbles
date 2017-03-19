@@ -9,4 +9,9 @@ public class FloatRange {
     {
         return min <= value && value <= max;
     }
+
+    public bool ContainsNotOnEdge(float value)
+    {
+        return min < value && value < max;        
+    }
 }

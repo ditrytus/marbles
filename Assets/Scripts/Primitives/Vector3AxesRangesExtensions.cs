@@ -10,4 +10,13 @@ public static class Vector3AxesRangesExtensions
             Mathf.Clamp(vector.z, range.zRange.min, range.zRange.max)
         );
     }    
+
+    public static AxesFilter GetAxesOutOfRangeOrOnEdge(this Vector3 vector, AxesRanges range)
+	{
+		var filter = new AxesFilter();
+		filter.x = !range.xRange.ContainsNotOnEdge(vector.x);        
+		filter.y = !range.yRange.ContainsNotOnEdge(vector.y);
+		filter.z = !range.zRange.ContainsNotOnEdge(vector.z);
+		return filter;
+	}
 }

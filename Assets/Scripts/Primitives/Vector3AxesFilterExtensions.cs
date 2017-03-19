@@ -14,11 +14,6 @@ public static class Vector3AxesFilterExtensions
     public static Vector3 Filter(this Vector3 vector, AxesFilter filter)
     {
         return FilterCombine(vector, Vector3.zero, filter);
-
-        // return new Vector3(
-        //     filter.x ? vector.x : 0.0f,
-        //     filter.y ? vector.y : 0.0f,
-        //     filter.z ? vector.z : 0.0f);
     }
 
     public static Vector3 FilterCombine(this Vector3 vector, Vector3 other, AxesFilter filter)
