@@ -16,6 +16,8 @@ public class FiloController : RxBehaviour {
 
 	public float switchTime = 1.0f;
 
+	public float slowDownFactor = 0.1f;
+
 	private enum FiloState
 	{
 		Gathering,
@@ -97,6 +99,15 @@ public class FiloController : RxBehaviour {
 			{
 				SetRotation(upPositionAngle);
 				state = FiloState.Gathering;
+			}
+		}
+		if (state == FiloState.Releasing)
+		{
+			foreach (var item in container.content.Take(container.content.Count - 1))
+			{
+				var body = item.GetComponent<Rigidbody>();
+				//body.velocity = body.velocity * slowDownFactor;
+				body.AddForce(-body.velocity * slowDownFactor, ForceMode.VelocityChange);
 			}
 		}
 	}
