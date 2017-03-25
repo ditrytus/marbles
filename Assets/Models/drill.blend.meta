@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: 8705a0184d97b4507aa6bdbc0540d7e6
+timeCreated: 1490453413
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BottomCap
+    100002: Drill
+    100004: //RootNode
+    100006: DrillLift
+    100008: Icosphere
+    100010: LiftEnterExit
+    100012: LiftEnterTrack
+    100014: LiftTrackFront
+    100016: LiftTrackLeft
+    100018: LiftTractRight
+    100020: TopCap
+    100022: TriangleThickBevel
+    100024: TriangleThickBevel_001
+    100026: TriangleThickSingleStrandBevel
+    100028: TriangleThickSingleStrandBevel_001
+    100030: TriangleThickSingleStrandBevel_002
+    100032: TriangleThickTwoStrandBevel
+    400000: BottomCap
+    400002: Drill
+    400004: //RootNode
+    400006: DrillLift
+    400008: Icosphere
+    400010: LiftEnterExit
+    400012: LiftEnterTrack
+    400014: LiftTrackFront
+    400016: LiftTrackLeft
+    400018: LiftTractRight
+    400020: TopCap
+    400022: TriangleThickBevel
+    400024: TriangleThickBevel_001
+    400026: TriangleThickSingleStrandBevel
+    400028: TriangleThickSingleStrandBevel_001
+    400030: TriangleThickSingleStrandBevel_002
+    400032: TriangleThickTwoStrandBevel
+    2300000: BottomCap
+    2300002: Drill
+    2300004: Icosphere
+    2300006: LiftEnterExit
+    2300008: LiftEnterTrack
+    2300010: LiftTrackFront
+    2300012: LiftTrackLeft
+    2300014: LiftTractRight
+    2300016: TopCap
+    2300018: TriangleThickBevel
+    2300020: TriangleThickBevel_001
+    2300022: TriangleThickSingleStrandBevel
+    2300024: TriangleThickSingleStrandBevel_001
+    2300026: TriangleThickSingleStrandBevel_002
+    2300028: TriangleThickTwoStrandBevel
+    3300000: BottomCap
+    3300002: Drill
+    3300004: Icosphere
+    3300006: LiftEnterExit
+    3300008: LiftEnterTrack
+    3300010: LiftTrackFront
+    3300012: LiftTrackLeft
+    3300014: LiftTractRight
+    3300016: TopCap
+    3300018: TriangleThickBevel
+    3300020: TriangleThickBevel_001
+    3300022: TriangleThickSingleStrandBevel
+    3300024: TriangleThickSingleStrandBevel_001
+    3300026: TriangleThickSingleStrandBevel_002
+    3300028: TriangleThickTwoStrandBevel
+    4300000: Icosphere
+    4300002: TriangleThickTwoStrandBevel
+    4300004: TriangleThickSingleStrandBevel
+    4300006: TriangleThickSingleStrandBevel_001
+    4300008: TriangleThickSingleStrandBevel_002
+    4300010: TriangleThickBevel
+    4300012: LiftEnterTrack
+    4300014: TriangleThickBevel_001
+    4300016: LiftEnterExit
+    4300018: BottomCap
+    4300020: Drill
+    4300022: TopCap
+    4300024: LiftTrackLeft
+    4300026: LiftTractRight
+    4300028: LiftTrackFront
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
