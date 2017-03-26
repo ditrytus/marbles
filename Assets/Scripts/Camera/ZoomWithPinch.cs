@@ -38,7 +38,6 @@ public class ZoomWithPinch : ZoomBase {
 			var oldDistance = Vector2.Distance(oldPos1, oldPos2);
 			var newDistance = Vector2.Distance(touch1.position, touch2.position);
 
-			var oldMiddle = (oldPos1 + oldPos2) / 2.0f;
 			var newMiddle = (touch1.position + touch2.position) / 2.0f;
 
 			var zoomDelta = newDistance - oldDistance;
