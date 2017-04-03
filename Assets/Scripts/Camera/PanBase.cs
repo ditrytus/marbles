@@ -51,7 +51,16 @@ public abstract class PanBase : MonoBehaviour
 
     private Vector3 GetGlidedCamPos(Vector3 velocity)
     {
-        return cam.transform.position - Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
+        var glidedVelocity = Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
+
+        return GetPosMovedInLocalSpace(glidedVelocity);
+    }
+
+    private Vector3 GetPosMovedInLocalSpace(Vector3 velocity)
+    {
+        var translation = cam.transform.TransformDirection(-velocity);
+
+        return cam.transform.position + translation;
     }
 
     public void StartGlide()
@@ -68,9 +77,7 @@ public abstract class PanBase : MonoBehaviour
 
         velocity = c.Constrain(constraint);
 
-        var movedPos = cam.transform.position - velocity;
-
-        cam.transform.position = movedPos.Clamp(boundary);
+        cam.transform.position = GetPosMovedInLocalSpace(velocity);
     }
 
     public void EndGlide()
