@@ -856,7 +856,6 @@ Transform:
   - {fileID: 1602111400}
   - {fileID: 165483879}
   - {fileID: 1772747337}
-  - {fileID: 1769241990}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 21.8, y: 0, z: 0}
@@ -2853,7 +2852,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1769241990}
   m_Father: {fileID: 392843199}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2869,8 +2869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 392843198}
-  rotateSpeed: 1
-  rotationAxis: {x: 0, y: 1, z: 0}
+  rotateSpeed: 0.5
   rotationPoint: {fileID: 1769241990}
   glide: 0
   mouseRotateButton: 1
@@ -2890,17 +2889,17 @@ MonoBehaviour:
   constraint:
     x: 0
     y: 0
-    z: 1
+    z: 0
   boundary:
     xRange:
-      min: -5
-      max: 50
+      min: -500
+      max: 5000
     yRange:
-      min: -20
-      max: 80
+      min: -2000
+      max: 8000
     zRange:
-      min: -100
-      max: 100
+      min: -10000
+      max: 10000
   mousePanButton: 0
 --- !u!114 &1602111403
 MonoBehaviour:
@@ -3221,6 +3220,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1769241990}
+  - component: {fileID: 1769241991}
+  - component: {fileID: 1769241992}
   m_Layer: 0
   m_Name: RotationCenter
   m_TagString: Untagged
@@ -3234,13 +3235,43 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1769241989}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 115.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 392843199}
-  m_RootOrder: 3
+  m_Father: {fileID: 1602111400}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1769241991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1769241989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e062ad85d2b41449c298c0b5eb30bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  radius: 2
+--- !u!114 &1769241992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1769241989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97b144ca3215482ea3c98761f3dc804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseButton: 1
+  cam: {fileID: 392843198}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  hitTrigger: 1
 --- !u!1 &1772747336
 GameObject:
   m_ObjectHideFlags: 0
