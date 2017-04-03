@@ -41,7 +41,6 @@ public abstract class PanBase : MonoBehaviour
 
             cam.transform.position = glidedCamPos;
 
-
             if (glidedTime > glide)
             {
                 isGliding = false;
@@ -60,7 +59,7 @@ public abstract class PanBase : MonoBehaviour
     {
         var translation = cam.transform.TransformDirection(-velocity);
 
-        return cam.transform.position + translation;
+        return cam.transform.position + ProjectToVerticalPlane(translation);
     }
 
     public void StartGlide()
@@ -73,11 +72,16 @@ public abstract class PanBase : MonoBehaviour
     {
         var d = (Vector3)(delta) * cam.orthographicSize / cam.pixelHeight * 2f;
 
-        var c = d / Mathf.Sin(0.5f * Mathf.PI - Mathf.Deg2Rad * Vector3.Angle(cam.transform.up, Vector3.up));
+        Vector3 c = ProjectToVerticalPlane(d);
 
         velocity = c.Constrain(constraint);
 
         cam.transform.position = GetPosMovedInLocalSpace(velocity);
+    }
+
+    private Vector3 ProjectToVerticalPlane(Vector3 d)
+    {
+        return d / Mathf.Sin(0.5f * Mathf.PI - Mathf.Deg2Rad * Vector3.Angle(cam.transform.up, Vector3.up));
     }
 
     public void EndGlide()
