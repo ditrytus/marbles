@@ -14,60 +14,43 @@ public abstract class RotateBase : MonoBehaviour
 
 	private float glidedTime = 0;
 
-    private Vector3 velocity;
+    private float angularVelocity;
 
-	//public AxesFilter constraint = AxesFilter.All;
+	public AxesFilter constraint = AxesFilter.All;
 
-    // public void Glide()
-    // {
-    //     if (isGliding)
-    //     {
-    //         glidedTime += Time.deltaTime;
-
-    //         var glidedCamPos = GetGlidedCamPos(velocity);
-
-    //         if (!boundary.Contains(glidedCamPos))
-    //         {
-    //             var axesOutsideBoundary = glidedCamPos.GetAxesOutOfRangeOrOnEdge(boundary);
-    //             if (axesOutsideBoundary.HasAll)
-    //             {
-    //                 velocity = -velocity;
-    //             } 
-    //             else
-    //             {
-    //                 velocity = velocity.Constrain(axesOutsideBoundary);
-    //             }
-                
-    //             glidedCamPos = GetGlidedCamPos(velocity);
-    //         }
-
-    //         cam.transform.position = glidedCamPos;
-
-
-    //         if (glidedTime > glide)
-    //         {
-    //             isGliding = false;
-    //         }
-    //     }
-    // }
-
-    private Vector3 GetGlidedCamPos(Vector3 velocity)
+    public void Glide()
     {
-        return rotatedObject.transform.position - Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
+        if (isGliding)
+        {
+            glidedTime += Time.deltaTime;
+
+            RotateByAngle(Mathf.Lerp(angularVelocity, 0.0f, glidedTime / glide));
+
+            if (glidedTime > glide)
+            {
+                isGliding = false;
+            }
+        }
     }
 
     public void StartGlide()
     {
-        //isGliding = true;
+        isGliding = true;
         glidedTime = 0;
     }
 
     public void Rotate(Vector2 delta)
     {
+        angularVelocity = Vector2.Dot(delta, Vector2.right) * rotateSpeed;
+        RotateByAngle(angularVelocity);
+    }
+
+    private void RotateByAngle(float angularVelocity)
+    {
         rotatedObject.transform.RotateAround(
             rotationPoint.position,
             Vector2.up,
-            Vector2.Dot(delta, Vector2.right) * rotateSpeed);
+            angularVelocity);
     }
 
     public void EndGlide()

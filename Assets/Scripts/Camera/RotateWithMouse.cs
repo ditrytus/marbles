@@ -34,6 +34,6 @@ public class RotateWithMouse : RotateBase {
 			previousMousePosition = null;
 		}
 
-        //Glide();
+        Glide();
     }
 }

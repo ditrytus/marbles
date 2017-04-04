@@ -2912,7 +2912,11 @@ MonoBehaviour:
   rotateSpeed: 0.5
   rotationPoint: {fileID: 1852375814}
   rotatedObject: {fileID: 1852375812}
-  glide: 0
+  glide: 2
+  constraint:
+    x: 1
+    y: 1
+    z: 1
   mouseRotateButton: 1
 --- !u!114 &1602111402
 MonoBehaviour:
