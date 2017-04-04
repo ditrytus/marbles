@@ -2,13 +2,11 @@ using UnityEngine;
 
 public abstract class RotateBase : MonoBehaviour
 {
-    public Camera cam;
-
     public float rotateSpeed;
 
-    //public Vector3 rotationAxis;
-
     public Transform rotationPoint;
+
+    public GameObject rotatedObject;
 
     private bool isGliding = false;
 
@@ -55,7 +53,7 @@ public abstract class RotateBase : MonoBehaviour
 
     private Vector3 GetGlidedCamPos(Vector3 velocity)
     {
-        return cam.transform.position - Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
+        return rotatedObject.transform.position - Vector3.Lerp(velocity, Vector3.zero, glidedTime / glide);
     }
 
     public void StartGlide()
@@ -66,7 +64,7 @@ public abstract class RotateBase : MonoBehaviour
 
     public void Rotate(Vector2 delta)
     {
-        cam.transform.RotateAround(
+        rotatedObject.transform.RotateAround(
             rotationPoint.position,
             Vector2.up,
             Vector2.Dot(delta, Vector2.right) * rotateSpeed);

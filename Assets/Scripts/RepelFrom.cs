@@ -9,7 +9,8 @@ public class RepelFrom : MonoBehaviour {
 	public float threshold;
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		if (Vector3.Distance(repellent.position, transform.position) < threshold)
 		{
 			transform.Translate(Vector3.back * threshold, Space.Self);

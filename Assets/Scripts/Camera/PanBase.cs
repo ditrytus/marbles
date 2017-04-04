@@ -4,6 +4,8 @@ public abstract class PanBase : MonoBehaviour
 {
     public Camera cam;
 
+    public GameObject pannedObject;
+
     private bool isGliding = false;
 
     public float glide;
@@ -39,7 +41,7 @@ public abstract class PanBase : MonoBehaviour
                 glidedCamPos = GetGlidedCamPos(velocity);
             }
 
-            cam.transform.position = glidedCamPos;
+            pannedObject.transform.position = glidedCamPos;
 
             if (glidedTime > glide)
             {
@@ -57,9 +59,7 @@ public abstract class PanBase : MonoBehaviour
 
     private Vector3 GetPosMovedInLocalSpace(Vector3 velocity)
     {
-        var translation = cam.transform.TransformDirection(-velocity);
-
-        return cam.transform.position + ProjectToVerticalPlane(translation);
+        return pannedObject.transform.position - ProjectToVerticalPlane(Quaternion.Euler(0, pannedObject.transform.rotation.eulerAngles.y, 0) * velocity);
     }
 
     public void StartGlide()
@@ -76,7 +76,9 @@ public abstract class PanBase : MonoBehaviour
 
         velocity = c.Constrain(constraint);
 
-        cam.transform.position = GetPosMovedInLocalSpace(velocity);
+        var newPosition = GetPosMovedInLocalSpace(velocity).Clamp(boundary);
+
+        pannedObject.transform.position = newPosition;
     }
 
     private Vector3 ProjectToVerticalPlane(Vector3 d)
