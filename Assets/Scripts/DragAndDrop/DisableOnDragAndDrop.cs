@@ -11,6 +11,8 @@ public class DisableOnDragAndDrop : RxBehaviour {
 
 	public List<GameObject> objectsToDisable = new List<GameObject>();
 
+	private List<GameObject> objectsToEnable = new List<GameObject>();
+
 	void Start () {
 		var allPhases = dragAndDropControllers
 			.Select(c => c.Phases)
@@ -19,13 +21,14 @@ public class DisableOnDragAndDrop : RxBehaviour {
 		var sub1 = allPhases	
 			.Where(p => p == DragAndDropPhase.Started)
 			.Subscribe(_ => {
-				objectsToDisable.ForEach(o => o.Disable());
+				objectsToEnable = objectsToDisable.Where(o => o.active).ToList();
+				objectsToEnable.ForEach(o => o.Disable());
 			});
 
 		var sub2 = allPhases
 			.Where(p => p.IsOver())
 			.Subscribe(_ => {
-				objectsToDisable.ForEach(o => o.Enable());
+				objectsToEnable.ForEach(o => o.Enable());
 			});
 
 		AddSubscriptions(sub1, sub2);

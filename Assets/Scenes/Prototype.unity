@@ -1731,6 +1731,7 @@ MonoBehaviour:
   - {fileID: 1067009555}
   objectsToDisable:
   - {fileID: 1602111399}
+  - {fileID: 1772747336}
 --- !u!114 &1067009557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,34 +1857,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4396634032750766, guid: f766dba04c86843eb9d21775756c5dec,
     type: 2}
   m_PrefabInternal: {fileID: 672288704}
---- !u!1 &1275976704
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1275976705}
-  m_Layer: 0
-  m_Name: CameraRepellent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1275976705
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1275976704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: -15.7, z: 2.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1337629588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2480,6 +2453,47 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300012, guid: 8705a0184d97b4507aa6bdbc0540d7e6, type: 3}
+--- !u!1 &1506551837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1506551839}
+  - component: {fileID: 1506551838}
+  m_Layer: 0
+  m_Name: Configuration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1506551838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506551837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0df14ff81e45740ca8abef30f27022cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
+--- !u!4 &1506551839
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506551837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -183.9961, y: -52.84375, z: -86.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1511256526
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,13 +3282,14 @@ GameObject:
   - component: {fileID: 1772747337}
   - component: {fileID: 1772747338}
   - component: {fileID: 1772747339}
+  - component: {fileID: 1772747340}
   m_Layer: 0
   m_Name: TouchCameraMoveController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1772747337
 Transform:
   m_ObjectHideFlags: 0
@@ -3300,22 +3315,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 392843198}
-  pannedObject: {fileID: 0}
+  pannedObject: {fileID: 1852375812}
   glide: 2
   constraint:
     x: 0
     y: 0
-    z: 1
+    z: 0
   boundary:
     xRange:
-      min: -5
-      max: 4
+      min: -15
+      max: 50
     yRange:
-      min: -20
-      max: 80
+      min: -75
+      max: 50
     zRange:
-      min: -100
-      max: 100
+      min: -18
+      max: 26
 --- !u!114 &1772747339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3334,6 +3349,25 @@ MonoBehaviour:
   sizeRange:
     min: 6
     max: 36
+--- !u!114 &1772747340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1772747336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e106709cb598c4a09af7e1c599a4e015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 0.5
+  rotationPoint: {fileID: 1852375814}
+  rotatedObject: {fileID: 1852375812}
+  glide: 2
+  constraint:
+    x: 1
+    y: 1
+    z: 1
 --- !u!4 &1842980055 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4155709677164504, guid: 410fc444beb9b44e3bc99d1beff03ad7,
@@ -3380,7 +3414,7 @@ Transform:
   m_Children:
   - {fileID: 392843199}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1855091343
 Prefab:
