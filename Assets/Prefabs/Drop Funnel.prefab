@@ -115,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1997677990111014}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -68.66939, y: 44.84, z: 26.537857}
+  m_LocalPosition: {x: -68.67, y: 69.7, z: 26.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4903390156686694}
@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceptingCamera: {fileID: 0}
+  acceptingCameraTag: MainCamera
   acceptingCollider: {fileID: 64928380484656686}
 --- !u!114 &114301154213587780
 MonoBehaviour:
@@ -294,6 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   observedObject: {fileID: 0}
+  observedObjectTag: MainCamera
   filter:
     x: 1
     y: 0

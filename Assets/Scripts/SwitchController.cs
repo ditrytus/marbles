@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-public class SwitchArmController : MonoBehaviour {
+public class SwitchController : MonoBehaviour {
 
 	public float leftPositionAngle;
 
@@ -13,23 +13,29 @@ public class SwitchArmController : MonoBehaviour {
 
 	public bool isLeft = true;
 
-	private bool isSwitching = false;
+	public bool isSwitching = false;
+    
+    public Vector3 rotationAxis;
+
+    public float initialAngle = 0.0f;
+
+    private Quaternion initialRotation;
 
 	private float timeStarted;
 
-	private GameObject lastMarble;
-
 	void Start()
     {
+        initialRotation = transform.localRotation;
         SetRotation(GetAngleForPosition());
     }
 
-    private void SetRotation(float newZAngle)
+    private void SetRotation(float newAngle)
     {
-        transform.localEulerAngles = new Vector3(
-			transform.localRotation.eulerAngles.x,
-			transform.localRotation.eulerAngles.y,
-			newZAngle);
+        transform.localRotation = initialRotation * Quaternion.AngleAxis(initialAngle - newAngle, rotationAxis);   
+        // transform.localEulerAngles = new Vector3(
+		// 	transform.localRotation.eulerAngles.x,
+		// 	transform.localRotation.eulerAngles.y,
+		// 	newAngle);
     }
 
 	void FixedUpdate()
@@ -60,13 +66,9 @@ public class SwitchArmController : MonoBehaviour {
         return isLeft ? leftPositionAngle : rightPositionAngle;
     }
 
-    void OnCollisionEnter(Collision collision)
-	{
-		if (collision.gameObject != lastMarble && collision.gameObject.CompareTag("Marble") && !isSwitching)
-		{
-			isSwitching = true;
-			timeStarted = Time.time;
-			lastMarble = collision.gameObject;
-		}
-	}
+    public void Switch()
+    {
+        isSwitching = true;
+        timeStarted = Time.time;
+    }
 }

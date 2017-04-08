@@ -8,7 +8,17 @@ public class ColliderDragAndDropDestination : MonoBehaviour, IDragAndDropDestina
 
 	public Camera acceptingCamera;
 
+	public string acceptingCameraTag;
+
 	public Collider acceptingCollider;
+
+	void Start()
+	{
+		if (acceptingCamera == null && !string.IsNullOrEmpty(acceptingCameraTag))
+		{
+			acceptingCamera = GameObject.FindGameObjectWithTag(acceptingCameraTag).GetComponent<Camera>();
+		}
+	}
 
     public bool TryAccept(Vector2 position, GameObject draggedObject)
     {
