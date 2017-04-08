@@ -1783,11 +1783,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fdbf2d6c1106841c6a0b0fabb95c8f26, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1018542434 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1005533486449350, guid: f766dba04c86843eb9d21775756c5dec,
-    type: 2}
-  m_PrefabInternal: {fileID: 672288704}
 --- !u!1 &1045577528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,7 +1961,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sourceObject: {fileID: 202271522}
-  destinationObject: {fileID: 1018542434}
   dragMouseButton: 0
 --- !u!114 &1067009556
 MonoBehaviour:
@@ -3368,7 +3362,7 @@ MonoBehaviour:
       max: 50
     yRange:
       min: -75
-      max: 50
+      max: 75
     zRange:
       min: -18
       max: 26

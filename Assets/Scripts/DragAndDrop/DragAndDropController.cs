@@ -17,15 +17,7 @@ public class DragAndDropController : RxBehaviour
         }
     }
 
-    public GameObject destinationObject;
-
-    private IDragAndDropDestination Destination
-    {
-        get
-        {
-            return destinationObject.GetComponent<IDragAndDropDestination>();
-        }
-    }
+    private IDragAndDropDestination[] destinations;
 
     private Subject<DragAndDropPhase> phasesSubject = new Subject<DragAndDropPhase>();
 
@@ -67,6 +59,11 @@ public class DragAndDropController : RxBehaviour
         {
             return draggedObject != null;
         }
+    }
+
+    void Start()
+    {
+        destinations = GameObject.FindGameObjectsWithTag("DropZone").Select(o => o.GetComponent<IDragAndDropDestination>()).ToArray();
     }
 
     void Update()
@@ -133,7 +130,7 @@ public class DragAndDropController : RxBehaviour
 
     private void EndDrag(Vector2 position)
     {
-        if (Destination.TryAccept(position, draggedObject))
+        if (destinations.Any(d => d.TryAccept(position, draggedObject)))
         {
             AcceptDrag();
         }
