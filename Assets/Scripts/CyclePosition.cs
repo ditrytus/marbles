@@ -19,11 +19,6 @@ public class CyclePosition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// var normalizedPosition = new Vector3(
-		// 	Mathf.Sin(initialPosition.x + Time.time * speed.x),
-		// 	Mathf.Sin(initialPosition.y + Time.time * speed.y),
-		// 	Mathf.Sin(initialPosition.z + Time.time * speed.z));
-
 		transform.position = initialPosition + direction * Mathf.Sin((initialShift / speed + Time.time) * speed * 2 * Mathf.PI);
 	}
 }
