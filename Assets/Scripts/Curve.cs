@@ -3,34 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class Curver : MonoBehaviour {
+public class Curve : MonoBehaviour {
 
 	public Transform[] points;
 
 	public LineRenderer lineRenderer;
 
-	private Vector3[] oldPositions;
+	private Vector3[] oldPoints;
+
+    public Vector3[] positions;
+
+    public float length;
 
 	public float smoothness = 3.0f;
 
 	// Use this for initialization
 	void Start ()
     {
-        var positions = GetPositions();
-        oldPositions = positions;
+        var points = GetPoints();
 
+        SetPoints(points);
+    }
+
+    private void SetPoints(Vector3[] points)
+    {
+        oldPoints = points;
+        positions = MakeSmoothCurve(points, smoothness);
+        SetLendth();
         RenderCurve(positions);
     }
 
-    private Vector3[] GetPositions()
+    private void SetLendth()
+    {
+        length = 0;
+        for (int i = 0; i < positions.Length - 1; i++)
+        {
+            length += Vector3.Distance(positions[i], positions[i + 1]);
+        }
+    }
+
+    private Vector3[] GetPoints()
     {
         return points.Select(p => p.position).ToArray();
     }
 
     private void RenderCurve(Vector3[] positions)
     {
-		positions = MakeSmoothCurve(positions, smoothness);
-
         lineRenderer.numPositions = positions.Length;
         for (int i = 0; i < positions.Length; i++)
         {
@@ -41,14 +59,14 @@ public class Curver : MonoBehaviour {
     // Update is called once per frame
     void Update ()
 	{
-		var positions = GetPositions();
+		var points = GetPoints();
 		bool changed = true;
-		if (positions.Length == oldPositions.Length)
+		if (points.Length == oldPoints.Length)
 		{
 			changed = false;
-			for(int i=0; i<positions.Length; i++)
+			for(int i=0; i<points.Length; i++)
 			{
-				if (positions[i] != oldPositions[i])
+				if (points[i] != oldPoints[i])
 				{
 					changed = true;
 				}
@@ -56,8 +74,7 @@ public class Curver : MonoBehaviour {
 		}
 		if (changed)
 		{
-			oldPositions = positions;
-			RenderCurve(positions);
+			SetPoints(points);
 		}
 	}
 
@@ -72,7 +89,7 @@ public class Curver : MonoBehaviour {
          
          pointsLength = arrayToCurve.Length;
          
-         curvedLength = (pointsLength*Mathf.RoundToInt(smoothness))-1;
+         curvedLength = (pointsLength * Mathf.RoundToInt(smoothness))-1;
          curvedPoints = new List<Vector3>(curvedLength);
          
          float t = 0.0f;
