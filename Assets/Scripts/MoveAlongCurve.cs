@@ -13,8 +13,7 @@ public class MoveAlongCurve : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		curve = GetComponentInParent<Curve>();
-		duration = GetComponentInParent<SwitchTriggerBase>().delay;
-
+        duration = GetComponentInParent<SwitchTriggerBase>().delay;
 		startTime = Time.time;	
 	}
 	
