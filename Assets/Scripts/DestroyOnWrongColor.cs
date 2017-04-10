@@ -13,6 +13,8 @@ public class DestroyOnWrongColor : RxBehaviour {
 
 	public float wiggleTime;
 
+	public GameObject particlePrefab;
+
 	private bool isDestroying = false;
 
 	private float startTime;
@@ -45,7 +47,12 @@ public class DestroyOnWrongColor : RxBehaviour {
 							(Time.time - startTime) / wiggleTime);
 					});
 
-				Destroy(gameObject, wiggleTime);
+				Observable.Timer(TimeSpan.FromSeconds(wiggleTime))
+					.Subscribe(__ => {
+						var explosion = Instantiate(particlePrefab, transform.position, transform.rotation);
+						explosion.SendMessage(MarbleColorController.SetMarbleColorMessage, gameObject.GetComponent<MarbleColorController>().color);
+						Destroy(gameObject);
+					});
 
 				AddSubscriptions(sub2);
 			});

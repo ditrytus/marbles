@@ -155,6 +155,8 @@ MonoBehaviour:
     min: 0
     max: 0.5
   wiggleTime: 5
+  particlePrefab: {fileID: 1157090209877650, guid: f6f12b286d6a34cea8f47f9b2e0a79d5,
+    type: 2}
 --- !u!135 &135378198450274258
 SphereCollider:
   m_ObjectHideFlags: 1
