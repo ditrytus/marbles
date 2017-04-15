@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: d8068293bc2714a5f8fc7fe77d1474f5
+timeCreated: 1492265991
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cylinder
+    100002: Cylinder_001
+    100004: Cylinder_002
+    100006: Cylinder_003
+    100008: Cylinder_004
+    100010: Cylinder_005
+    100012: Cylinder_006
+    100014: Enclosure
+    100016: Enter_Ring
+    100018: Exit_Ring
+    100020: NurbsPath
+    100022: //RootNode
+    100024: TriangleThickBevel
+    100026: Attacher
+    100028: Color_000
+    100030: Color_001
+    100032: Color_002
+    100034: Color_003
+    100036: Color_004
+    100038: Color_Wheel
+    100040: MainPipe
+    100042: Selector
+    400000: Cylinder
+    400002: Cylinder_001
+    400004: Cylinder_002
+    400006: Cylinder_003
+    400008: Cylinder_004
+    400010: Cylinder_005
+    400012: Cylinder_006
+    400014: Enclosure
+    400016: Enter_Ring
+    400018: Exit_Ring
+    400020: NurbsPath
+    400022: //RootNode
+    400024: TriangleThickBevel
+    400026: Attacher
+    400028: Color_000
+    400030: Color_001
+    400032: Color_002
+    400034: Color_003
+    400036: Color_004
+    400038: Color_Wheel
+    400040: MainPipe
+    400042: Selector
+    2300000: Cylinder
+    2300002: Cylinder_001
+    2300004: Cylinder_002
+    2300006: Cylinder_003
+    2300008: Cylinder_004
+    2300010: Cylinder_005
+    2300012: Cylinder_006
+    2300014: Enclosure
+    2300016: Enter_Ring
+    2300018: Exit_Ring
+    2300020: NurbsPath
+    2300022: TriangleThickBevel
+    2300024: Attacher
+    2300026: Color_000
+    2300028: Color_001
+    2300030: Color_002
+    2300032: Color_003
+    2300034: Color_004
+    2300036: Color_Wheel
+    2300038: MainPipe
+    2300040: Selector
+    3300000: Cylinder
+    3300002: Cylinder_001
+    3300004: Cylinder_002
+    3300006: Cylinder_003
+    3300008: Cylinder_004
+    3300010: Cylinder_005
+    3300012: Cylinder_006
+    3300014: Enclosure
+    3300016: Enter_Ring
+    3300018: Exit_Ring
+    3300020: NurbsPath
+    3300022: TriangleThickBevel
+    3300024: Attacher
+    3300026: Color_000
+    3300028: Color_001
+    3300030: Color_002
+    3300032: Color_003
+    3300034: Color_004
+    3300036: Color_Wheel
+    3300038: MainPipe
+    3300040: Selector
+    4300000: Cylinder
+    4300002: TriangleThickBevel
+    4300004: NurbsPath
+    4300006: Exit_Ring
+    4300008: Enter_Ring
+    4300010: Enclosure
+    4300012: Cylinder_001
+    4300014: Cylinder_002
+    4300016: Cylinder_003
+    4300018: Cylinder_004
+    4300020: Cylinder_005
+    4300022: Cylinder_006
+    4300024: MainPipe
+    4300026: Color_Wheel
+    4300028: Color_000
+    4300030: Color_001
+    4300032: Color_002
+    4300034: Color_003
+    4300036: Color_004
+    4300038: Selector
+    4300040: Attacher
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

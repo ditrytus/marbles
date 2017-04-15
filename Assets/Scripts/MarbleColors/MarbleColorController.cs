@@ -13,7 +13,7 @@ public class MarbleColorController : MonoBehaviour {
         SetColor(color);
     }
 
-    protected void SetColor(MarbleColor newColor)
+    public void SetColor(MarbleColor newColor)
 	{
 		this.color = newColor;
         BroadcastMessage(SetMarbleColorMessage, newColor);
