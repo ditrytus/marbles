@@ -31,11 +31,7 @@ public class SwitchController : MonoBehaviour {
 
     private void SetRotation(float newAngle)
     {
-        transform.localRotation = initialRotation * Quaternion.AngleAxis(initialAngle - newAngle, rotationAxis);   
-        // transform.localEulerAngles = new Vector3(
-		// 	transform.localRotation.eulerAngles.x,
-		// 	transform.localRotation.eulerAngles.y,
-		// 	newAngle);
+        transform.localRotation = initialRotation * Quaternion.AngleAxis(initialAngle - newAngle, rotationAxis);
     }
 
 	void FixedUpdate()
@@ -68,7 +64,10 @@ public class SwitchController : MonoBehaviour {
 
     public void Switch()
     {
-        isSwitching = true;
-        timeStarted = Time.time;
+        if (!this.isSwitching)
+        {
+            isSwitching = true;
+            timeStarted = Time.time;
+        }
     }
 }

@@ -24,7 +24,7 @@ public class ShakeOnEnter : MonoBehaviour
 		if (isShaking)
 		{
 			var deltaTime = Time.time - startTime;
-			if (deltaTime <= shakeTime)
+			if (deltaTime >= shakeTime)
             {
                 SetRotation(initialAngle);
 				isShaking = false;
@@ -39,6 +39,7 @@ public class ShakeOnEnter : MonoBehaviour
 
     private void SetRotation(float newAngle)
     {
+		Debug.Log(newAngle);
         shakedObject.transform.localEulerAngles = new Vector3(
 			shakedObject.transform.localEulerAngles.x,
 			shakedObject.transform.localEulerAngles.y,

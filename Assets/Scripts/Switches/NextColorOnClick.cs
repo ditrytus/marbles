@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NextColorOnClick : MonoBehaviour {
+public class SwitchOnClick : MonoBehaviour {
 
-	public ColorWheelController colorWheel;
+	public GameObject switchController;
 	
 	// Update is called once per frame
 	void Update ()
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
-			colorWheel.NextColor();
+			switchController.SendMessage(SwitchMessages.Switch);
 		}	
 	}
 }

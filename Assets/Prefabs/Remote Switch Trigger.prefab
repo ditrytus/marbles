@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4844109659448088}
   m_Layer: 0
-  m_Name: Remote Trigger
+  m_Name: Remote Switch Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,6 +436,7 @@ MonoBehaviour:
   prefab: {fileID: 1212264280548048, guid: 0ea6dd1055a3e4897af11d01bb75f494, type: 2}
   parent: {fileID: 4333977195501284}
   spawnPoint: {fileID: 4028363947475918}
+  timeout: 0
 --- !u!114 &114433468453620616
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,6 +6,6 @@ public class OnTriggerEnterSwitchTrigger : SwitchTriggerBase {
 
 	void OnTriggerEnter(Collider other)
     {
-        SwitchOnCollision(other.gameObject);
+        SwitchWithObject(other.gameObject);
     }  
 }

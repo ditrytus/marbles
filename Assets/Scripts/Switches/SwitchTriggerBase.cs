@@ -6,24 +6,24 @@ using System;
 
 public abstract class SwitchTriggerBase : MonoBehaviour {
 
-	public SwitchController switchController;
+	public GameObject switchController;
 
     public float delay = 0.0f;
 
 	private GameObject lastMarble;
 
-	protected void SwitchOnCollision(GameObject triggeringObject)
+	protected void SwitchWithObject(GameObject triggeringObject)
     {
-        if (triggeringObject != lastMarble && triggeringObject.CompareTag("Marble") && !switchController.isSwitching)
+        if (triggeringObject != lastMarble && triggeringObject.CompareTag("Marble"))
         {
             if (delay == 0.0f)
             {
-                switchController.Switch();
+                switchController.SendMessage(SwitchMessages.Switch);
             }
             else
             {
                 Observable.Timer(TimeSpan.FromSeconds(delay))
-                    .Subscribe(_ => switchController.Switch());
+                    .Subscribe(_ => switchController.SendMessage(SwitchMessages.Switch));
             }
             
             lastMarble = triggeringObject;

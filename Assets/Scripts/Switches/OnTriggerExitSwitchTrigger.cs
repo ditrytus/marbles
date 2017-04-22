@@ -6,6 +6,6 @@ public class OnTriggerExitSwitchTrigger : SwitchTriggerBase {
 
 	void OnTriggerExit(Collider other)
     {
-        SwitchOnCollision(other.gameObject);
+        SwitchWithObject(other.gameObject);
     }  
 }

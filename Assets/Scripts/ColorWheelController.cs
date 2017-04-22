@@ -49,7 +49,7 @@ public class ColorWheelController : MonoBehaviour
 		}
 	}
 
-	public void NextColor()
+	public void Switch()
 	{
 		SetNewIndex((currentColorIndex + 1) % colors.Length);
 	}
