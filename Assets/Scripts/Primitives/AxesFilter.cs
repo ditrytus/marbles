@@ -3,6 +3,13 @@ using System;
 [Serializable]
 public struct AxesFilter
 {
+    public AxesFilter(bool x, bool y, bool z)
+    {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
     public static AxesFilter All
     {
         get

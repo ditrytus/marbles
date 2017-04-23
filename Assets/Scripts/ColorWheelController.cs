@@ -10,15 +10,17 @@ public class ColorWheelController : MonoBehaviour
 
 	public float switchTime;
 
+	public AxesFilter rotationAxis = new AxesFilter(false, false, true);
+
 	private float startTime;
 
 	private bool isSwitching;
 
-	private float destinationAngle = 0.0f;
+	private Vector3 destinationAngle = Vector3.zero;
 
-	private float currentAngle = 0.0f;
+	private Vector3 currentAngle = Vector3.zero;
 
-	private float previousAngle = 0.0f;
+	private Vector3 previousAngle = Vector3.zero;
 
 	private int currentColorIndex;
 
@@ -37,7 +39,7 @@ public class ColorWheelController : MonoBehaviour
 	{
 		currentColorIndex = 0;
 		originalAngles = transform.localEulerAngles;
-		previousAngle = destinationAngle = transform.localEulerAngles.z;
+		previousAngle = destinationAngle = transform.localEulerAngles.Filter(rotationAxis);
 		Debug.Log("Z: " + transform.localEulerAngles.z);
 		for (int i=0; i<colors.Length; i++)
 		{
@@ -45,7 +47,7 @@ public class ColorWheelController : MonoBehaviour
 			token.Enable();
 			var marbleColor = token.GetComponent<MarbleColorController>();
 			marbleColor.SetColor(colors[i]);
-			token.transform.RotateAround(transform.position, transform.forward, GetAngleForIndex(i));
+			token.transform.RotateAround(transform.position, transform.InverseTransformDirection(rotationAxis.ToDirection()), GetAngleForIndex(i));
 		}
 	}
 
@@ -58,19 +60,25 @@ public class ColorWheelController : MonoBehaviour
 	{
 		isSwitching = true;
 		previousAngle = currentAngle;
-		destinationAngle -= GetAngleForIndex(i - currentColorIndex);
+		destinationAngle -= GetAnglesForIndex(i - currentColorIndex);
 		currentColorIndex = i;
 		startTime = Time.time;
 		
 	}
 
-	private float GetAngleForIndex(int i)
-	{
-		return (360.0f / colors.Length) * i;
-	}
-	
-	// Update is called once per frame
-	void Update ()
+	private Vector3 GetAnglesForIndex(int i)
+    {
+        var angle = GetAngleForIndex(i);
+        return new Vector3(angle, angle, angle);
+    }
+
+    private float GetAngleForIndex(int i)
+    {
+        return (360.0f / colors.Length) * i;
+    }
+
+    // Update is called once per frame
+    void Update ()
 	{
 		if (isSwitching)
         {
@@ -82,17 +90,20 @@ public class ColorWheelController : MonoBehaviour
 			}
 			else
 			{
-                SetRotation(Mathf.LerpAngle(previousAngle, destinationAngle, deltaTime / switchTime));
+				var t = deltaTime / switchTime;
+				var newAngles = new Vector3(
+					Mathf.LerpAngle(previousAngle.x, destinationAngle.x, t),
+					Mathf.LerpAngle(previousAngle.y, destinationAngle.y, t),
+					Mathf.LerpAngle(previousAngle.z, destinationAngle.z, t)
+				);
+				SetRotation(newAngles);
 			}
         }
     }
 
-    private void SetRotation(float newAngle)
+    private void SetRotation(Vector3 newAngles)
     {
-		currentAngle = newAngle;
-        transform.localRotation = Quaternion.Euler(
-			originalAngles.x,
-			originalAngles.y,
-			newAngle);
+		currentAngle = newAngles;
+        transform.localRotation = Quaternion.Euler(newAngles.FilterCombine(originalAngles, rotationAxis));
     }
 }

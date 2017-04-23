@@ -5,10 +5,11 @@ public static class Vector3AxesFilterExtensions
 {
     public static Vector3 Constrain(this Vector3 vector, AxesFilter constraint)
     {
-        return new Vector3(
-            constraint.x ? 0.0f : vector.x,
-            constraint.y ? 0.0f : vector.y,
-            constraint.z ? 0.0f : vector.z);
+        return FilterCombine(Vector3.zero, vector, constraint);
+        // return new Vector3(
+        //     constraint.x ? 0.0f : vector.x,
+        //     constraint.y ? 0.0f : vector.y,
+        //     constraint.z ? 0.0f : vector.z);
     }
 
     public static Vector3 Filter(this Vector3 vector, AxesFilter filter)
@@ -22,5 +23,10 @@ public static class Vector3AxesFilterExtensions
             filter.x ? vector.x : other.x,
             filter.y ? vector.y : other.y,
             filter.z ? vector.z : other.z);
+    }
+
+    public static Vector3 ToDirection(this AxesFilter filter)
+    {
+        return Filter(new Vector3(1.0f, 1.0f, 1.0f), filter);
     }
 }

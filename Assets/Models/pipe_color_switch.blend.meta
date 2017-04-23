@@ -26,6 +26,7 @@ ModelImporter:
     100036: TriangleThickBevel
     100038: TriangleThickBevel_0
     100040: TriangleThickBevel_001
+    100042: CenterPipeLeft_001
     400000: CenterPipeLeft
     400002: CenterPipeRight
     400004: ColorCylinder
@@ -47,6 +48,7 @@ ModelImporter:
     400036: TriangleThickBevel
     400038: TriangleThickBevel_0
     400040: TriangleThickBevel_001
+    400042: CenterPipeLeft_001
     2300000: CenterPipeLeft
     2300002: CenterPipeRight
     2300004: ColorCylinder
@@ -67,6 +69,7 @@ ModelImporter:
     2300034: TriangleThickBevel
     2300036: TriangleThickBevel_0
     2300038: TriangleThickBevel_001
+    2300040: CenterPipeLeft_001
     3300000: CenterPipeLeft
     3300002: CenterPipeRight
     3300004: ColorCylinder
@@ -87,6 +90,7 @@ ModelImporter:
     3300034: TriangleThickBevel
     3300036: TriangleThickBevel_0
     3300038: TriangleThickBevel_001
+    3300040: CenterPipeLeft_001
     4300000: TriangleThickBevel
     4300002: InPipe
     4300004: Ring
@@ -107,6 +111,7 @@ ModelImporter:
     4300034: Selector_001
     4300036: Ring_004
     4300038: Ring_005
+    4300040: CenterPipeLeft_001
     7400000: Default Take
     9500000: //RootNode
   materials:
