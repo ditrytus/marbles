@@ -14,7 +14,7 @@ public abstract class SwitchTriggerBase : MonoBehaviour {
 
 	protected void SwitchWithObject(GameObject triggeringObject)
     {
-        if (triggeringObject != lastMarble && triggeringObject.CompareTag("Marble"))
+        if (triggeringObject != lastMarble && triggeringObject.CompareTag(Tags.Marble))
         {
             if (delay == 0.0f)
             {

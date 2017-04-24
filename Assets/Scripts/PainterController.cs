@@ -8,7 +8,7 @@ public class PainterController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-        if (other.gameObject.CompareTag("Marble"))
+        if (other.gameObject.CompareTag(Tags.Marble))
 		{
 			var color = other.gameObject.GetComponent<MarbleColorController>();
 			color.SetColor(colorWheel.CurrentColor);

@@ -17,7 +17,7 @@ public class ColorSwitchController : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		var marble = other.gameObject;
-		if (marble.CompareTag("Marble"))
+		if (marble.CompareTag(Tags.Marble))
 		{
 			var marbleColorController = marble.GetComponent<MarbleColorController>();
 			if (marbleColorController == null)

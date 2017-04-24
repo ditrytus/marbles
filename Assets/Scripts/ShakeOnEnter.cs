@@ -49,7 +49,7 @@ public class ShakeOnEnter : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
 	{
-        if (other.gameObject.CompareTag("Marble"))
+        if (other.gameObject.CompareTag(Tags.Marble))
 		{
 			startTime = Time.time;
 			initialAngle = shakedObject.transform.localRotation.z;
