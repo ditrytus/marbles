@@ -7,7 +7,7 @@ using System.Linq;
 
 public class DestroyOnWrongColor : RxBehaviour {
 
-	public int delay;
+	public float delay;
 
 	public FloatRange radiusRange;
 
