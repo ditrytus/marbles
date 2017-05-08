@@ -11,7 +11,10 @@ public class PainterController : MonoBehaviour {
         if (other.gameObject.CompareTag(Tags.Marble))
 		{
 			var color = other.gameObject.GetComponent<MarbleColorController>();
-			color.SetColor(colorWheel.CurrentColor);
+			if (colorWheel.CurrentColor != MarbleColor.Joker)
+			{
+				color.SetColor(colorWheel.CurrentColor);
+			}
 		}
     }
 }

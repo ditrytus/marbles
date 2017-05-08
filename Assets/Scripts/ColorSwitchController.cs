@@ -24,12 +24,12 @@ public class ColorSwitchController : MonoBehaviour {
 			{
 				return;
 			}
-			if (marbleColorController.color == leftColor.color)
+			if (marbleColorController.color.ColorEquals(leftColor.color))
 			{
 				Physics.IgnoreCollision(other, rightRail, true);
 				ignoredPairs.Add(other, rightRail);
 			}
-			else if (marbleColorController.color == rightColor.color)
+			else if (marbleColorController.color.ColorEquals(rightColor.color))
 			{
 				Physics.IgnoreCollision(other, leftRail, true);
 				ignoredPairs.Add(other, leftRail);

@@ -83,6 +83,7 @@ MonoBehaviour:
   greenMaterial: {r: 0, g: 1, b: 0, a: 1}
   redMaterial: {r: 1, g: 0, b: 0, a: 1}
   blueMaterial: {r: 0, g: 1, b: 1, a: 1}
+  jokerMaterial: {r: 0.75735295, g: 0.75735295, b: 0.75735295, a: 0}
 --- !u!198 &198665728377426340
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -14,9 +14,8 @@ public class SetMarbleColorToWheel : MonoBehaviour {
 		Switch();
 	}
 
-	// Update is called once per frame
 	public void Switch()
 	{
-		marbleColorController.SetColor(colorWheelController.CurrentColor);	
+		marbleColorController.SetColor(colorWheelController.CurrentColor);
 	}
 }

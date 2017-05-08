@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 23486769310985384}
   - component: {fileID: 114337649266677260}
   - component: {fileID: 114041344135898254}
+  - component: {fileID: 114748732009251180}
   m_Layer: 0
   m_Name: ColorCylinder
   m_TagString: Untagged
@@ -347,6 +348,7 @@ GameObject:
   - component: {fileID: 23307690530691908}
   - component: {fileID: 114711270512076514}
   - component: {fileID: 114295023433955718}
+  - component: {fileID: 114837387393012662}
   m_Layer: 0
   m_Name: ColorCylinder
   m_TagString: Untagged
@@ -1423,6 +1425,7 @@ MonoBehaviour:
   greenMaterial: {fileID: 2100000, guid: 34797ba91d87e41b9a500bddcd07760a, type: 2}
   redMaterial: {fileID: 2100000, guid: 202db3ea59a254363ba5fb82afa37790, type: 2}
   blueMaterial: {fileID: 2100000, guid: 06d5291130a4941e39b5405a346167c3, type: 2}
+  jokerMaterial: {fileID: 2100000, guid: a6ce9f062ec2446e8bf115cabeee15de, type: 2}
 --- !u!114 &114170190569272530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1518,6 +1521,7 @@ MonoBehaviour:
   greenMaterial: {fileID: 2100000, guid: 34797ba91d87e41b9a500bddcd07760a, type: 2}
   redMaterial: {fileID: 2100000, guid: 202db3ea59a254363ba5fb82afa37790, type: 2}
   blueMaterial: {fileID: 2100000, guid: 06d5291130a4941e39b5405a346167c3, type: 2}
+  jokerMaterial: {fileID: 2100000, guid: a6ce9f062ec2446e8bf115cabeee15de, type: 2}
 --- !u!114 &114433783887282264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1569,6 +1573,7 @@ MonoBehaviour:
   greenMaterial: {fileID: 2100000, guid: 34797ba91d87e41b9a500bddcd07760a, type: 2}
   redMaterial: {fileID: 2100000, guid: 202db3ea59a254363ba5fb82afa37790, type: 2}
   blueMaterial: {fileID: 2100000, guid: 06d5291130a4941e39b5405a346167c3, type: 2}
+  jokerMaterial: {fileID: 2100000, guid: a6ce9f062ec2446e8bf115cabeee15de, type: 2}
 --- !u!114 &114580669209773226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1603,13 +1608,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fedbbbd991074f3b89cf5620b4cf2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors: 0000000001000000020000000300000004000000
+  colors: 0400000001000000020000000300000000000000
   tokenPrototype: {fileID: 1826427198909596}
   switchTime: 1
   rotationAxis:
     x: 1
     y: 0
     z: 0
+--- !u!114 &114748732009251180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775413346177852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596d8add7e6a94746a4c33bd8345bf7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchController: {fileID: 1775413346177852}
+--- !u!114 &114837387393012662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958245461373424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596d8add7e6a94746a4c33bd8345bf7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchController: {fileID: 1958245461373424}
 --- !u!114 &114863541243816068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1648,3 +1677,4 @@ MonoBehaviour:
   greenMaterial: {fileID: 2100000, guid: 34797ba91d87e41b9a500bddcd07760a, type: 2}
   redMaterial: {fileID: 2100000, guid: 202db3ea59a254363ba5fb82afa37790, type: 2}
   blueMaterial: {fileID: 2100000, guid: 06d5291130a4941e39b5405a346167c3, type: 2}
+  jokerMaterial: {fileID: 2100000, guid: a6ce9f062ec2446e8bf115cabeee15de, type: 2}

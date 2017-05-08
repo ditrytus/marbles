@@ -4,7 +4,11 @@ using UnityEngine;
 using System.Linq;
 
 public class RandomizeMarbleColor : MarbleColorController {
-	void Start () {
-		SetColor((MarbleColor)Random.Range(0, System.Enum.GetValues(typeof(MarbleColor)).Length));
+	
+	public MarbleColor[] colorBag;
+
+	void Start ()
+	{
+		SetColor(colorBag[Random.Range(0, colorBag.Length)]);
 	}
 }

@@ -11,6 +11,7 @@ public class MarbleColorColorMap : MonoBehaviour {
 	public Color greenMaterial;
 	public Color redMaterial;
 	public Color blueMaterial;
+	public Color jokerMaterial;
 
 	public Color GetColorForMarbleColor(MarbleColor color)
     {
@@ -21,6 +22,7 @@ public class MarbleColorColorMap : MonoBehaviour {
             {MarbleColor.Purple, purpleMaterial},
             {MarbleColor.Red,    redMaterial},
             {MarbleColor.Yellow, yellowMaterial},
+			{MarbleColor.Joker,  jokerMaterial},
         }
 		[color];
     }

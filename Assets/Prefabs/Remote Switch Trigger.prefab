@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 4102049147258598}
   - component: {fileID: 33985581273330130}
   - component: {fileID: 23871592607112584}
+  - component: {fileID: 114070405544041950}
   m_Layer: 0
   m_Name: Receiver Cube
   m_TagString: Untagged
@@ -113,6 +114,7 @@ GameObject:
   - component: {fileID: 65523385519666974}
   - component: {fileID: 114078713929655066}
   - component: {fileID: 114422938231405326}
+  - component: {fileID: 114338930209079972}
   m_Layer: 0
   m_Name: Trigger Cube
   m_TagString: Untagged
@@ -128,6 +130,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4844109659448088}
+  - component: {fileID: 114156786499318234}
+  - component: {fileID: 114696458227914804}
   m_Layer: 0
   m_Name: Remote Switch Trigger
   m_TagString: Untagged
@@ -378,6 +382,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 0, a: 1}
   radius: 0.5
+--- !u!114 &114070405544041950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168486311896570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb2fe01585d344dea567b88b9184e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114078713929655066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchController: {fileID: 0}
-  delay: 20
+  delay: 5
 --- !u!114 &114080386924271114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -403,6 +418,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherObject: {fileID: 4028363947475918}
+--- !u!114 &114156786499318234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1657421829276396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6260c7b706ac1401d80292044b781cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purpleMaterial: {fileID: 2100000, guid: 3779dd903262442cb95be94dee483001, type: 2}
+  yellowMaterial: {fileID: 2100000, guid: 81aad75dd88dc4559893fd98a4a8c159, type: 2}
+  greenMaterial: {fileID: 2100000, guid: 34797ba91d87e41b9a500bddcd07760a, type: 2}
+  redMaterial: {fileID: 2100000, guid: 202db3ea59a254363ba5fb82afa37790, type: 2}
+  blueMaterial: {fileID: 2100000, guid: 06d5291130a4941e39b5405a346167c3, type: 2}
+  jokerMaterial: {fileID: 2100000, guid: a6ce9f062ec2446e8bf115cabeee15de, type: 2}
 --- !u!114 &114181211882192634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -422,6 +454,17 @@ MonoBehaviour:
   positions: []
   length: 0
   smoothness: 3
+--- !u!114 &114338930209079972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1628485464737752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb2fe01585d344dea567b88b9184e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114422938231405326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -436,7 +479,7 @@ MonoBehaviour:
   prefab: {fileID: 1212264280548048, guid: 0ea6dd1055a3e4897af11d01bb75f494, type: 2}
   parent: {fileID: 4333977195501284}
   spawnPoint: {fileID: 4028363947475918}
-  timeout: 0
+  timeout: 5
 --- !u!114 &114433468453620616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -475,6 +518,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 0, a: 1}
   radius: 0.5
+--- !u!114 &114696458227914804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1657421829276396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b154fdcb4ab4aca971875e9dc40ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 3
 --- !u!120 &120108311021944338
 LineRenderer:
   m_ObjectHideFlags: 1

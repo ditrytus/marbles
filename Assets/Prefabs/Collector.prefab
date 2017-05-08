@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1704848492407592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.1, y: -61.3, z: -1.3}
+  m_LocalPosition: {x: 31.89, y: -25.3, z: -9.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224593128789087860}
@@ -310,6 +310,7 @@ MonoBehaviour:
   greenMaterial: {fileID: 2100000, guid: 6241dcdefc70e421c84637084efb59a8, type: 2}
   redMaterial: {fileID: 2100000, guid: 1847d9178b6cd4277a11313357c69d8a, type: 2}
   blueMaterial: {fileID: 2100000, guid: 4006d6a829f71454aab2d1e4912fc606, type: 2}
+  jokerMaterial: {fileID: 2100000, guid: 84b882500a1a4426ca330866c2ad77d3, type: 2}
 --- !u!114 &114164942338287688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -458,6 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  colorBag: 0000000001000000020000000300000004000000
 --- !u!135 &135814577038036676
 SphereCollider:
   m_ObjectHideFlags: 1

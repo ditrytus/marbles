@@ -129,7 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c6f49167fd24b33a16615cbcd1d58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 0
+  color: 3
+  colorBag: 0000000001000000020000000300000004000000
 --- !u!114 &114499951890773846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,6 +158,7 @@ MonoBehaviour:
   greenMaterial: {fileID: 2100000, guid: 34797ba91d87e41b9a500bddcd07760a, type: 2}
   redMaterial: {fileID: 2100000, guid: 202db3ea59a254363ba5fb82afa37790, type: 2}
   blueMaterial: {fileID: 2100000, guid: 06d5291130a4941e39b5405a346167c3, type: 2}
+  jokerMaterial: {fileID: 0}
 --- !u!135 &135378198450274258
 SphereCollider:
   m_ObjectHideFlags: 1

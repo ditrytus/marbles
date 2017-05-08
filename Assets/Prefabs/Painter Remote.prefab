@@ -1050,9 +1050,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fedbbbd991074f3b89cf5620b4cf2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors: 0100000000000000030000000400000002000000
+  colors: 00000000010000000000000001000000
   tokenPrototype: {fileID: 1955721376456578}
   switchTime: 1
+  rotationAxis:
+    x: 0
+    y: 0
+    z: 1
 --- !u!114 &114569616118855328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1158,7 +1162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b154fdcb4ab4aca971875e9dc40ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 2
+  color: 0
 --- !u!114 &114936735169042988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1175,6 +1179,7 @@ MonoBehaviour:
   greenMaterial: {fileID: 2100000, guid: 34797ba91d87e41b9a500bddcd07760a, type: 2}
   redMaterial: {fileID: 2100000, guid: 202db3ea59a254363ba5fb82afa37790, type: 2}
   blueMaterial: {fileID: 2100000, guid: 06d5291130a4941e39b5405a346167c3, type: 2}
+  jokerMaterial: {fileID: 2100000, guid: a6ce9f062ec2446e8bf115cabeee15de, type: 2}
 --- !u!114 &114979608181970990
 MonoBehaviour:
   m_ObjectHideFlags: 1

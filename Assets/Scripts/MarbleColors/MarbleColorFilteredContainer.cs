@@ -25,13 +25,12 @@ public class MarbleColorFilteredContainer : ContainerController
     private bool IsMarbleOfColor(Collider c)
     {
         var itemColor = c.gameObject.GetComponent<MarbleColorController>();
-        return itemColor != null && itemColor.color == marbleColor;
+        return itemColor != null && itemColor.color.ColorEquals(marbleColor);
     }
 
     private bool IsMarbleOfOtherColor(Collider c)
     {
-        var itemColor = c.gameObject.GetComponent<MarbleColorController>();
-        return itemColor != null && itemColor.color != marbleColor;
+        return !IsMarbleOfColor(c);
     }
 
     public void SetMarbleColor(MarbleColor color)
