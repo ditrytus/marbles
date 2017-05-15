@@ -91,7 +91,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4485268385144194}
-  - component: {fileID: 95088751019796412}
   m_Layer: 0
   m_Name: Pipe Color Switch
   m_TagString: Untagged
@@ -1380,23 +1379,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.2374954, y: 4.6009665, z: 1.7478724}
   m_Center: {x: -2.3909233, y: 0.003026736, z: 0.00401944}
---- !u!95 &95088751019796412
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1223639889529382}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5518f2cc205654ce588560b476e4d0a9, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114041344135898254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1608,7 +1590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fedbbbd991074f3b89cf5620b4cf2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors: 0400000001000000020000000300000000000000
+  colors: 0500000001000000020000000300000000000000
   tokenPrototype: {fileID: 1826427198909596}
   switchTime: 1
   rotationAxis:

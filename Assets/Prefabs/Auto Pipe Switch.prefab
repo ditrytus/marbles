@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da51a9ca093554856b4ed21313cd1d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchController: {fileID: 0}
+  switchController: {fileID: 1527997053346310}
   delay: 0.0625
 --- !u!114 &114227261054673886
 MonoBehaviour:
@@ -1500,7 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da51a9ca093554856b4ed21313cd1d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchController: {fileID: 0}
+  switchController: {fileID: 1527997053346310}
   delay: 0.0625
 --- !u!114 &114546806312526594
 MonoBehaviour:
