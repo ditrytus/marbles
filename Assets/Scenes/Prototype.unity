@@ -4130,7 +4130,7 @@ Prefab:
         type: 2}
       propertyPath: observedObject
       value: 
-      objectReference: {fileID: 392843194}
+      objectReference: {fileID: 0}
     - target: {fileID: 223721155545013716, guid: db04ac66570344ddf97919ccf11b1716,
         type: 2}
       propertyPath: m_Camera

@@ -447,6 +447,7 @@ MonoBehaviour:
     x: 1
     y: 1
     z: 1
+  rotateParallel: 1
 --- !u!114 &114911668360224610
 MonoBehaviour:
   m_ObjectHideFlags: 1

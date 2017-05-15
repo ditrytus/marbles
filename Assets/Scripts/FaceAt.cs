@@ -11,6 +11,8 @@ public class FaceAt : MonoBehaviour {
 
 	public AxesFilter filter = AxesFilter.All;
 
+	public bool rotateParallel = false;
+
 	void Start()
 	{
 		if (observedObject == null && !string.IsNullOrEmpty(observedObjectTag))
@@ -21,7 +23,14 @@ public class FaceAt : MonoBehaviour {
 
 	void Update()
 	{
-		this.transform.rotation = Quaternion.LookRotation(observedObject.transform.position.Filter(filter));
-		this.transform.forward = -this.transform.forward;
+		if (rotateParallel)
+		{
+			this.transform.rotation = observedObject.transform.rotation;	
+		} 
+		else
+		{
+			this.transform.rotation = Quaternion.LookRotation(observedObject.transform.position.Filter(filter));	
+			this.transform.forward = -this.transform.forward;					
+		}
 	}
 }
