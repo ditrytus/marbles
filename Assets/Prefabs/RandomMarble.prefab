@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114257160324796012}
   - component: {fileID: 114830735369546600}
   - component: {fileID: 114499951890773846}
+  - component: {fileID: 114283188595987464}
   m_Layer: 0
   m_Name: RandomMarble
   m_TagString: Marble
@@ -116,6 +117,17 @@ MonoBehaviour:
     min: 0
     max: 0.25
   wiggleTime: 5
+--- !u!114 &114283188595987464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad5a87ee8b1d4771b53707826761bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   particlePrefab: {fileID: 1157090209877650, guid: f6f12b286d6a34cea8f47f9b2e0a79d5,
     type: 2}
 --- !u!114 &114470582115801684
