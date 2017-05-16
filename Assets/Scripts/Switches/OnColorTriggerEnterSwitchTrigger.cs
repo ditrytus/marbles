@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnColorTriggerEnterSwitchTrigger : SwitchTriggerBase
+public class OnColorTriggerEnterSwitchTrigger : OnMarbleSwitchTriggerBase
 {
 	public MarbleColorController colorController;
 

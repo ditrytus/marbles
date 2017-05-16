@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnTriggerEnterSwitchTrigger : SwitchTriggerBase
+public class OnTriggerEnterSwitchTrigger : OnMarbleSwitchTriggerBase
 {
 	void OnTriggerEnter(Collider other)
     {
