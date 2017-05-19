@@ -293,7 +293,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1040008907324132}
   m_LocalRotation: {x: 0.000000015406178, y: 0.38268313, z: 8.881784e-16, w: 0.92387974}
-  m_LocalPosition: {x: 26.189991, y: -7.1100006, z: -8.71002}
+  m_LocalPosition: {x: 27.90767, y: -10.2714615, z: -25.035088}
   m_LocalScale: {x: 0.75000024, y: 0.7499999, z: 0.7500001}
   m_Children: []
   m_Father: {fileID: 4509739606444656}
@@ -305,8 +305,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1428369234367412}
-  m_LocalRotation: {x: -0, y: -0.71885455, z: -0, w: -0.69516057}
-  m_LocalPosition: {x: -42.087456, y: 69.61544, z: 67.379684}
+  m_LocalRotation: {x: -0, y: -0.7188545, z: -0, w: -0.69516057}
+  m_LocalPosition: {x: 26.02555, y: 10.620029, z: 26.981358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4631972271651990}
@@ -350,7 +350,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409512629445700}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.617923, y: 8.227715, z: -4.300568}
+  m_LocalPosition: {x: -7.603802, y: 4.8177257, z: -6.4639893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4064467375001974}
@@ -376,7 +376,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1784978932510060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36109167, y: 0.2429881, z: 0.52757233}
+  m_LocalPosition: {x: 0.3610867, y: 0.24299298, z: 0.52756745}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4064467375001974}
@@ -631,8 +631,8 @@ Rigidbody:
   m_GameObject: {fileID: 1257331716613098}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1030,7 +1030,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 54349025902259296}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -3.708921, y: -2.4570084, z: 6.7075677}
+  m_ConnectedAnchor: {x: -3.7089262, y: -2.4570189, z: 6.7075777}
   serializedVersion: 2
   m_Spring: 10
   m_Damper: 0.2
@@ -1050,7 +1050,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 54349025902259296}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 4.5479226, y: 5.527712, z: 1.8794298}
+  m_ConnectedAnchor: {x: -11.673809, y: 2.1177223, z: -0.28398657}
   serializedVersion: 2
   m_Spring: 10
   m_Damper: 0.2
