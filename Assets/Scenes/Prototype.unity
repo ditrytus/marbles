@@ -1597,6 +1597,9 @@ GameObject:
   - component: {fileID: 392843196}
   - component: {fileID: 392843195}
   - component: {fileID: 392843200}
+  - component: {fileID: 392843201}
+  - component: {fileID: 392843202}
+  - component: {fileID: 392843203}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1645,7 +1648,7 @@ Camera:
   far clip plane: 1000
   field of view: 24
   orthographic: 1
-  orthographic size: 29.1
+  orthographic size: 43.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1666,7 +1669,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 392843194}
   m_LocalRotation: {x: 0.18909544, y: -0, z: -0, w: 0.98195875}
-  m_LocalPosition: {x: 0.06, y: 42.72, z: -107.03}
+  m_LocalPosition: {x: 0.06, y: 33.9, z: -107.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1602111400}
@@ -1684,6 +1687,51 @@ Skybox:
   m_GameObject: {fileID: 392843194}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: 54ab362cf51db4afa901e53d73f168ff, type: 2}
+--- !u!95 &392843201
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392843194}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f4e40abcd81254f84bb7d434140cf664, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &392843202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392843194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2b853228442461fa6c2b4eda8042ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 392843201}
+  key: 27
+  triggerName: GoOut
+--- !u!114 &392843203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392843194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2b853228442461fa6c2b4eda8042ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 392843201}
+  key: 13
+  triggerName: GoIn
 --- !u!1 &395751434
 GameObject:
   m_ObjectHideFlags: 0
@@ -8155,14 +8203,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1852375812}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.9, y: 56.6, z: -18.3}
+  m_LocalRotation: {x: 0, y: 0.3577976, z: 0, w: 0.9337992}
+  m_LocalPosition: {x: 19, y: 56.6, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 392843199}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 41.93, z: 0}
 --- !u!1 &1854731866
 GameObject:
   m_ObjectHideFlags: 0
