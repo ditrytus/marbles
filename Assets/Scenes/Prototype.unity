@@ -1778,7 +1778,7 @@ MonoBehaviour:
   frontCamera: {fileID: 1254667255}
   backCamera: {fileID: 227446278}
   levelBoundary: {fileID: 895910019}
-  duration: 15
+  duration: 10
   defaultNearPlane:
     min: 0.3
     max: 900
@@ -3988,27 +3988,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4682255294177280, guid: 560374c3bfcf94ee19351e4f91ff58c6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.5000021
-      objectReference: {fileID: 0}
-    - target: {fileID: 4682255294177280, guid: 560374c3bfcf94ee19351e4f91ff58c6, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1019010565780426, guid: 560374c3bfcf94ee19351e4f91ff58c6, type: 2}
       propertyPath: m_Name
       value: Switch (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4682255294177280, guid: 560374c3bfcf94ee19351e4f91ff58c6, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -332.853
-      objectReference: {fileID: 0}
-    - target: {fileID: 23511736469802102, guid: 560374c3bfcf94ee19351e4f91ff58c6,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a6ce9f062ec2446e8bf115cabeee15de, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 560374c3bfcf94ee19351e4f91ff58c6, type: 2}
   m_IsPrefabParent: 0
