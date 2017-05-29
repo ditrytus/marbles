@@ -10,23 +10,53 @@ ModelImporter:
     100004: Cylinder
     100006: Cylinder_000
     100008: Cylinder_001
+    100010: Axis
+    100012: Cover
+    100014: Cylinder_Tens
+    100016: Cylinder_Units
+    100018: Cover_In
+    100020: Cover_Out
     400000: //RootNode
     400002: Cube
     400004: Cylinder
     400006: Cylinder_000
     400008: Cylinder_001
+    400010: Axis
+    400012: Cover
+    400014: Cylinder_Tens
+    400016: Cylinder_Units
+    400018: Cover_In
+    400020: Cover_Out
     2300000: Cube
     2300002: Cylinder
     2300004: Cylinder_000
     2300006: Cylinder_001
+    2300008: Axis
+    2300010: Cover
+    2300012: Cylinder_Tens
+    2300014: Cylinder_Units
+    2300016: Cover_In
+    2300018: Cover_Out
     3300000: Cube
     3300002: Cylinder
     3300004: Cylinder_000
     3300006: Cylinder_001
+    3300008: Axis
+    3300010: Cover
+    3300012: Cylinder_Tens
+    3300014: Cylinder_Units
+    3300016: Cover_In
+    3300018: Cover_Out
     4300000: Cylinder
     4300002: Cube
     4300004: Cylinder_001
     4300006: Cylinder_000
+    4300008: Axis
+    4300010: Cover
+    4300012: Cylinder_Tens
+    4300014: Cylinder_Units
+    4300016: Cover_Out
+    4300018: Cover_In
     7400000: Default Take
     9500000: //RootNode
   materials:
