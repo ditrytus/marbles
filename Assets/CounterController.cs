@@ -16,7 +16,7 @@ public class CounterController : MonoBehaviour {
 
 	public int destinationValue = 0;
 
-	private int currentValue;
+	public int currentValue;
 
 	private bool isRotating = false;
 
@@ -24,7 +24,7 @@ public class CounterController : MonoBehaviour {
 
 	private float rotationStartTime;
 
-	private int direction;
+	public int direction;
 
 	public AxesFilter rotationAxes;
 
@@ -36,7 +36,7 @@ public class CounterController : MonoBehaviour {
 		angles = new Vector3[cylinders.Length];
 		for (int i=0; i<angles.Length; i++)
 		{
-			angles[i] = cylinders[i].localEulerAngles;
+			angles[i] = cylinders[i].localRotation.eulerAngles;
 		}
 	}
 
@@ -50,9 +50,12 @@ public class CounterController : MonoBehaviour {
     {
         if (destinationValue != currentValue)
         {
-            isRotating = true;
-            rotationStartTime = Time.time;
-			direction = destinationValue > currentValue ? 1 : -1;
+			if (!isRotating)
+			{
+				isRotating = true;
+				rotationStartTime = Time.time;
+				direction = destinationValue > currentValue ? 1 : -1;
+			}
         }
     }
 
@@ -60,23 +63,45 @@ public class CounterController : MonoBehaviour {
 	{
 		if (isRotating)
 		{
-			var t = Time.time - rotationStartTime;
+			var t = (Time.time - rotationStartTime) / unitDuration;
 			for (int i=0; i<cylinders.Length; i++)
             {
 				var isDigitChanging = GetDigit(i, currentValue) != GetDigit(i, currentValue + direction);
                 if (isDigitChanging)
 				{
-					if (t < 1.0)
+					float angleDelta = unitAngle * direction;
+                    if (t < 1.0)
 					{
-						//cylinders[i].localEulerAngles = 
+                        var newAngles = new Vector3(
+                            Mathf.Lerp(angles[i].x, angles[i].x + angleDelta, t),
+                            Mathf.Lerp(angles[i].y, angles[i].y + angleDelta, t),
+                            Mathf.Lerp(angles[i].z, angles[i].z + angleDelta, t)
+						);
+                        cylinders[i].localRotation = Quaternion.Euler(newAngles.FilterCombine(angles[i], rotationAxes));
+					}
+					else
+					{
+						var newAngles = new Vector3(
+                            angles[i].x + angleDelta,
+                            angles[i].y + angleDelta,
+                            angles[i].z + angleDelta
+						).FilterCombine(angles[i], rotationAxes);
+                        cylinders[i].localRotation = Quaternion.Euler(newAngles);
+						angles[i] = newAngles;
 					}
 				}
             }
+			if (t>=1.0)
+			{
+				isRotating = false;
+				currentValue = currentValue + direction;
+				StartRotating();
+			}
         }
 	}
 
     private float GetDigit(int i, int value)
     {
-        return (value / Mathf.Pow(unitBase, i)) % unitBase;
+        return (value / (int)Mathf.Pow(unitBase, i)) % unitBase;
     }
 }
