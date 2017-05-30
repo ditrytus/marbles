@@ -10,6 +10,8 @@ public class IncrementOnButton : MonoBehaviour {
 
 	public KeyCode decreaseKey;
 
+	public int step = 1;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -20,11 +22,11 @@ public class IncrementOnButton : MonoBehaviour {
 	{
 		if (Input.GetKeyDown(increaseKey))
 		{
-			counterController.SetValue(counterController.destinationValue + 1);
+			counterController.SetValue(counterController.destinationValue + step);
 		}
 		if (Input.GetKeyDown(decreaseKey))
 		{
-			counterController.SetValue(counterController.destinationValue - 1);
+			counterController.SetValue(counterController.destinationValue - step);
 		}
 	}
 }

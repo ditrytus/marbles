@@ -16,7 +16,7 @@ public class CounterController : MonoBehaviour {
 
 	public int destinationValue = 0;
 
-	public int currentValue;
+	private int currentValue;
 
 	private bool isRotating = false;
 
@@ -24,7 +24,7 @@ public class CounterController : MonoBehaviour {
 
 	private float rotationStartTime;
 
-	public int direction;
+	private int direction;
 
 	public AxesFilter rotationAxes;
 
@@ -69,15 +69,15 @@ public class CounterController : MonoBehaviour {
 				var isDigitChanging = GetDigit(i, currentValue) != GetDigit(i, currentValue + direction);
                 if (isDigitChanging)
 				{
-					float angleDelta = unitAngle * direction;
+					float angleDelta = - unitAngle * direction;
                     if (t < 1.0)
 					{
                         var newAngles = new Vector3(
                             Mathf.Lerp(angles[i].x, angles[i].x + angleDelta, t),
                             Mathf.Lerp(angles[i].y, angles[i].y + angleDelta, t),
                             Mathf.Lerp(angles[i].z, angles[i].z + angleDelta, t)
-						);
-                        cylinders[i].localRotation = Quaternion.Euler(newAngles.FilterCombine(angles[i], rotationAxes));
+						).FilterCombine(angles[i], rotationAxes);
+                        cylinders[i].localRotation = Quaternion.Euler(newAngles);
 					}
 					else
 					{
