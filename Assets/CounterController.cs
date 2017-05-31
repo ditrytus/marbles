@@ -42,6 +42,7 @@ public class CounterController : MonoBehaviour {
 
 	public void SetValue(int newValue)
     {
+		Debug.Log("New counter value: " + newValue);
         destinationValue = newValue;
         StartRotating();
     }

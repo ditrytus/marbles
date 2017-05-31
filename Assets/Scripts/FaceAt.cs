@@ -13,6 +13,8 @@ public class FaceAt : MonoBehaviour {
 
 	public bool rotateParallel = false;
 
+	public Vector3 initialRotationEuler = Vector3.zero;
+
 	void Start()
 	{
 		if (observedObject == null && !string.IsNullOrEmpty(observedObjectTag))
@@ -25,11 +27,11 @@ public class FaceAt : MonoBehaviour {
 	{
 		if (rotateParallel)
 		{
-			this.transform.rotation = observedObject.transform.rotation;	
+			this.transform.rotation = Quaternion.Euler(initialRotationEuler) * observedObject.transform.rotation;	
 		} 
 		else
 		{
-			this.transform.rotation = Quaternion.LookRotation(observedObject.transform.position.Filter(filter));	
+			this.transform.rotation = Quaternion.Euler(initialRotationEuler) * Quaternion.LookRotation(observedObject.transform.position.Filter(filter));	
 			this.transform.forward = -this.transform.forward;					
 		}
 	}
