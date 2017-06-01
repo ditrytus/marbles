@@ -32,7 +32,7 @@ public class FaceAt : MonoBehaviour {
 		else
 		{
 			this.transform.rotation = Quaternion.Euler(initialRotationEuler) * Quaternion.LookRotation(observedObject.transform.position.Filter(filter));	
-			this.transform.forward = -this.transform.forward;					
+			this.transform.forward = -this.transform.forward;			
 		}
 	}
 }
