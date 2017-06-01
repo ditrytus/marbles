@@ -16,12 +16,14 @@ public class ContainerController : RxBehaviour {
 	protected void Start ()
 	{
 		var sub1 = ProcessOnEnter(this.OnTriggerEnterAsObservable())
+			.Where(x => !x.isTrigger)
 			.Subscribe(x => {
 				content.Add(x.gameObject);
 				Debug.Log(string.Format("Object {0} added to container {1}", x.gameObject, this.gameObject));
 			});
 
 		var sub2 = this.OnTriggerExitAsObservable()
+			.Where(x => !x.isTrigger)
 			.Subscribe(x => {
 				content.Remove(x.gameObject);
 				Debug.Log(string.Format("Object {0} removed from container {1}", x.gameObject, this.gameObject));
