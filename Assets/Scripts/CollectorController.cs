@@ -10,14 +10,17 @@ public class CollectorController : RxBehaviour {
 
 	public ContainerController container;
 
-	
 	public int RequiredCount = 10;
+
+	public bool Countdown = true;
+
+	public float delay = 0.5f;
 
 	void Start ()
 	{
 		var sub1 = container.content.ObserveCountChanged(true)
-			.Delay(TimeSpan.FromMilliseconds(500))
-			.Select(c => RequiredCount - c)
+			.Delay(TimeSpan.FromSeconds(delay))
+			.Select(c => Countdown ? RequiredCount - c : c)
 			.Subscribe(c => {
 				counter.SetValue(c);
 			});
