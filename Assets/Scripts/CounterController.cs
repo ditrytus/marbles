@@ -98,6 +98,7 @@ public class CounterController : MonoBehaviour {
 			{
 				isRotating = false;
 				currentValue = currentValue + direction;
+				BroadcastMessage(CounterMessages.ValueChanged, currentValue, SendMessageOptions.DontRequireReceiver);
 				StartRotating();
 			}
         }
