@@ -28,6 +28,8 @@ public class CounterController : MonoBehaviour {
 
 	public AxesFilter rotationAxes;
 
+	public IntRange valueRange = new IntRange(0, 99);
+
 	void Start ()
 	{
 		currentValue = destinationValue;
@@ -43,7 +45,7 @@ public class CounterController : MonoBehaviour {
 	public void SetValue(int newValue)
     {
 		Debug.Log("New counter value: " + newValue);
-        destinationValue = newValue;
+        destinationValue = valueRange.Clamp(newValue);
         StartRotating();
     }
 

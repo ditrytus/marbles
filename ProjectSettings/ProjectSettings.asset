@@ -466,6 +466,9 @@ PlayerSettings:
   vrEditorSettings: {}
   cloudServicesEnabled:
     Build: 1
+    Collab: 0
+    ErrorHub: 0
+    Hub: 0
     UNet: 1
   cloudProjectId: 09efbb3a-e468-4a7b-92fb-c5ad35ea3b08
   projectName: marbles
