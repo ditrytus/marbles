@@ -53,6 +53,8 @@ public class DragAndDropController : RxBehaviour
 
     public int dragMouseButton = 0;
 
+    public Vector2 touchMoveOffset;
+
     private bool IsDragging 
     {
         get
@@ -118,11 +120,11 @@ public class DragAndDropController : RxBehaviour
                 {
                     draggingFingerId = null;
 
-                    EndDrag(touch.position);
+                    EndDrag(touch.position + touchMoveOffset);
                 }
                 else if (touch.phase == TouchPhase.Moved)
                 {
-                    DragMoved(touch.position);
+                    DragMoved(touch.position + touchMoveOffset);
                 }
             }
         }

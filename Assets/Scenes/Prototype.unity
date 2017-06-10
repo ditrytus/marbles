@@ -3702,6 +3702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sourceObject: {fileID: 202271522}
   dragMouseButton: 0
+  touchMoveOffset: {x: 0, y: 60}
 --- !u!114 &1067009556
 MonoBehaviour:
   m_ObjectHideFlags: 0
