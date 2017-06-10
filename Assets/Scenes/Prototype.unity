@@ -4339,11 +4339,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1147227423}
     m_Modifications:
-    - target: {fileID: 114911668360224610, guid: db04ac66570344ddf97919ccf11b1716,
-        type: 2}
-      propertyPath: colorBag.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4222525045654778, guid: db04ac66570344ddf97919ccf11b1716, type: 2}
       propertyPath: m_LocalPosition.x
       value: -28.1
@@ -4375,34 +4370,6 @@ Prefab:
     - target: {fileID: 4222525045654778, guid: db04ac66570344ddf97919ccf11b1716, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: observedObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 392843198}
-    - target: {fileID: 114911668360224610, guid: db04ac66570344ddf97919ccf11b1716,
-        type: 2}
-      propertyPath: colorBag.Array.data[1]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114911668360224610, guid: db04ac66570344ddf97919ccf11b1716,
-        type: 2}
-      propertyPath: colorBag.Array.data[2]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114911668360224610, guid: db04ac66570344ddf97919ccf11b1716,
-        type: 2}
-      propertyPath: colorBag.Array.data[3]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114911668360224610, guid: db04ac66570344ddf97919ccf11b1716,
-        type: 2}
-      propertyPath: colorBag.Array.data[4]
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db04ac66570344ddf97919ccf11b1716, type: 2}

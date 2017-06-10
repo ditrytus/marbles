@@ -10,7 +10,9 @@ public class CounterController : MonoBehaviour {
 
 	public int unitBase = 10;
 
-	public float unitDuration = 1.0f;
+	public float unitDurationUp = 1.0f;
+
+	public float unitDurationDown = 1.0f;
 
 	public Transform[] cylinders;
 
@@ -66,7 +68,7 @@ public class CounterController : MonoBehaviour {
 	{
 		if (isRotating)
 		{
-			var t = (Time.time - rotationStartTime) / unitDuration;
+			var t = (Time.time - rotationStartTime) / (direction > 0 ? unitDurationUp : unitDurationDown);
 			for (int i=0; i<cylinders.Length; i++)
             {
 				var isDigitChanging = GetDigit(i, currentValue) != GetDigit(i, currentValue + direction);

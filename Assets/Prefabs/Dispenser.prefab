@@ -974,7 +974,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitBase: 10
-  unitDuration: 0.25
+  unitDurationUp: 0.25
+  unitDurationDown: 1
   cylinders:
   - {fileID: 4640365114177722}
   - {fileID: 4021463718040026}
@@ -1011,7 +1012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 0.1
-  maxCount: 3
+  maxCount: 25
   prefab: {fileID: 1739119305881630, guid: 4e4267ef1ac3145eebef4b3162438332, type: 2}
   spawnPoint: {fileID: 1978716016575502}
 --- !u!114 &114569149469204190

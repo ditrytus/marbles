@@ -298,8 +298,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1704848492407592}
-  m_LocalRotation: {x: -0, y: 0.92064124, z: -0, w: -0.3904097}
-  m_LocalPosition: {x: -39.370625, y: -26.5, z: 29.938046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.1, y: -61.3, z: -1.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4622450565053312}
@@ -872,7 +872,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitBase: 10
-  unitDuration: 1
+  unitDurationUp: 0.5
+  unitDurationDown: 1
   cylinders:
   - {fileID: 4842765109894742}
   - {fileID: 4120978696083032}
@@ -910,7 +911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: {fileID: 114821354179008264}
   container: {fileID: 114534869074946022}
-  RequiredCount: 1
+  RequiredCount: 10
   Countdown: 1
   delay: 0.5
 --- !u!135 &135814577038036676
