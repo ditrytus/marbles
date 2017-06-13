@@ -44,7 +44,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1413111523294122
 GameObject:
@@ -110,7 +110,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4076101438533068
 Transform:
@@ -131,8 +131,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1997677990111014}
-  m_LocalRotation: {x: -0, y: 0.92064124, z: -0, w: -0.3904097}
-  m_LocalPosition: {x: 0.042877197, y: 1.7299995, z: 0.027565002}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -31.2, y: 37.8, z: 1.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4903390156686694}
@@ -142,7 +142,7 @@ Transform:
   - {fileID: 4958722936282402}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &4487914704534770
 Transform:
   m_ObjectHideFlags: 1
@@ -356,3 +356,5 @@ MonoBehaviour:
     x: 1
     y: 0
     z: 1
+  rotateParallel: 0
+  initialRotationEuler: {x: 0, y: 0, z: 0}
