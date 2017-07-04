@@ -89,8 +89,6 @@ public class Curve : MonoBehaviour {
 	{    
          float t = 0.0f;
 
-
-
          for(int pointInTimeOnCurve = 0; pointInTimeOnCurve < positions.Length; pointInTimeOnCurve++)
          {
              t = Mathf.InverseLerp(0, positions.Length-1, pointInTimeOnCurve);
