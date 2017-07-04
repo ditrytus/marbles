@@ -19,10 +19,8 @@ public class BoundingBox : MonoBehaviour {
         AddChildrenToBounds(transform);
     }
    
-     
-   
-    void AddChildrenToBounds(Transform child) {
-   
+    void AddChildrenToBounds(Transform child)
+    {
         foreach (Transform grandChild in child)
 		{
 			var renderer = grandChild.GetComponent<Renderer>();
@@ -38,7 +36,6 @@ public class BoundingBox : MonoBehaviour {
    
             AddChildrenToBounds(grandChild);
         }
-   
     }
 
     void OnDrawGizmosSelected()

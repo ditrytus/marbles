@@ -9,7 +9,7 @@ public class Curve : MonoBehaviour {
 
 	public LineRenderer lineRenderer;
 
-	private Vector3[] oldPoints;
+	private Vector3[] oldPointsPositions;
 
     public Vector3[] positions;
 
@@ -17,23 +17,31 @@ public class Curve : MonoBehaviour {
 
 	public float smoothness = 3.0f;
 
+    private Vector3[] tempPositions;
+
 	// Use this for initialization
 	void Start ()
     {
-        var points = GetPoints();
+        oldPointsPositions = points.Select(p => p.position).ToArray();
+        tempPositions = new Vector3[points.Length];
+        positions = new Vector3[(points.Length * Mathf.RoundToInt(smoothness))];
 
-        SetPoints(points);
+        SetPoints();
     }
 
-    private void SetPoints(Vector3[] points)
+    private void SetPoints()
     {
-        oldPoints = points;
-        positions = MakeSmoothCurve(points, smoothness);
-        SetLendth();
-        RenderCurve(positions);
+        for (int i=0; i<points.Length; i++)
+        {
+            oldPointsPositions[i] = points[i].position;
+        }
+
+        MakeSmoothCurve();
+        SetLength();
+        RenderCurve();
     }
 
-    private void SetLendth()
+    private void SetLength()
     {
         length = 0;
         for (int i = 0; i < positions.Length - 1; i++)
@@ -47,7 +55,7 @@ public class Curve : MonoBehaviour {
         return points.Select(p => p.position).ToArray();
     }
 
-    private void RenderCurve(Vector3[] positions)
+    private void RenderCurve()
     {
         lineRenderer.numPositions = positions.Length;
         for (int i = 0; i < positions.Length; i++)
@@ -59,14 +67,13 @@ public class Curve : MonoBehaviour {
     // Update is called once per frame
     void Update ()
 	{
-		var points = GetPoints();
 		bool changed = true;
-		if (points.Length == oldPoints.Length)
+		if (points.Length == oldPointsPositions.Length)
 		{
 			changed = false;
 			for(int i=0; i<points.Length; i++)
 			{
-				if (points[i] != oldPoints[i])
+				if (points[i].position != oldPointsPositions[i])
 				{
 					changed = true;
 				}
@@ -74,39 +81,34 @@ public class Curve : MonoBehaviour {
 		}
 		if (changed)
 		{
-			SetPoints(points);
+			SetPoints();
 		}
 	}
 
-	public Vector3[] MakeSmoothCurve(Vector3[] arrayToCurve,float smoothness)
-	{
-         List<Vector3> points;
-         List<Vector3> curvedPoints;
-         int pointsLength = 0;
-         int curvedLength = 0;
-         
-         if(smoothness < 1.0f) smoothness = 1.0f;
-         
-         pointsLength = arrayToCurve.Length;
-         
-         curvedLength = (pointsLength * Mathf.RoundToInt(smoothness))-1;
-         curvedPoints = new List<Vector3>(curvedLength);
-         
+	public void MakeSmoothCurve()
+	{    
          float t = 0.0f;
-         for(int pointInTimeOnCurve = 0;pointInTimeOnCurve < curvedLength+1;pointInTimeOnCurve++){
-             t = Mathf.InverseLerp(0,curvedLength,pointInTimeOnCurve);
+
+
+
+         for(int pointInTimeOnCurve = 0; pointInTimeOnCurve < positions.Length; pointInTimeOnCurve++)
+         {
+             t = Mathf.InverseLerp(0, positions.Length-1, pointInTimeOnCurve);
              
-             points = new List<Vector3>(arrayToCurve);
+             for (int i = 0; i<points.Length; i++)
+             {
+                tempPositions[i] = points[i].position;
+             }
              
-             for(int j = pointsLength-1; j > 0; j--){
-                 for (int i = 0; i < j; i++){
-                     points[i] = (1-t)*points[i] + t*points[i+1];
+             for(int j = points.Length-1; j > 0; j--)
+             {
+                 for (int i = 0; i < j; i++)
+                 {
+                     tempPositions[i] = (1 - t) * tempPositions[i] + t * tempPositions[i + 1];
                  }
              }
              
-             curvedPoints.Add(points[0]);
+             positions[pointInTimeOnCurve] = tempPositions[0];
          }
-         
-         return(curvedPoints.ToArray());
      }
 }
