@@ -3935,7 +3935,7 @@ Prefab:
     - target: {fileID: 114544471831948482, guid: 14916dbe2b7a4470893a2c438dc78bba,
         type: 2}
       propertyPath: maxCount
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114781891714199436, guid: 14916dbe2b7a4470893a2c438dc78bba, type: 2}
