@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 049e98652a1194f949b085576543ee4e
+timeCreated: 1499357453
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bowhouse
+  fontNames:
+  - Bowhouse
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
