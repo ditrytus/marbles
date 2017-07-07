@@ -18,7 +18,7 @@ public class CounterController : MonoBehaviour {
 
 	public int destinationValue = 0;
 
-	private int currentValue;
+	public IntReactiveProperty currentValue;
 
 	private bool isRotating = false;
 
@@ -34,7 +34,8 @@ public class CounterController : MonoBehaviour {
 
 	void Start ()
 	{
-		currentValue = destinationValue;
+		currentValue = new IntReactiveProperty(destinationValue);
+
 		unitAngle = 360.0f / unitBase;
 
 		angles = new Vector3[cylinders.Length];
@@ -53,13 +54,13 @@ public class CounterController : MonoBehaviour {
 
     private void StartRotating()
     {
-        if (destinationValue != currentValue)
+        if (destinationValue != currentValue.Value)
         {
 			if (!isRotating)
 			{
 				isRotating = true;
 				rotationStartTime = Time.time;
-				direction = destinationValue > currentValue ? 1 : -1;
+				direction = destinationValue > currentValue.Value ? 1 : -1;
 			}
         }
     }
@@ -71,7 +72,7 @@ public class CounterController : MonoBehaviour {
 			var t = (Time.time - rotationStartTime) / (direction > 0 ? unitDurationUp : unitDurationDown);
 			for (int i=0; i<cylinders.Length; i++)
             {
-				var isDigitChanging = GetDigit(i, currentValue) != GetDigit(i, currentValue + direction);
+				var isDigitChanging = GetDigit(i, currentValue.Value) != GetDigit(i, currentValue.Value + direction);
                 if (isDigitChanging)
 				{
 					float angleDelta = - unitAngle * direction;
@@ -99,8 +100,8 @@ public class CounterController : MonoBehaviour {
 			if (t>=1.0)
 			{
 				isRotating = false;
-				currentValue = currentValue + direction;
-				BroadcastMessage(CounterMessages.ValueChanged, currentValue, SendMessageOptions.DontRequireReceiver);
+				currentValue.SetValueAndForceNotify(currentValue.Value + direction);
+				BroadcastMessage(CounterMessages.ValueChanged, currentValue.Value, SendMessageOptions.DontRequireReceiver);
 				StartRotating();
 			}
         }
