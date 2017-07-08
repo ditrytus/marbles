@@ -14,7 +14,9 @@ public class LevelInOutEffect : MonoBehaviour {
 
 	public Collider levelBoundary;
 
-	public float duration;
+	public float inDuration;
+
+	public float outDuration;
 
 	public FloatRange defaultNearPlane;
 
@@ -71,7 +73,7 @@ public class LevelInOutEffect : MonoBehaviour {
 		if (isAnimating)
 		{
 			var nearRange = GetNearRange();
-            var t = (Time.time - startTime) / duration;
+            var t = (Time.time - startTime) / (state == InOutState.In ? inDuration : outDuration);
 			var isOver = t >= 1.0;
 			animatedCamera.nearClipPlane = !isOver ? Mathf.Lerp(
 				state == InOutState.In ? nearRange.max : nearRange.min,
