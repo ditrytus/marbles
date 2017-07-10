@@ -9,7 +9,11 @@
         "Behaviour",
         "Collider",
         "Mathf",
-        "Lerp"
+        "Lerp",
+        "collapsibles",
+        "IPausable",
+        "pausables",
+        "Pausable"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.

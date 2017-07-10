@@ -11,6 +11,8 @@ public class SpawnOnInterval : RxBehaviour {
 
 	public GameObject spawnPoint;
 
+	public GameObject parent;
+
 	public IObservable<Unit> SpawningFinished
 	{
 		get
@@ -27,7 +29,7 @@ public class SpawnOnInterval : RxBehaviour {
 		var sub1 = intervalObservable
 			.Subscribe(
 				_ => {
-					var obj = Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+					var obj = Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation, parent.transform);
 					obj.layer = this.gameObject.layer;
 				},
 				() => {
