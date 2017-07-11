@@ -16,14 +16,6 @@ public class RigidBodyPausableWrapper : IPausable
 
 	private bool isPaused = false;
 
-    public bool IsPaused
-	{
-		get
-		{
-			return isPaused;
-		}
-	}
-
     public void Pause()
     {
         if (isPaused)

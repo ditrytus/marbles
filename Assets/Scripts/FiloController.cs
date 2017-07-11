@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using System.Linq;
+using System;
 
-public class FiloController : RxBehaviour {
-
+public class FiloController : RxBehaviour
+{
 	public int maxCount = 5;
 
 	public float upPositionAngle;
@@ -45,7 +46,7 @@ public class FiloController : RxBehaviour {
     {
 		get
 		{
-			return Time.time - startTime;
+			return PausableTime.Instance.Time - startTime;
 		}
     }
 
@@ -65,7 +66,7 @@ public class FiloController : RxBehaviour {
 				if (count == 0 && state == FiloState.Releasing)
 				{
 					state = FiloState.SwitchingUp;
-					startTime = Time.time;
+					startTime = PausableTime.Instance.Time;
 				}
 			});
 
@@ -74,13 +75,18 @@ public class FiloController : RxBehaviour {
 
 	void FixedUpdate()
 	{
+		if (PausableTime.Instance.IsPaused)
+		{
+			return;
+		}
+
 		if (state == FiloState.SettleBeforeSwitchingDown)
 		{
 			if (container.content.All(item => item.GetComponent<Rigidbody>().IsSleeping()))
 			{
 				state = FiloState.SwitchingDown;
 				eulerAngles = transform.localEulerAngles;
-				startTime = Time.time;
+				startTime = PausableTime.Instance.Time;
 			}
 		}
 		if (state == FiloState.SwitchingDown)
@@ -106,7 +112,6 @@ public class FiloController : RxBehaviour {
 			foreach (var item in container.content.Take(container.content.Count - 1))
 			{
 				var body = item.GetComponent<Rigidbody>();
-				//body.velocity = body.velocity * slowDownFactor;
 				body.AddForce(-body.velocity * slowDownFactor, ForceMode.VelocityChange);
 			}
 		}

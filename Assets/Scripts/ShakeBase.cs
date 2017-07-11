@@ -22,9 +22,14 @@ public abstract class ShakeBase : MonoBehaviour
 
     void Update ()
 	{
+        if (PausableTime.Instance.IsPaused)
+		{
+			return;
+		}
+        
 		if (isShaking)
 		{
-			var deltaTime = Time.time - startTime;
+			var deltaTime = PausableTime.Instance.Time - startTime;
 			if (deltaTime >= shakeTime)
             {
                 SetRotation(initialAngles);
@@ -46,7 +51,7 @@ public abstract class ShakeBase : MonoBehaviour
 
     protected void StartShaking()
     {
-        startTime = Time.time;
+        startTime = PausableTime.Instance.Time;
         initialAngles = shakedObject.transform.localEulerAngles;
         isShaking = true;
     }

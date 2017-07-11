@@ -36,9 +36,14 @@ public class SwitchController : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+        if (PausableTime.Instance.IsPaused)
+        {
+            return;
+        }
+
 		if (isSwitching)
         {
-            var currentTime = Time.time - timeStarted;
+            var currentTime = PausableTime.Instance.Time - timeStarted;
             var progress = currentTime / switchingDuration;
 
             var fromAngle = GetAngleForPosition();
@@ -67,7 +72,7 @@ public class SwitchController : MonoBehaviour {
         if (!this.isSwitching)
         {
             isSwitching = true;
-            timeStarted = Time.time;
+            timeStarted = PausableTime.Instance.Time;
         }
     }
 }

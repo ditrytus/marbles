@@ -14,13 +14,18 @@ public class MoveAlongCurve : MonoBehaviour {
 	void Start () {
 		curve = GetComponentInParent<Curve>();
         duration = GetComponentInParent<SwitchTriggerBase>().delay;
-		startTime = Time.time;	
+		startTime = PausableTime.Instance.Time;	
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		var currentTime = Time.time - startTime;
+		if (PausableTime.Instance.IsPaused)
+		{
+			return;
+		}
+
+		var currentTime = PausableTime.Instance.Time - startTime;
         var currentDistance = Mathf.Lerp(0.0f, curve.length, currentTime / duration);
 
 		var distanceSoFar = 0.0f;

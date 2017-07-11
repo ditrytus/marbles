@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RotateToward : MonoBehaviour
 {
-
 	public Transform destination;
 
 	public float duration;
@@ -30,18 +29,23 @@ public class RotateToward : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (PausableTime.Instance.IsPaused)
+		{
+			return;
+		}
+
         Vector3 destDir = destination.TransformDirection(direction);
 		if (!isRotating && destDir != prevDestDir)
 		{
 			isRotating = true;
 			prevDestDir = destDir;
-			startTime = Time.time;
+			startTime = PausableTime.Instance.Time;
 			startRotation = transform.rotation;
 			startDirection = transform.TransformDirection(direction);
 		}
 		if (isRotating)
 		{
-			var t = (Time.time - startTime) / duration;
+			var t = (PausableTime.Instance.Time - startTime) / duration;
 			if (t < 1.0)
 			{
 				transform.rotation = startRotation * Quaternion.Lerp(

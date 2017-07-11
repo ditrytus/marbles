@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -62,7 +63,7 @@ public class ColorWheelController : MonoBehaviour
 		previousAngle = currentAngle;
 		destinationAngle -= GetAnglesForIndex(i - currentColorIndex);
 		currentColorIndex = i;
-		startTime = Time.time;
+		startTime = PausableTime.Instance.Time;
 		
 	}
 
@@ -80,9 +81,14 @@ public class ColorWheelController : MonoBehaviour
     // Update is called once per frame
     void Update ()
 	{
+		if (PausableTime.Instance.IsPaused)
+		{
+			return;
+		}
+
 		if (isSwitching)
         {
-            var deltaTime = Time.time - startTime;
+            var deltaTime = PausableTime.Instance.Time - startTime;
 			if (deltaTime > switchTime)
 			{
 				SetRotation(destinationAngle);

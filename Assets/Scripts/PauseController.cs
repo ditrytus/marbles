@@ -7,7 +7,7 @@ using System;
 public class PauseController : MonoBehaviour, IPausable
 {
 	public GameObject[] objectsToDeactivate;
-
+	
 	private Dictionary<GameObject, bool> objectsStateToResume;
 
 	public GameObject rootToPause;
@@ -17,14 +17,6 @@ public class PauseController : MonoBehaviour, IPausable
 	private bool isPaused = false;
 
 	private IPausable[] pausables;
-
-    public bool IsPaused
-	{
-		get
-		{
-			return isPaused;
-		}
-	}
 
     void Start()
 	{
@@ -59,6 +51,8 @@ public class PauseController : MonoBehaviour, IPausable
 		{
 			pausable.Pause();
 		}
+		
+		PausableTime.Instance.Pause();
 
 		isPaused = true;
 	}
@@ -87,6 +81,8 @@ public class PauseController : MonoBehaviour, IPausable
 		{
 			pausable.Resume();
 		}
+
+		PausableTime.Instance.Resume();
 
 		isPaused = false;
 	}

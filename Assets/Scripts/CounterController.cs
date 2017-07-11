@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using System.Linq;
+using System;
 
-public class CounterController : MonoBehaviour {
-
+public class CounterController : MonoBehaviour
+{
 	private float unitAngle;
 
 	public int unitBase = 10;
@@ -59,7 +60,7 @@ public class CounterController : MonoBehaviour {
 			if (!isRotating)
 			{
 				isRotating = true;
-				rotationStartTime = Time.time;
+				rotationStartTime = PausableTime.Instance.Time;
 				direction = destinationValue > currentValue.Value ? 1 : -1;
 			}
         }
@@ -67,9 +68,14 @@ public class CounterController : MonoBehaviour {
 
     void Update ()
 	{
+		if (PausableTime.Instance.IsPaused)
+		{
+			return;
+		}
+
 		if (isRotating)
 		{
-			var t = (Time.time - rotationStartTime) / (direction > 0 ? unitDurationUp : unitDurationDown);
+			var t = (PausableTime.Instance.Time - rotationStartTime) / (direction > 0 ? unitDurationUp : unitDurationDown);
 			for (int i=0; i<cylinders.Length; i++)
             {
 				var isDigitChanging = GetDigit(i, currentValue.Value) != GetDigit(i, currentValue.Value + direction);
