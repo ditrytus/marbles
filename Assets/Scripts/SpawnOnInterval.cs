@@ -2,7 +2,7 @@
 using UniRx;
 using System;
 
-public class SpawnOnInterval : RxBehaviour {
+public class SpawnOnInterval : MonoBehaviour {
 	public float interval;
 
 	public int maxCount = -1;
@@ -23,19 +23,40 @@ public class SpawnOnInterval : RxBehaviour {
 
 	private Subject<Unit> spawningFinished = new Subject<Unit>();
 
-	void Start () {
-		var intervalObservable = Observable.Interval(TimeSpan.FromSeconds(interval));
-		intervalObservable = maxCount < 0 ? intervalObservable : intervalObservable.Take(maxCount);
-		var sub1 = intervalObservable
-			.Subscribe(
-				_ => {
-					var obj = Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation, parent.transform);
-					obj.layer = this.gameObject.layer;
-				},
-				() => {
-					spawningFinished.OnNext(Unit.Default);
-				}
-			);
-		AddSubscriptions(sub1);
+	private float startTime;
+
+	private int count = 0;
+
+	void Start ()
+	{
+		startTime = PausableTime.Instance.Time;
+	}
+
+	void Update()
+	{
+		if (PausableTime.Instance.IsPaused)
+		{
+			return;
+		}
+		
+		if (count >= maxCount)
+		{
+			return;
+		}
+
+		var deltaTime = PausableTime.Instance.Time - startTime;
+		if (deltaTime >= interval)
+		{
+			var obj = Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation, parent.transform);
+			obj.layer = this.gameObject.layer;
+
+			startTime = PausableTime.Instance.Time;
+			count++;
+
+			if (count >= maxCount)
+			{
+				spawningFinished.OnNext(Unit.Default);				
+			}
+		}
 	}
 }

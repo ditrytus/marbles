@@ -4201,6 +4201,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 114506741881613730, guid: 6376e5ca564a44a48b453670fc602a9e,
         type: 2}
+      propertyPath: rootsToPause.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114506741881613730, guid: 6376e5ca564a44a48b453670fc602a9e,
+        type: 2}
       propertyPath: objectsToDeactivate.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -4280,6 +4285,16 @@ Prefab:
       propertyPath: objectsToDeactivate.Array.data[2]
       value: 
       objectReference: {fileID: 1772747336}
+    - target: {fileID: 114506741881613730, guid: 6376e5ca564a44a48b453670fc602a9e,
+        type: 2}
+      propertyPath: rootsToPause.Array.data[0]
+      value: 
+      objectReference: {fileID: 558157676}
+    - target: {fileID: 114506741881613730, guid: 6376e5ca564a44a48b453670fc602a9e,
+        type: 2}
+      propertyPath: rootsToPause.Array.data[1]
+      value: 
+      objectReference: {fileID: 1147227422}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
   m_IsPrefabParent: 0

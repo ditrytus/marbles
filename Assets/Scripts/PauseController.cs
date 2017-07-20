@@ -10,7 +10,7 @@ public class PauseController : MonoBehaviour, IPausable
 	
 	private Dictionary<GameObject, bool> objectsStateToResume;
 
-	public GameObject rootToPause;
+	public GameObject[] rootsToPause;
 
 	private RigidBodyPausableWrapper[] pausableBodies;
 
@@ -36,7 +36,7 @@ public class PauseController : MonoBehaviour, IPausable
 			obj.SetActive(false);
 		}
 
-		var rigidBodies = rootToPause.GetComponentsInChildren<Rigidbody>(true);
+		var rigidBodies = rootsToPause.SelectMany(r => r.GetComponentsInChildren<Rigidbody>(true));
 
 		pausableBodies = rigidBodies.Select(r => new RigidBodyPausableWrapper(r)).ToArray();
 
@@ -45,7 +45,7 @@ public class PauseController : MonoBehaviour, IPausable
 			body.Pause();
 		}
 
-		pausables = rootToPause.GetComponentsInChildren<IPausable>(true);
+		pausables = rootsToPause.SelectMany(r => r.GetComponentsInChildren<IPausable>(true)).ToArray();
 
 		foreach(var pausable in pausables)
 		{
