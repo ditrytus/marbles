@@ -38,7 +38,7 @@ public class SpawnOnInterval : MonoBehaviour {
 		{
 			return;
 		}
-		
+
 		if (count >= maxCount)
 		{
 			return;

@@ -74,7 +74,7 @@ namespace UniRx
             }
         }
 
-        class MainThreadScheduler : IScheduler, ISchedulerPeriodic, ISchedulerQueueing
+        public class MainThreadScheduler : IScheduler, ISchedulerPeriodic, ISchedulerQueueing
         {
             readonly Action<object> scheduleAction;
 
@@ -88,6 +88,7 @@ namespace UniRx
             // Okay to action run synchronous and guaranteed run on MainThread
             IEnumerator DelayAction(TimeSpan dueTime, Action action, ICancelable cancellation)
             {
+                var startTime = Now;
                 // zero == every frame
                 if (dueTime == TimeSpan.Zero)
                 {
@@ -95,10 +96,23 @@ namespace UniRx
                 }
                 else
                 {
-                    yield return new WaitForSeconds((float)dueTime.TotalSeconds);
+                    do
+                    {
+                        var elapsedSpan = Now - startTime;
+                        var elapsed = (float)elapsedSpan.TotalSeconds;
+                        if (GetType() != typeof(MainThreadScheduler))
+                        {
+                            Debug.Log(string.Format("WAIT Type: {0} Now: {1} Elapsed: {2} Due: {3}", GetType().Name, Now, elapsedSpan, dueTime));
+                        }
+                        yield return new WaitForSeconds((float)dueTime.TotalSeconds - elapsed);
+                    } while (Now - startTime < dueTime);
                 }
 
                 if (cancellation.IsDisposed) yield break;
+                if (GetType() != typeof(MainThreadScheduler))
+                {
+                            Debug.Log(string.Format("GO Type: {0} Now: {1} Elapsed: {2} Due: {3}", GetType().Name, Now, Now - startTime, dueTime));                    
+                }
                 MainThreadDispatcher.UnsafeSend(action);
             }
 
@@ -130,7 +144,7 @@ namespace UniRx
                 }
             }
 
-            public DateTimeOffset Now
+            public virtual DateTimeOffset Now
             {
                 get { return Scheduler.Now; }
             }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,9 +7,12 @@ public class PausableTime : IPausable
 {
 	public static PausableTime Instance { get; private set; }
 
+	private static DateTimeOffset StartUtc;
+
 	static PausableTime()
 	{
 		Instance = new PausableTime();
+		StartUtc = DateTime.UtcNow;
 	}
 
 	public bool IsPaused { get; private set; }
@@ -21,11 +25,24 @@ public class PausableTime : IPausable
 	{
 		get
 		{
+			if (IsPaused)
+			{
+				return pauseTime;
+			}
+
 			return UnityEngine.Time.time - gapTime;
 		}
 	}
 
-	public PausableTime()
+    public DateTimeOffset UtcNow
+	{
+		get
+		{
+			return StartUtc.AddSeconds(Time);
+		}
+	}
+
+    public PausableTime()
 	{
 		IsPaused = false;
 		gapTime = 0.0f;
@@ -38,7 +55,7 @@ public class PausableTime : IPausable
 			return;
 		}
 
-		pauseTime = UnityEngine.Time.time;
+		pauseTime = Time;
 
 		IsPaused = true;
     }
