@@ -27,12 +27,13 @@ public class DestroyOnWrongColor : RxBehaviour {
 		}
 		isDestroying = true;
 
-		var sub1 = Observable.Timer(TimeSpan.FromSeconds(delay))
+		var sub1 = Observable
+			.Timer(TimeSpan.FromSeconds(delay), new PausableMainThreadScheduler())
 			.Subscribe(_ => {
 				GetComponent<Rigidbody>().isKinematic = true;
 				GetComponents<Collider>().ToList().ForEach(c => c.isTrigger = true);
 				
-				startTime = Time.time;
+				startTime = PausableTime.Instance.Time;
 
 				randomizePosition = gameObject.AddComponent<RandomizePosition>();
 				randomizePosition.radius = 0.0f;
@@ -42,10 +43,11 @@ public class DestroyOnWrongColor : RxBehaviour {
 						randomizePosition.radius = Mathf.Lerp(
 							radiusRange.min,
 							radiusRange.max,
-							(Time.time - startTime) / wiggleTime);
+							(PausableTime.Instance.Time - startTime) / wiggleTime);
 					});
 
-				Observable.Timer(TimeSpan.FromSeconds(wiggleTime))
+				Observable
+					.Timer(TimeSpan.FromSeconds(wiggleTime), new PausableMainThreadScheduler())
 					.Subscribe(__ => {
 						this.SendMessage(MarbleMessages.ExplodeMarble);
 					});

@@ -21,9 +21,8 @@ public abstract class SpawnAtWithTimeout : RxBehaviour
         createdObject = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation, parent);
         if (timeout > 0.0f)
         {
-            var sub = Observable.Timer(
-                TimeSpan.FromSeconds(timeout),
-                new PausableMainThreadScheduler())
+            var sub = Observable
+                .Timer(TimeSpan.FromSeconds(timeout), new PausableMainThreadScheduler())
                 .Subscribe(_ => 
                 {
                     Destroy(createdObject);

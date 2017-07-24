@@ -11,6 +11,24 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1891546165792254}
   m_IsPrefabParent: 1
+--- !u!1 &1034553931917288
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224614329040686046}
+  - component: {fileID: 222733219289434538}
+  - component: {fileID: 114817241463832166}
+  - component: {fileID: 114726057692646898}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1042533062637586
 GameObject:
   m_ObjectHideFlags: 1
@@ -668,7 +686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1970121991585518
 GameObject:
   m_ObjectHideFlags: 1
@@ -1836,7 +1854,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToDeactivate:
   - {fileID: 0}
-  rootToPause: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rootsToPause:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114514353531115680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2106,6 +2128,18 @@ MonoBehaviour:
   nextSceneName: Prototype
   levelCompletedController: {fileID: 114794877803943224}
   triggerName: Exit
+--- !u!114 &114726057692646898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1034553931917288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc3789186de84d8ca86ac6497ba33db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 114817241463832166}
 --- !u!114 &114750407930984484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2329,6 +2363,39 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: resume
+--- !u!114 &114817241463832166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1034553931917288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 34
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 60
+    m_Alignment: 2
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
 --- !u!114 &114824716015828080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2873,6 +2940,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1466152245364058}
+--- !u!222 &222733219289434538
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1034553931917288}
 --- !u!222 &222745698666873360
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -3281,6 +3354,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224614329040686046
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1034553931917288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224928354016049334}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -30, y: -30}
+  m_SizeDelta: {x: 400, y: 400}
+  m_Pivot: {x: 1, y: 1}
 --- !u!224 &224657179239515398
 RectTransform:
   m_ObjectHideFlags: 1
@@ -3544,6 +3635,7 @@ RectTransform:
   - {fileID: 4678852705476654}
   - {fileID: 224657179239515398}
   - {fileID: 224883602699346844}
+  - {fileID: 224614329040686046}
   m_Father: {fileID: 4397957137631372}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

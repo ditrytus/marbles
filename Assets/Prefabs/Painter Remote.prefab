@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchController: {fileID: 1785575471748558}
-  delay: 10
+  delay: 3
 --- !u!114 &114507365422612028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1183,7 +1183,7 @@ MonoBehaviour:
   prefab: {fileID: 1212264280548048, guid: 0ea6dd1055a3e4897af11d01bb75f494, type: 2}
   parent: {fileID: 4864304662970500}
   spawnPoint: {fileID: 4827421018208798}
-  timeout: 10
+  timeout: 3
 --- !u!114 &114924259025324550
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -18,7 +18,8 @@ public abstract class SwitchTriggerBase : MonoBehaviour
         }
         else
         {
-            var sub = Observable.Timer(TimeSpan.FromSeconds(delay))
+            var sub = Observable
+                .Timer(TimeSpan.FromSeconds(delay), new PausableMainThreadScheduler())
                 .Subscribe(_ => switchController.SendMessage(SwitchMessages.Switch));
         }
     }

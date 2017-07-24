@@ -19,18 +19,45 @@ public class PausableTime : IPausable
 
 	private float pauseTime = 0.0f;
 
+	private float unscaledPauseTime = 0.0f;
+
 	public float gapTime;
+
+	public float unscaledGapTime;
 
 	public float Time
 	{
 		get
 		{
+			float result;
 			if (IsPaused)
 			{
-				return pauseTime;
+				result = pauseTime;
 			}
+			else
+			{
+				result =  UnityEngine.Time.time - gapTime;
+			}
+			
+			return result;
+		}
+	}
 
-			return UnityEngine.Time.time - gapTime;
+	public float UnscaledTime
+	{
+		get
+		{
+			float result;
+			if (IsPaused)
+			{
+				result = unscaledPauseTime;
+			}
+			else
+			{
+				result =  UnityEngine.Time.unscaledTime - unscaledGapTime;
+			}
+			
+			return result;
 		}
 	}
 
@@ -39,6 +66,14 @@ public class PausableTime : IPausable
 		get
 		{
 			return StartUtc.AddSeconds(Time);
+		}
+	}
+
+	public DateTimeOffset UnscaledUtcNow
+	{
+		get
+		{
+			return StartUtc.AddSeconds(UnscaledTime);
 		}
 	}
 
@@ -56,6 +91,7 @@ public class PausableTime : IPausable
 		}
 
 		pauseTime = Time;
+		unscaledPauseTime = UnscaledTime;
 
 		IsPaused = true;
     }
@@ -67,7 +103,8 @@ public class PausableTime : IPausable
 			return;
 		}
 
-		gapTime += UnityEngine.Time.time - pauseTime;
+		gapTime = UnityEngine.Time.time - pauseTime;
+		unscaledGapTime = UnityEngine.Time.unscaledTime - unscaledPauseTime;
 
 		IsPaused = false;
     }
