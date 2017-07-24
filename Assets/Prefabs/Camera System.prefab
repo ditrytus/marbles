@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4456852120463952}
   - component: {fileID: 114552180102393148}
+  - component: {fileID: 114612867181535182}
   m_Layer: 0
   m_Name: Camera System
   m_TagString: Untagged
@@ -76,7 +77,6 @@ GameObject:
   - component: {fileID: 124675577337248342}
   - component: {fileID: 81052823202693062}
   - component: {fileID: 45922826805861490}
-  - component: {fileID: 114662168829598350}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -352,8 +352,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 1000
+  far clip plane: 1000.01
   field of view: 24
   orthographic: 1
   orthographic size: 43.6
@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8ea5582fcbb4bcf9259f0a1b85c65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelInOutEffect: {fileID: 114662168829598350}
+  levelInOutEffect: {fileID: 0}
   inKey: 13
   outKey: 27
 --- !u!114 &114552180102393148
@@ -628,25 +628,19 @@ MonoBehaviour:
   sizeRange:
     min: 6
     max: 44
---- !u!114 &114662168829598350
+--- !u!114 &114612867181535182
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1242267526162290}
+  m_GameObject: {fileID: 1006035078852134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7768164bdf43a46f392a2cc9194f8640, type: 3}
+  m_Script: {fileID: 11500000, guid: 33455ec32238f465c9d0a49fc95556b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatedCamera: {fileID: 20207692910656376}
-  frontCamera: {fileID: 20255575551913712}
-  backCamera: {fileID: 20003129531122646}
-  levelBoundary: {fileID: 0}
-  duration: 10
-  defaultNearPlane:
-    min: 0.3
-    max: 900
+  degreesPerSecond: {x: 0, y: 1.25, z: 0}
+  reversePause: 1
 --- !u!114 &114683301248327494
 MonoBehaviour:
   m_ObjectHideFlags: 1

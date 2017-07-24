@@ -1939,23 +1939,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114662168829598350, guid: b65594ee337e840cb814556225dd07d0,
+    - target: {fileID: 114480953425159886, guid: b65594ee337e840cb814556225dd07d0,
         type: 2}
-      propertyPath: levelBoundary
+      propertyPath: levelInOutEffect
       value: 
-      objectReference: {fileID: 895910019}
-    - target: {fileID: 20207692910656376, guid: b65594ee337e840cb814556225dd07d0,
-        type: 2}
-      propertyPath: near clip plane
-      value: 1000
       objectReference: {fileID: 0}
-    - target: {fileID: 20207692910656376, guid: b65594ee337e840cb814556225dd07d0,
-        type: 2}
-      propertyPath: far clip plane
-      value: 1000.01
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114662168829598350, guid: b65594ee337e840cb814556225dd07d0, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b65594ee337e840cb814556225dd07d0, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &771639391 stripped
@@ -4199,6 +4188,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114506741881613730, guid: 6376e5ca564a44a48b453670fc602a9e,
+        type: 2}
+      propertyPath: objectsToActivate.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4397957137631372, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -338.23

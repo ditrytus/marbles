@@ -6,9 +6,11 @@ public class Rotate : MonoBehaviour
 {
 	public Vector3 degreesPerSecond;
 	
+	public bool reversePause = false;
+
 	void Update ()
 	{
-		if (PausableTime.Instance.IsPaused)
+		if (reversePause ^ PausableTime.Instance.IsPaused)
 		{
 			return;
 		}
