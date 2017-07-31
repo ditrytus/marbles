@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoToSceneButtonHandler : MonoBehaviour
 {
@@ -12,10 +13,19 @@ public class GoToSceneButtonHandler : MonoBehaviour
 
 	public string triggerName = "Exit";
 
-	public void OnClick()
+	public void DefaultOnClick()
 	{
-		Debug.Log("Go to scene: " + triggerName);
-		levelCompletedController.nextSceneName = nextSceneName;
+		OnClick(nextSceneName);
+	}
+
+	public void OnClick(string sceneName)
+	{
+		levelCompletedController.nextSceneName = sceneName;
 		animator.SetTrigger(triggerName);
+	}
+
+	public void RestartOnClick()
+	{
+		OnClick(SceneManager.GetActiveScene().name);		
 	}
 }

@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: 222774092133523016}
   - component: {fileID: 114074139139099940}
   - component: {fileID: 114997495233647542}
-  - component: {fileID: 114723783720137146}
   m_Layer: 5
   m_Name: Play Again Button
   m_TagString: Untagged
@@ -218,7 +217,6 @@ GameObject:
   - component: {fileID: 222175948293276108}
   - component: {fileID: 114222298595772228}
   - component: {fileID: 114193996079878086}
-  - component: {fileID: 114702819788565078}
   m_Layer: 5
   m_Name: Main Menu Button
   m_TagString: Untagged
@@ -278,6 +276,7 @@ GameObject:
   - component: {fileID: 95743100364842794}
   - component: {fileID: 114463086554430336}
   - component: {fileID: 114794877803943224}
+  - component: {fileID: 114205258577679162}
   m_Layer: 5
   m_Name: Message Overlay
   m_TagString: Untagged
@@ -350,7 +349,6 @@ GameObject:
   - component: {fileID: 222780686478494470}
   - component: {fileID: 114752029846187350}
   - component: {fileID: 114229450713731346}
-  - component: {fileID: 114884816307530156}
   m_Layer: 5
   m_Name: Next Level Button
   m_TagString: Untagged
@@ -1198,19 +1196,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114702819788565078}
+      - m_Target: {fileID: 114205258577679162}
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114205258577679162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411643573019706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f55acdc7a764f759ed5f75491bd668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 95743100364842794}
+  nextSceneName: Prototype
+  levelCompletedController: {fileID: 114794877803943224}
+  triggerName: Exit
 --- !u!114 &114212355103235930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1288,7 +1301,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114041781101696996}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114205258577679162}
+        m_MethodName: OnClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114229450713731346
@@ -1330,15 +1354,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114884816307530156}
+      - m_Target: {fileID: 114205258577679162}
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Prototype
           m_BoolArgument: 0
         m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2071,21 +2095,6 @@ MonoBehaviour:
   collapsibles:
   - {fileID: 95440719143629308}
   - {fileID: 95885348929839570}
---- !u!114 &114702819788565078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1293132968832610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f55acdc7a764f759ed5f75491bd668, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 95743100364842794}
-  nextSceneName: Prototype
-  levelCompletedController: {fileID: 114794877803943224}
-  triggerName: Exit
 --- !u!114 &114715061174409758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2113,21 +2122,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114723783720137146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1164681324618742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f55acdc7a764f759ed5f75491bd668, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 95743100364842794}
-  nextSceneName: Prototype
-  levelCompletedController: {fileID: 114794877803943224}
-  triggerName: Exit
 --- !u!114 &114726057692646898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2527,7 +2521,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114091753136191024}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114205258577679162}
+        m_MethodName: RestartOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114878137431213998
@@ -2557,21 +2562,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114884816307530156
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1469768512426710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f55acdc7a764f759ed5f75491bd668, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 95743100364842794}
-  nextSceneName: Prototype
-  levelCompletedController: {fileID: 114794877803943224}
-  triggerName: Exit
 --- !u!114 &114885747734444884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2788,8 +2778,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114723783720137146}
-        m_MethodName: OnClick
+      - m_Target: {fileID: 114205258577679162}
+        m_MethodName: RestartOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
