@@ -28,7 +28,9 @@ public class LevelTransitionController : RxBehaviour
 			})
 			.Skip(1)
 			.AsUnitObservable()
-			.Delay(TimeSpan.FromSeconds(exitDelay))
+			.Delay(
+				TimeSpan.FromSeconds(exitDelay),
+				new PausableMainThreadScheduler())
 			.Subscribe(_ =>
 			{
 				Debug.Log("Triggered " + triggerName);

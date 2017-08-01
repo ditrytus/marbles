@@ -16,7 +16,8 @@ public class ColliderDragAndDropDestination : MonoBehaviour, IDragAndDropDestina
 	{
 		if (acceptingCamera == null && !string.IsNullOrEmpty(acceptingCameraTag))
 		{
-			acceptingCamera = GameObject.FindGameObjectWithTag(acceptingCameraTag).GetComponent<Camera>();
+			var cameraObject = GameObject.FindGameObjectWithTag(acceptingCameraTag);
+			acceptingCamera = cameraObject.GetComponent<Camera>();
 		}
 	}
 
