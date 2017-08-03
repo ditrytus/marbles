@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 114557874212926742}
   - component: {fileID: 114533410480568030}
   m_Layer: 0
-  m_Name: Marble
+  m_Name: Marble_purple
   m_TagString: Marble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

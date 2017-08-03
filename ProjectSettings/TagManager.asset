@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DropZone
   - Marble
+  - DragSource
   layers:
   - Default
   - TransparentFX

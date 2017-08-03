@@ -7,15 +7,9 @@ using System;
 
 public class DragAndDropController : RxBehaviour
 {
-    public GameObject sourceObject;
+    private IDragAndDropSource[] sources;
 
-    private IDragAndDropSource Source
-    {
-        get
-        {
-            return sourceObject.GetComponent<IDragAndDropSource>();
-        }
-    }
+    private IDragAndDropSource currentSource;
 
     private IDragAndDropDestination[] destinations;
 
@@ -65,7 +59,14 @@ public class DragAndDropController : RxBehaviour
 
     void Start()
     {
-        destinations = GameObject.FindGameObjectsWithTag("DropZone").Select(o => o.GetComponent<IDragAndDropDestination>()).ToArray();
+        sources = GameObject
+            .FindGameObjectsWithTag(Tags.DragSource)
+            .Select(o => o.GetComponent<IDragAndDropSource>())
+            .ToArray();
+        destinations = GameObject
+            .FindGameObjectsWithTag(Tags.DropZone)
+            .Select(o => o.GetComponent<IDragAndDropDestination>())
+            .ToArray();
     }
 
     void Update()
@@ -155,16 +156,17 @@ public class DragAndDropController : RxBehaviour
 
     private void CancelDrag()
     {
-        Source.ReturnObject(draggedObject);
+        currentSource.ReturnObject(draggedObject);
         phasesSubject.OnNext(DragAndDropPhase.Canceled);
     }
 
     private bool StartDrag(Vector2 position)
     {
-        draggedObject = Source.GetDraggedObject(position);
-        if (draggedObject != null)
+        currentSource = sources.FirstOrDefault(s => s.GetDraggedObject(position) != null);
+        if (currentSource != null)
         {
-            Source.RemoveObject(draggedObject);
+            draggedObject = currentSource.GetDraggedObject(position);
+            currentSource.RemoveObject(draggedObject);
             DragMoved(position);
             phasesSubject.OnNext(DragAndDropPhase.Started);
             Debug.Log("Drag started.");
