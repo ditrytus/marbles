@@ -8,12 +8,13 @@
     "words": [
         "Behaviour",
         "Collider",
-        "Mathf",
-        "Lerp",
-        "collapsibles",
         "IPausable",
-        "pausables",
-        "Pausable"
+        "Lerp",
+        "Mathf",
+        "Pausable",
+        "Rect",
+        "collapsibles",
+        "pausables"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.
