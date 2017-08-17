@@ -21,7 +21,7 @@ public class DisableOnDragAndDrop : RxBehaviour {
 		var sub1 = allPhases	
 			.Where(p => p == DragAndDropPhase.Started)
 			.Subscribe(_ => {
-				objectsToEnable = objectsToDisable.Where(o => o.active).ToList();
+				objectsToEnable = objectsToDisable.Where(o => o.activeSelf).ToList();
 				objectsToEnable.ForEach(o => o.Disable());
 			});
 
