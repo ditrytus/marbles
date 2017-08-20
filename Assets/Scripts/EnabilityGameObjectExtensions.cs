@@ -16,7 +16,7 @@ public static class EnabilityGameObjectExtensions
     private static void SetEnable(this GameObject gameObject, bool enableValue)
     {
         gameObject.SetActive(enableValue);
-        var behaviours = gameObject.GetComponents<MonoBehaviour>();
-        behaviours.ToList().ForEach(b => b.enabled = enableValue);
+        var behaviors = gameObject.GetComponents<MonoBehaviour>();
+        behaviors.ToList().ForEach(b => b.enabled = enableValue);
     }
 }
