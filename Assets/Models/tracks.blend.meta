@@ -39,6 +39,7 @@ ModelImporter:
     100062: TriangleThinBevel
     100064: LargerTriangleWithCircle
     100066: Triangles
+    100068: BasePath
     400000: Circle
     400002: Track
     400004: TrackBevel
@@ -73,6 +74,7 @@ ModelImporter:
     400062: TriangleThinBevel
     400064: LargerTriangleWithCircle
     400066: Triangles
+    400068: BasePath
     2300000: Circle
     2300002: Track
     2300004: TrackBevel
@@ -105,6 +107,7 @@ ModelImporter:
     2300058: TriangleThickBevel
     2300060: TriangleThinBevel
     2300062: //RootNode
+    2300064: BasePath
     3300000: Circle
     3300002: Track
     3300004: TrackBevel
@@ -137,6 +140,7 @@ ModelImporter:
     3300058: TriangleThickBevel
     3300060: TriangleThinBevel
     3300062: //RootNode
+    3300064: BasePath
     4300000: TrackBevel
     4300002: Circle
     4300004: TrackBevel_old
@@ -169,6 +173,7 @@ ModelImporter:
     4300058: RoundThickBevel
     4300060: Track_spiral_path
     4300062: 45deg_segment
+    4300064: BasePath
     7400000: Default Take
     9500000: //RootNode
   materials:
