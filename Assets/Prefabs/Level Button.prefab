@@ -102,8 +102,8 @@ MonoBehaviour:
     unlocked: {r: 1, g: 1, b: 1, a: 1}
   lockIconColors:
     locked: {r: 1, g: 1, b: 1, a: 1}
-    hidden: {r: 0, g: 0, b: 0, a: 1}
-    unlocked: {r: 0, g: 0, b: 0, a: 1}
+    hidden: {r: 0, g: 0, b: 0, a: 0}
+    unlocked: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114524367091928808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,14 +226,14 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 545c756d6a91543e08416077583dc2f8, type: 3}
-    m_FontSize: 264
+    m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -351,5 +351,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 345.41, y: 427.7}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
