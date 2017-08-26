@@ -10,12 +10,16 @@ public class LevelTransitionController : RxBehaviour
 {
 	public Animator animator;
 
+	public ProgressController progressController;
+
 	public string triggerName = "Complete";
 
 	public float exitDelay;
 
 	void Start ()
 	{
+		if (progressController == null) progressController = GetComponent<ProgressController>();
+
 		var sub1 = 
 			Observable.CombineLatest(
 				FindObjectsOfType<CollectorController>()
@@ -34,6 +38,7 @@ public class LevelTransitionController : RxBehaviour
 			.Subscribe(_ =>
 			{
 				Debug.Log("Triggered " + triggerName);
+				progressController.CompletedLevel(LevelNameHelper.GetCurrentLevelNumber());
 				animator.SetTrigger(triggerName);
 			});
 

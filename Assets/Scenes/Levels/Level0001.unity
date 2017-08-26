@@ -184,11 +184,6 @@ MonoBehaviour:
   triggerCount: 0
   container: {fileID: 202271525}
   objectToEnable: {fileID: 167928926}
---- !u!1 &202271522 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1226560261810484, guid: 14916dbe2b7a4470893a2c438dc78bba,
-    type: 2}
-  m_PrefabInternal: {fileID: 1273129233}
 --- !u!114 &202271525 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114817452432074070, guid: 14916dbe2b7a4470893a2c438dc78bba,
@@ -239,11 +234,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114175459286666106, guid: 12ab5ab286ffa4750a46517091120a90,
+    - target: {fileID: 114457621792185406, guid: 12ab5ab286ffa4750a46517091120a90,
         type: 2}
-      propertyPath: dragCamera
+      propertyPath: animator
       value: 
-      objectReference: {fileID: 165483878}
+      objectReference: {fileID: 1408092252}
     - target: {fileID: 114585552494925292, guid: 12ab5ab286ffa4750a46517091120a90,
         type: 2}
       propertyPath: objectsToDisable.Array.data[0]
@@ -254,35 +249,14 @@ Prefab:
       propertyPath: objectsToDisable.Array.data[1]
       value: 
       objectReference: {fileID: 1772747336}
-    - target: {fileID: 114009383797534094, guid: 12ab5ab286ffa4750a46517091120a90,
+    - target: {fileID: 114175459286666106, guid: 12ab5ab286ffa4750a46517091120a90,
         type: 2}
-      propertyPath: sourceObject
+      propertyPath: dragCamera
       value: 
-      objectReference: {fileID: 202271522}
-    - target: {fileID: 114457621792185406, guid: 12ab5ab286ffa4750a46517091120a90,
-        type: 2}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1408092252}
+      objectReference: {fileID: 165483878}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12ab5ab286ffa4750a46517091120a90, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &240973812 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1607437712747132, guid: 12ab5ab286ffa4750a46517091120a90,
-    type: 2}
-  m_PrefabInternal: {fileID: 240973811}
---- !u!114 &240973813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 240973812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6fff7ac45a3549d5952b3e258501b99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!20 &392843198 stripped
 Camera:
   m_PrefabParentObject: {fileID: 20207692910656376, guid: b65594ee337e840cb814556225dd07d0,

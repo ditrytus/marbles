@@ -39,6 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4898693829688460}
   - component: {fileID: 114457621792185406}
+  - component: {fileID: 114559099062573742}
   m_Layer: 0
   m_Name: Level Transition Controller
   m_TagString: Untagged
@@ -54,6 +55,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4531127627073144}
+  - component: {fileID: 114115190823918850}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -143,7 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc21ac83ee5cf4e7ba2a5f04e0615c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sourceObject: {fileID: 0}
   dragMouseButton: 0
   touchMoveOffset: {x: 0, y: 60}
 --- !u!114 &114027191582100298
@@ -170,6 +171,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+--- !u!114 &114115190823918850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1607437712747132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fff7ac45a3549d5952b3e258501b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114175459286666106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,8 +207,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  progressController: {fileID: 0}
   triggerName: Complete
   exitDelay: 3
+--- !u!114 &114559099062573742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337085068021234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed10fb8a1f00940429869b0885c02631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114585552494925292
 MonoBehaviour:
   m_ObjectHideFlags: 1

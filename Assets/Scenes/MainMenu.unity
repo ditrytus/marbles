@@ -1871,6 +1871,7 @@ GameObject:
   - component: {fileID: 1096486318}
   - component: {fileID: 1096486320}
   - component: {fileID: 1096486321}
+  - component: {fileID: 1096486322}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -1967,7 +1968,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0823e6c7a814d74bfd818021546108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlockedLevels: 5
+  progressController: {fileID: 0}
+  unlockedLevels: 0
+--- !u!114 &1096486322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1096486316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed10fb8a1f00940429869b0885c02631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1309332990 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224597904872598072, guid: 61b9eb565baa6431ba9ce7f83a038416,
