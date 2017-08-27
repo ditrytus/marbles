@@ -7,12 +7,16 @@ using System;
 public class LevelInOutEffect : MonoBehaviour {
 
 	public Camera animatedCamera;
+	public string defaultAnimatedCameraName = "Main Camera";
 
 	public Camera frontCamera;
+	public string defaultFrontCameraName = "FrontCamera";
 
 	public Camera backCamera;
+	public string defaultBackCameraName = "BackCamera";
 
 	public Collider levelBoundary;
+	public string defaultLevelBoundaryName = "Boundary";
 
 	public float inDuration;
 
@@ -45,6 +49,11 @@ public class LevelInOutEffect : MonoBehaviour {
 	
 	void Start()
 	{
+		if (animatedCamera == null) animatedCamera = GameObject.Find(defaultAnimatedCameraName).GetComponent<Camera>();
+		if (frontCamera == null) frontCamera = GameObject.Find(defaultFrontCameraName).GetComponent<Camera>();
+		if (backCamera == null) backCamera = GameObject.Find(defaultBackCameraName).GetComponent<Camera>();
+		if (levelBoundary == null) levelBoundary = GameObject.Find(defaultLevelBoundaryName).GetComponent<Collider>();
+
 		var viewportMiddle = new Vector3(0.5f, 0.5f);
 		distanceBetweenCameras = Vector3.Distance(
 			frontCamera.ViewportToWorldPoint(viewportMiddle),
@@ -110,13 +119,5 @@ public class LevelInOutEffect : MonoBehaviour {
 		var ray = cam.ViewportPointToRay(viewportPoint);
 		var isHit = levelBoundary.Raycast(ray, out hit, float.MaxValue);
 		return isHit ? hit : (RaycastHit?)null;
-	}
-
-	void OnDrawGizmos()
-	{
-		viewportPoints
-			.Select(p => frontCamera.ViewportPointToRay(p))
-			.ToList()
-			.ForEach(r => Gizmos.DrawRay(r));
 	}
 }

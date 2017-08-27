@@ -12,6 +12,9 @@ public class LevelTransitionController : RxBehaviour
 
 	public ProgressController progressController;
 
+	public TimeSpeedController timeSpeedController;
+	public string timeSpeedControllerObjectName = "FastForward Button";
+
 	public string triggerName = "Complete";
 
 	public float exitDelay;
@@ -19,6 +22,9 @@ public class LevelTransitionController : RxBehaviour
 	void Start ()
 	{
 		if (progressController == null) progressController = GetComponent<ProgressController>();
+		if (timeSpeedController == null) timeSpeedController = GameObject
+			.Find(timeSpeedControllerObjectName)
+			.GetComponent<TimeSpeedController>();
 
 		var sub1 = 
 			Observable.CombineLatest(
@@ -39,6 +45,7 @@ public class LevelTransitionController : RxBehaviour
 			{
 				Debug.Log("Triggered " + triggerName);
 				progressController.CompletedLevel(LevelNameHelper.GetCurrentLevelNumber());
+				timeSpeedController.OnPointerUp(null);
 				animator.SetTrigger(triggerName);
 			});
 

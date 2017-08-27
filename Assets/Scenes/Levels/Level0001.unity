@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b093a2d666f84be1a32b2370d2cd9a9, type: 3}
 --- !u!1 &235950140 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1012164944094576, guid: 6376e5ca564a44a48b453670fc602a9e,
+  m_PrefabParentObject: {fileID: 1212792412249510, guid: 6376e5ca564a44a48b453670fc602a9e,
     type: 2}
   m_PrefabInternal: {fileID: 1366846294}
 --- !u!1001 &240973811
@@ -490,11 +490,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b65594ee337e840cb814556225dd07d0, type: 2}
   m_IsPrefabParent: 0
---- !u!20 &772703049 stripped
-Camera:
-  m_PrefabParentObject: {fileID: 20003129531122646, guid: b65594ee337e840cb814556225dd07d0,
-    type: 2}
-  m_PrefabInternal: {fileID: 760420361}
 --- !u!1 &895910016
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,51 +874,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114463086554430336, guid: 6376e5ca564a44a48b453670fc602a9e,
-        type: 2}
-      propertyPath: animatedCamera
-      value: 
-      objectReference: {fileID: 392843198}
-    - target: {fileID: 114463086554430336, guid: 6376e5ca564a44a48b453670fc602a9e,
-        type: 2}
-      propertyPath: frontCamera
-      value: 
-      objectReference: {fileID: 1665801830}
-    - target: {fileID: 114463086554430336, guid: 6376e5ca564a44a48b453670fc602a9e,
-        type: 2}
-      propertyPath: backCamera
-      value: 
-      objectReference: {fileID: 772703049}
-    - target: {fileID: 114463086554430336, guid: 6376e5ca564a44a48b453670fc602a9e,
-        type: 2}
-      propertyPath: levelBoundary
-      value: 
-      objectReference: {fileID: 895910019}
-    - target: {fileID: 114506741881613730, guid: 6376e5ca564a44a48b453670fc602a9e,
-        type: 2}
-      propertyPath: objectsToDeactivate.Array.data[0]
-      value: 
-      objectReference: {fileID: 1887511687}
-    - target: {fileID: 114506741881613730, guid: 6376e5ca564a44a48b453670fc602a9e,
-        type: 2}
-      propertyPath: objectsToDeactivate.Array.data[1]
-      value: 
-      objectReference: {fileID: 1602111399}
-    - target: {fileID: 114506741881613730, guid: 6376e5ca564a44a48b453670fc602a9e,
-        type: 2}
-      propertyPath: objectsToDeactivate.Array.data[2]
-      value: 
-      objectReference: {fileID: 1772747336}
-    - target: {fileID: 114506741881613730, guid: 6376e5ca564a44a48b453670fc602a9e,
-        type: 2}
-      propertyPath: rootsToPause.Array.data[0]
-      value: 
-      objectReference: {fileID: 558157676}
-    - target: {fileID: 114506741881613730, guid: 6376e5ca564a44a48b453670fc602a9e,
-        type: 2}
-      propertyPath: rootsToPause.Array.data[1]
-      value: 
-      objectReference: {fileID: 1147227422}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
   m_IsPrefabParent: 0
@@ -997,11 +947,6 @@ Transform:
 --- !u!1 &1602111399 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1480332441703134, guid: b65594ee337e840cb814556225dd07d0,
-    type: 2}
-  m_PrefabInternal: {fileID: 760420361}
---- !u!20 &1665801830 stripped
-Camera:
-  m_PrefabParentObject: {fileID: 20255575551913712, guid: b65594ee337e840cb814556225dd07d0,
     type: 2}
   m_PrefabInternal: {fileID: 760420361}
 --- !u!1001 &1757585993
@@ -1143,8 +1088,3 @@ GameObject:
   m_PrefabParentObject: {fileID: 1354536371453110, guid: b65594ee337e840cb814556225dd07d0,
     type: 2}
   m_PrefabInternal: {fileID: 760420361}
---- !u!1 &1887511687 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1319398280051972, guid: 12ab5ab286ffa4750a46517091120a90,
-    type: 2}
-  m_PrefabInternal: {fileID: 240973811}

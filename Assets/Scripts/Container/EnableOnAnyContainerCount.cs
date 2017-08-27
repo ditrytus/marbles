@@ -11,9 +11,12 @@ public class EnableOnAnyContainerCount : RxBehaviour
 	public ContainerController[] containers;
 
 	public GameObject objectToEnable;
+	public string defaultObjectToEnableName = "Restart Hint";
 
 	void Start ()
 	{
+		if (objectToEnable == null) objectToEnable = GameObject.Find(defaultObjectToEnableName);
+		
 		var triggeringCounts = Observable.CombineLatest(
 			containers.Select(container =>
 				container.content.ObserveCountChanged()));
