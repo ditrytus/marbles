@@ -14,4 +14,17 @@ public class FloatRange {
     {
         return min < value && value < max;        
     }
+
+    public float Length
+    {
+        get
+        {
+            return max - min;
+        }
+    }
+
+    public float Lerpify(float val)
+    {
+        return (val - min) / Length;
+    }
 }

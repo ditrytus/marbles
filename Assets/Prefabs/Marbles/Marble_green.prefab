@@ -28,6 +28,9 @@ GameObject:
   - component: {fileID: 114261433990335378}
   - component: {fileID: 114557874212926742}
   - component: {fileID: 114533410480568030}
+  - component: {fileID: 82847814166651428}
+  - component: {fileID: 114624257564065110}
+  - component: {fileID: 114151220288215924}
   m_Layer: 0
   m_Name: Marble_green
   m_TagString: Marble
@@ -101,6 +104,111 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &82847814166651428
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &114151220288215924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c529e4524fc74b54a8ab212575fff67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: 0c1a63bcb04ac453da4f0da63509cae6, type: 3}
+  - {fileID: 8300000, guid: f46a0c8708cdc4caba76687e5675d521, type: 3}
+  - {fileID: 8300000, guid: dbd5d8e424b194d588beabc080b96ca9, type: 3}
+  - {fileID: 8300000, guid: 7371e4a086157449a940e2bbb40d6ec7, type: 3}
+  - {fileID: 8300000, guid: 316d51ed9856a4414bf2673e98226026, type: 3}
+  - {fileID: 8300000, guid: 6d0a7d90835f540bda1e72fb70117b27, type: 3}
+  velocityRange:
+    min: 0
+    max: 8
+  vanishingIndex: 2
+  volumeFactor: 1
+  tagFilter: Glass
 --- !u!114 &114181449041037972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,6 +278,32 @@ MonoBehaviour:
     min: 0
     max: 0.5
   wiggleTime: 5
+--- !u!114 &114624257564065110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c529e4524fc74b54a8ab212575fff67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: 8d9dcbf06eb484500bab74f0c64076f1, type: 3}
+  - {fileID: 8300000, guid: 7749ed27c02aa47fa9d90701ab081529, type: 3}
+  - {fileID: 8300000, guid: 69535e48cb4e44c61abccd6077a5d29f, type: 3}
+  - {fileID: 8300000, guid: a9db3b6b6860a492f876b1fd1eb3b49e, type: 3}
+  - {fileID: 8300000, guid: ccb55e5db60cd4644a7b06c5732f9454, type: 3}
+  - {fileID: 8300000, guid: ccb55e5db60cd4644a7b06c5732f9454, type: 3}
+  - {fileID: 8300000, guid: b54c3a8ff95084b05b4fc881e45a2fb9, type: 3}
+  velocityRange:
+    min: 0
+    max: 8
+  vanishingIndex: 2
+  volumeFactor: 1
+  tagFilter: Marble
 --- !u!135 &135378198450274258
 SphereCollider:
   m_ObjectHideFlags: 1

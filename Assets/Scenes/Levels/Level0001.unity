@@ -720,6 +720,10 @@ Prefab:
       value: 
       objectReference: {fileID: 1739119305881630, guid: 4e4267ef1ac3145eebef4b3162438332,
         type: 2}
+    - target: {fileID: 4551943047110016, guid: 14916dbe2b7a4470893a2c438dc78bba, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114781891714199436, guid: 14916dbe2b7a4470893a2c438dc78bba, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14916dbe2b7a4470893a2c438dc78bba, type: 2}
@@ -986,7 +990,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4396634032750766, guid: f766dba04c86843eb9d21775756c5dec, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4396634032750766, guid: f766dba04c86843eb9d21775756c5dec, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x

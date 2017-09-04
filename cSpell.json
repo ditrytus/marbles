@@ -10,6 +10,7 @@
         "Collider",
         "IPausable",
         "Lerp",
+        "Lerpify",
         "Mathf",
         "Pausable",
         "Rect",
