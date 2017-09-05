@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 324087730}
   m_Layer: 0
   m_Name: StraightTrack (1)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1224,18 +1224,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 4682255294177280, guid: 560374c3bfcf94ee19351e4f91ff58c6, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4682255294177280, guid: 560374c3bfcf94ee19351e4f91ff58c6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.5000026
-      objectReference: {fileID: 0}
-    - target: {fileID: 4682255294177280, guid: 560374c3bfcf94ee19351e4f91ff58c6, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 560374c3bfcf94ee19351e4f91ff58c6, type: 2}
   m_IsPrefabParent: 0
@@ -1453,7 +1441,7 @@ GameObject:
   - component: {fileID: 1671517605}
   m_Layer: 0
   m_Name: StraightTrack
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1600,7 +1588,7 @@ GameObject:
   - component: {fileID: 1969010620}
   m_Layer: 0
   m_Name: StraightTrack (2)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

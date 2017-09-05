@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 1331883530}
   m_Layer: 0
   m_Name: twist_path _b
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 1629143017}
   m_Layer: 0
   m_Name: twist_path_a
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

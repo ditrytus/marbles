@@ -8,6 +8,7 @@ TagManager:
   - Marble
   - DragSource
   - Glass
+  - Metal
   layers:
   - Default
   - TransparentFX

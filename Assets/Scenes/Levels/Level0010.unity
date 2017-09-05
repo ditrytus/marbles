@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 163466201}
   m_Layer: 0
   m_Name: LiftTractRightLong (3)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 427924442}
   m_Layer: 0
   m_Name: Drill (1)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 430353625}
   m_Layer: 0
   m_Name: Drill (2)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 459006670}
   m_Layer: 0
   m_Name: LiftTractRightShort1 (2)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 476106884}
   m_Layer: 0
   m_Name: Drill
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -841,7 +841,7 @@ GameObject:
   - component: {fileID: 522841654}
   m_Layer: 0
   m_Name: LiftTractRightShort2 (4)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -927,7 +927,7 @@ GameObject:
   - component: {fileID: 523303204}
   m_Layer: 0
   m_Name: LiftTractRightLong
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1114,7 +1114,7 @@ GameObject:
   - component: {fileID: 664026042}
   m_Layer: 0
   m_Name: LiftTractRightShort1 (1)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1200,7 +1200,7 @@ GameObject:
   - component: {fileID: 673519014}
   m_Layer: 0
   m_Name: LiftTractRightShort2 (1)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1318,6 +1318,10 @@ Prefab:
     - target: {fileID: 4835647322565922, guid: c8c2c21079e79400b9add61125ca2eb4, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681925244585478, guid: c8c2c21079e79400b9add61125ca2eb4, type: 2}
+      propertyPath: m_TagString
+      value: Metal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8c2c21079e79400b9add61125ca2eb4, type: 2}
@@ -1552,7 +1556,7 @@ GameObject:
   - component: {fileID: 778744364}
   m_Layer: 0
   m_Name: LiftTractRightShort2 (2)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1825,7 +1829,7 @@ GameObject:
   - component: {fileID: 950015164}
   m_Layer: 0
   m_Name: LiftTractRightShort1 (4)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1910,7 +1914,7 @@ GameObject:
   - component: {fileID: 1040376892}
   m_Layer: 0
   m_Name: BasePath_0
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1996,7 +2000,7 @@ GameObject:
   - component: {fileID: 1055484621}
   m_Layer: 0
   m_Name: LiftTractRightShort1 (3)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2474,7 +2478,7 @@ GameObject:
   - component: {fileID: 1551182216}
   m_Layer: 0
   m_Name: LiftTractRightShort2
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2567,7 +2571,7 @@ GameObject:
   - component: {fileID: 1656595366}
   m_Layer: 0
   m_Name: Drill (3)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2775,7 +2779,7 @@ GameObject:
   - component: {fileID: 1784897578}
   m_Layer: 0
   m_Name: LiftTractRightShort2 (3)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2984,6 +2988,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1211367303347940, guid: 25f4e66700e57410db71690f205b9218, type: 2}
+      propertyPath: m_TagString
+      value: Metal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25f4e66700e57410db71690f205b9218, type: 2}
   m_IsPrefabParent: 0
@@ -3012,7 +3020,7 @@ GameObject:
   - component: {fileID: 1924591856}
   m_Layer: 0
   m_Name: LiftTractRightLong (1)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3098,7 +3106,7 @@ GameObject:
   - component: {fileID: 1925075754}
   m_Layer: 0
   m_Name: LiftTractRightLong (2)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3184,7 +3192,7 @@ GameObject:
   - component: {fileID: 2016220892}
   m_Layer: 0
   m_Name: LiftTractRightLong (4)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3270,7 +3278,7 @@ GameObject:
   - component: {fileID: 2134302617}
   m_Layer: 0
   m_Name: LiftTractRightShort1
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

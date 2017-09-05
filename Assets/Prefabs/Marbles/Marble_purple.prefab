@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 82727737734433984}
   - component: {fileID: 114512756877607950}
   - component: {fileID: 114545267303930172}
+  - component: {fileID: 114937004594866780}
   m_Layer: 0
   m_Name: Marble_purple
   m_TagString: Marble
@@ -304,6 +305,29 @@ MonoBehaviour:
     min: 0
     max: 0.5
   wiggleTime: 5
+--- !u!114 &114937004594866780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c529e4524fc74b54a8ab212575fff67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: bca79851412294a718d7bb5b31cb2857, type: 3}
+  - {fileID: 8300000, guid: 9a31d955e93544934b03c303c8de5914, type: 3}
+  - {fileID: 8300000, guid: 86668c14e4f9e4b75a04fd58e68cf142, type: 3}
+  - {fileID: 8300000, guid: 8c5cb8f0e9aa4447cb9d76d65daf919e, type: 3}
+  velocityRange:
+    min: 0
+    max: 16
+  vanishingIndex: 2
+  volumeFactor: 1
+  tagFilter: Metal
 --- !u!135 &135378198450274258
 SphereCollider:
   m_ObjectHideFlags: 1

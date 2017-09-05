@@ -1894,7 +1894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeScaleRange:
     min: 3
-    max: 15
+    max: 7
 --- !u!114 &114419413506366476
 MonoBehaviour:
   m_ObjectHideFlags: 1
