@@ -15,6 +15,6 @@ public class PlayRandomSoundBase : MonoBehaviour {
 
 	protected void PlayRandomSound(float volume)
 	{
-		audioSource.PlayOneShot(clips[Random.Range(0, clips.Length-1)], volume);
+		audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)], volume);
 	}
 }

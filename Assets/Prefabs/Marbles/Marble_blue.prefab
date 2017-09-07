@@ -339,6 +339,9 @@ MonoBehaviour:
     min: 0
     max: 0.5
   wiggleTime: 5
+  audioSource: {fileID: 0}
+  wiggleSound: {fileID: 8300000, guid: 46e19edee3f4f490c8f7c87ff701631d, type: 3}
+  volume: 1
 --- !u!114 &114639896641608888
 MonoBehaviour:
   m_ObjectHideFlags: 1

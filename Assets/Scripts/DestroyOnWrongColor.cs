@@ -19,6 +19,20 @@ public class DestroyOnWrongColor : RxBehaviour {
 
 	private RandomizePosition randomizePosition;
 
+	public AudioSource audioSource;
+
+	public VelocityToVolume velocityToVolume;
+
+	public AudioClip wiggleSound;
+
+	public float volume = 1.0f;
+
+	public void Start()
+	{
+		this.SetDefaultFromThis(ref audioSource);
+		this.SetDefaultFromThis(ref velocityToVolume);
+	}
+
 	public void MarbleColorIsWrong()
 	{
 		if (isDestroying)
@@ -32,7 +46,11 @@ public class DestroyOnWrongColor : RxBehaviour {
 			.Subscribe(_ => {
 				GetComponent<Rigidbody>().isKinematic = true;
 				GetComponents<Collider>().ToList().ForEach(c => c.isTrigger = true);
-				
+
+				if (velocityToVolume != null) velocityToVolume.enabled = false;
+				audioSource.volume = volume;
+				audioSource.PlayOneShot(wiggleSound);
+
 				startTime = PausableTime.Instance.Time;
 
 				randomizePosition = gameObject.AddComponent<RandomizePosition>();
