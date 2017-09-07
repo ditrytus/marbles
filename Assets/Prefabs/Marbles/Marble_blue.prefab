@@ -202,8 +202,12 @@ MonoBehaviour:
   velocityRange:
     min: 0
     max: 2
-  vanishingIndex: 1
-  volumeFactor: 2
+  vanishingIndex: 1.75
+  volumeFactor: 1
+  axesFilter:
+    x: 1
+    y: 0
+    z: 1
 --- !u!114 &114181449041037972
 MonoBehaviour:
   m_ObjectHideFlags: 1

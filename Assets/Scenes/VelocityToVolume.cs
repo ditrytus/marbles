@@ -14,6 +14,8 @@ public class VelocityToVolume : MonoBehaviour
 
 	private Rigidbody body;
 
+	public AxesFilter axesFilter = AxesFilter.All;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -23,7 +25,7 @@ public class VelocityToVolume : MonoBehaviour
 	
 	void Update()
 	{
-		var v = body.velocity.magnitude;
+		var v = body.velocity.Filter(axesFilter).magnitude;
 		var t = velocityRange.Lerpify(v);
 		var volume = Mathf.Pow(Mathf.Clamp(Mathf.Lerp(0.0f, 1.0f, t), 0.0f, 1.0f), vanishingIndex) * volumeFactor;
 

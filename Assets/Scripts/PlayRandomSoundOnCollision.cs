@@ -32,7 +32,7 @@ public class PlayRandomSoundOnCollision : PlayRandomSoundBase
 			return;
 		}
 
-		var v = body.velocity.magnitude;
+		var v = other.relativeVelocity.magnitude;
 		var t = velocityRange.Lerpify(v);
 		var volume = Mathf.Pow(Mathf.Clamp(Mathf.Lerp(0.0f, 1.0f, t), 0.0f, 1.0f), vanishingIndex) * volumeFactor;
 
