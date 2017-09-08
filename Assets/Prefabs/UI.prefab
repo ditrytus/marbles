@@ -1895,6 +1895,9 @@ MonoBehaviour:
   timeScaleRange:
     min: 3
     max: 7
+  rootWithAudio: {fileID: 0}
+  defaultRootName: Level
+  pitchFactor: 2.3
 --- !u!114 &114419413506366476
 MonoBehaviour:
   m_ObjectHideFlags: 1
