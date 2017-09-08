@@ -23,8 +23,11 @@ public class SwitchController : MonoBehaviour {
 
 	private float timeStarted;
 
+    public AudioSource audioSource;
+
 	void Start()
     {
+        this.SetDefaultFromThis(ref audioSource);
         initialRotation = transform.localRotation;
         SetRotation(GetAngleForPosition());
     }
@@ -73,6 +76,7 @@ public class SwitchController : MonoBehaviour {
         {
             isSwitching = true;
             timeStarted = PausableTime.Instance.Time;
+            if (audioSource != null) audioSource.Play();
         }
     }
 }
