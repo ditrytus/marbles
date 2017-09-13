@@ -19,12 +19,15 @@ public class LevelTransitionController : RxBehaviour
 
 	public float exitDelay;
 
+	public AudioSource audioSource;
+
 	void Start ()
 	{
 		if (progressController == null) progressController = GetComponent<ProgressController>();
 		if (timeSpeedController == null) timeSpeedController = GameObject
 			.Find(timeSpeedControllerObjectName)
 			.GetComponent<TimeSpeedController>();
+		this.SetDefaultFromThis(ref audioSource);
 
 		var sub1 = 
 			Observable.CombineLatest(
@@ -47,6 +50,7 @@ public class LevelTransitionController : RxBehaviour
 				progressController.CompletedLevel(LevelNameHelper.GetCurrentLevelNumber());
 				timeSpeedController.OnPointerUp(null);
 				animator.SetTrigger(triggerName);
+				audioSource.Play();
 			});
 
 		AddSubscriptions(sub1);
