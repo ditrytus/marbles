@@ -13,4 +13,9 @@ public static class ComponentExtensions
 	{
 		if (gameObject == null) gameObject = GameObject.Find(defaultName);
 	}
+
+	public static void SetDefaultFromName<TComponent>(this MonoBehaviour script, ref TComponent component, string defaultName) where TComponent : Component
+	{
+		if (component == null) component = GameObject.Find(defaultName).GetComponent<TComponent>();
+	}
 }
