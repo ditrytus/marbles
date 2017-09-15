@@ -1353,6 +1353,7 @@ GameObject:
   - component: {fileID: 806998972}
   - component: {fileID: 806998973}
   - component: {fileID: 806998974}
+  - component: {fileID: 806998975}
   m_Layer: 5
   m_Name: Music Toggle
   m_TagString: Untagged
@@ -1376,7 +1377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 100, y: 10}
+  m_AnchoredPosition: {x: 120, y: 10}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &806998973
@@ -1438,6 +1439,19 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   defaultSourceGameObjectName: Music Controller
   toggle: {fileID: 0}
+--- !u!114 &806998975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 806998971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb2d6413950140cbb28a538cf022550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 0}
+  field: 0
 --- !u!1 &843162936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3178,6 +3192,7 @@ GameObject:
   - component: {fileID: 1954720353}
   - component: {fileID: 1954720354}
   - component: {fileID: 1954720355}
+  - component: {fileID: 1954720356}
   m_Layer: 5
   m_Name: Sound Toggle
   m_TagString: Untagged
@@ -3261,6 +3276,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 0}
+--- !u!114 &1954720356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954720352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb2d6413950140cbb28a538cf022550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 0}
+  field: 1
 --- !u!1001 &1993273894
 Prefab:
   m_ObjectHideFlags: 0

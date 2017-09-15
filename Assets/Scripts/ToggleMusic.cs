@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ToggleMusic : MonoBehaviour {
-
+public class ToggleMusic : MonoBehaviour
+{
 	public AudioSource audioSource;
 
 	public string defaultSourceGameObjectName;
