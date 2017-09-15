@@ -15,11 +15,12 @@ public class ToggleMusic : MonoBehaviour {
 	{
 		this.SetDefaultFromName(ref audioSource, defaultSourceGameObjectName);
 		this.SetDefaultFromThis(ref toggle);
+		toggle.onValueChanged.AddListener(OnValueChanged);
 	}
 	
-	public void Toggle ()
+	public void OnValueChanged(bool value)
 	{
-		if (toggle.isOn)
+		if (value)
 		{
 			Debug.Log("UnPause");
 			audioSource.UnPause();
