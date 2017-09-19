@@ -965,7 +965,7 @@ Prefab:
     - target: {fileID: 114949280858017578, guid: b65594ee337e840cb814556225dd07d0,
         type: 2}
       propertyPath: boundary.yRange.min
-      value: -45
+      value: -85
       objectReference: {fileID: 0}
     - target: {fileID: 20207692910656376, guid: b65594ee337e840cb814556225dd07d0,
         type: 2}
@@ -980,7 +980,7 @@ Prefab:
     - target: {fileID: 114949280858017578, guid: b65594ee337e840cb814556225dd07d0,
         type: 2}
       propertyPath: boundary.yRange.max
-      value: 60
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 114949280858017578, guid: b65594ee337e840cb814556225dd07d0,
         type: 2}
@@ -1010,12 +1010,12 @@ Prefab:
     - target: {fileID: 114325069256126336, guid: b65594ee337e840cb814556225dd07d0,
         type: 2}
       propertyPath: boundary.yRange.min
-      value: -45
+      value: -85
       objectReference: {fileID: 0}
     - target: {fileID: 114325069256126336, guid: b65594ee337e840cb814556225dd07d0,
         type: 2}
       propertyPath: boundary.yRange.max
-      value: 60
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 114325069256126336, guid: b65594ee337e840cb814556225dd07d0,
         type: 2}
