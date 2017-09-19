@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 4391095039029060}
   - component: {fileID: 82121257273689910}
   - component: {fileID: 114405466878515700}
+  - component: {fileID: 114446004711796350}
   m_Layer: 0
   m_Name: Music Controller
   m_TagString: Untagged
@@ -176,7 +177,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -337,6 +338,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 22fd11aaaa1f04b809e6b206b9a27b01, type: 3}
   - {fileID: 8300000, guid: d852d6faf9a60454cb91e4be9cf5dbfb, type: 3}
   - {fileID: 8300000, guid: 8f9035708252c4b73af0b39ca8518e6e, type: 3}
+--- !u!114 &114446004711796350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711498254919078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aead4165480e4782a21c57e34df1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundToggle: {fileID: 0}
+  defaultSoundToggleName: Sound Toggle
+  musicToggle: {fileID: 0}
+  defaultMusicToggleName: Music Toggle
+  musicSource: {fileID: 0}
 --- !u!114 &114457621792185406
 MonoBehaviour:
   m_ObjectHideFlags: 1

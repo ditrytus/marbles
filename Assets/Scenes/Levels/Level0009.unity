@@ -541,6 +541,16 @@ Prefab:
       propertyPath: dragAndDropControllers.Array.data[1]
       value: 
       objectReference: {fileID: 1887511691}
+    - target: {fileID: 114446004711796350, guid: 12ab5ab286ffa4750a46517091120a90,
+        type: 2}
+      propertyPath: soundToggle
+      value: 
+      objectReference: {fileID: 1366846296}
+    - target: {fileID: 114446004711796350, guid: 12ab5ab286ffa4750a46517091120a90,
+        type: 2}
+      propertyPath: musicToggle
+      value: 
+      objectReference: {fileID: 1366846295}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12ab5ab286ffa4750a46517091120a90, type: 2}
   m_IsPrefabParent: 0
@@ -2715,6 +2725,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1366846295 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114393552182539174, guid: 6376e5ca564a44a48b453670fc602a9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1366846294}
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1366846296 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114142570831680264, guid: 6376e5ca564a44a48b453670fc602a9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1366846294}
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1387106649
 GameObject:
   m_ObjectHideFlags: 0
