@@ -10,7 +10,7 @@ public class PlayRandomSoundBase : MonoBehaviour {
 
 	protected virtual void Start()
 	{
-		if (audioSource == null) audioSource = this.gameObject.GetComponent<AudioSource>();
+		this.SetDefaultFromThis(ref audioSource);
 	}
 
 	protected void PlayRandomSound(float volume)
