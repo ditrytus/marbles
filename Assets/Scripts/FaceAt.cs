@@ -23,7 +23,7 @@ public class FaceAt : MonoBehaviour {
 		}
 	}
 
-	void Update()
+	void LateUpdate()
 	{
 		if (rotateParallel)
 		{
