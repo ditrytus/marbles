@@ -10,6 +10,7 @@ public class SetAnimatorTrigger : MonoBehaviour {
 
 	public void SetTrigger()
 	{
+		Debug.Log(triggerName);
 		animator.SetTrigger(triggerName);
 	}
 }
