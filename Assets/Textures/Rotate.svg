@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns1="http://sozi.baierouge.fr" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg3135" viewBox="0 0 81.402 185.72" version="1.1" inkscape:version="0.91 r13725">
+  <defs id="defs3137">
+    <clipPath id="clipPath108">
+      <path id="path110" d="m0 612h792v-612h-792v612z"/>
+    </clipPath>
+  </defs>
+  <g id="layer1" transform="translate(-607.57 -428.6)">
+    <g id="g104" transform="matrix(1.25 0 0 -1.25 342.67 790.71)">
+      <g id="g106" clip-path="url(#clipPath108)">
+        <g id="g112" transform="translate(246.92 288.08)">
+          <path id="path114" style="fill:#878786" d="m0 0c-5.421 0-9.861-4.232-10.215-9.565-1.871 1.984-4.515 3.232-7.452 3.232-5.651 0-10.25-4.598-10.25-10.25 0-4.259 2.611-7.916 6.315-9.462l0.296 2.069c-2.726 1.348-4.611 4.152-4.611 7.393 0 4.549 3.702 8.25 8.25 8.25 4.549 0 8.25-3.701 8.25-8.25 0-2.309-0.956-4.396-2.49-5.896l0.231-2.4c2.395 1.738 4.017 4.482 4.225 7.611 0.494-0.525 1.047-0.994 1.641-1.406l0.249 2.348c-1.647 1.51-2.689 3.671-2.689 6.076 0 4.549 3.701 8.25 8.25 8.25s8.25-3.701 8.25-8.25c0-3.239-1.882-6.041-4.605-7.39l0.069-2.153c3.819 1.491 6.536 5.202 6.536 9.543 0 5.652-4.598 10.25-10.25 10.25"/>
+        </g>
+        <g id="g116" transform="translate(271.67 191.31)">
+          <path id="path118" style="fill:#878786" d="m0 0c-0.075-0.942-0.136-1.7-0.169-2.21-0.202-3.127-0.815-12.642-2.755-17.126-2.168-5.016-0.772-11.404-0.711-11.674l0.05-0.174c0.389-1.097 0.252-2.365-0.399-3.667-1.011-2.021-4.207-5.882-14.26-9.024-12.06-3.769-15.61-0.183-15.853 0.081-1.07 1.789-21.037 35.413-20.409 51.094l0.002 0.059-0.002 0.06c-0.31 7.854-0.702 20.134-0.51 21.766 0.153 1.299 0.074 3.166-0.019 5.327-0.103 2.413-0.378 8.821 0.706 9.44 0.001-0.001 0.071 0.015 0.245-0.035l0.337-0.079 0.307 0.04c0.133 0.017 3.337 0.355 4.938-6.049l0.101 0.025c-0.101-9.674-0.104-17.314-0.104-18.162 0-4.508-2.296-7.344-2.319-7.372l2.3-1.926c0.123 0.145 3.019 3.649 3.019 9.298 0 17.823 0.463 57.967 1.828 61.138 0.706 1.348 2.144 2.267 3.269 2.073 1.17-0.191 2.053-1.63 2.421-3.946 0.453-2.846 0.862-10.788 1.295-19.197 1.325-25.753 1.7-25.857 3.277-26.29 0.689-0.19 1.405 0.095 1.825 0.724 0.929 1.395 1.218 7.026 1.729 25.669 0.274 9.993 0.649 23.679 1.38 25.358 0.451 0.959 1.579 1.62 2.618 1.573 1.376-0.082 2.083-1.356 2.435-2.409 0.548-1.645 0.812-9.172 1.092-17.142 0.692-19.712 1.412-33.92 4.383-37.221l2.229 2.008c-1.233 1.37-2.029 7.141-2.57 14.093 2.345-0.41 3.855-2.61 4.781-6.873 0.64-2.943 4.879-14.461 5.058-14.95l2.816 1.037c-0.912 2.474-2.361 6.495-3.466 9.767 3.454-0.501 5.308-4.056 7.279-8.567 0.546-1.248 1.061-2.427 1.615-3.359 1.822-3.07 0.609-18.205 0.211-23.178m2.368 24.709c-0.459 0.772-0.938 1.869-1.445 3.029-1.863 4.265-4.616 10.562-11.028 10.436-0.223 0.724-0.391 1.319-0.476 1.713-1.291 5.938-3.957 9.046-7.931 9.297-0.405 6.205-0.642 12.939-0.825 18.165-0.358 10.173-0.592 16.025-1.246 17.985-0.897 2.692-2.757 4.316-5.103 4.454-2.264 0.133-4.536-1.219-5.51-3.29-0.896-1.906-1.209-9.941-1.664-26.553-0.089-3.254-0.185-6.764-0.297-10.081-0.196 3.374-0.378 6.905-0.539 10.05-0.437 8.491-0.85 16.511-1.328 19.514-0.801 5.033-3.413 6.193-4.899 6.436-2.403 0.392-5.099-1.137-6.411-3.641-1.218-2.326-1.753-21.376-1.987-37.86-2.038 2.392-4.336 2.56-5.234 2.512-1.234 0.258-2.106-0.155-2.632-0.569-2.12-1.672-2.107-5.806-1.845-11.922 0.083-1.948 0.162-3.788 0.037-4.85-0.278-2.367 0.399-19.89 0.489-22.176-0.625-16.943 20.004-51.317 20.883-52.774l0.057-0.087c0.299-0.426 2.429-3.099 8.694-3.099 2.686 0 6.134 0.493 10.522 1.864 10.558 3.299 14.555 7.556 16.05 10.547 0.99 1.982 1.194 4.076 0.577 5.91-0.138 0.68-1.113 5.9 0.553 9.754 1.923 4.448 2.63 12.474 2.995 18.124 0.032 0.499 0.092 1.241 0.166 2.163 0.876 10.938 1.406 21.531-0.623 24.949"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Multitouch - rotate</dc:title>
+        <dc:date>2013-02-25T20:30:04</dc:date>
+        <dc:description>A small set of multitoutch wireframes by Jonathan Averstedt. Used with permission, original file available here: http://dribbble.com/shots/817543-Freebie-Hands</dc:description>
+        <dc:source>https://openclipart.org/detail/175321/multitouch---rotate-by-williamtheaker-175321</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>williamtheaker</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>android</rdf:li>
+            <rdf:li>gesture</rdf:li>
+            <rdf:li>iphone</rdf:li>
+            <rdf:li>meego</rdf:li>
+            <rdf:li>multitouch</rdf:li>
+            <rdf:li>replicant</rdf:li>
+            <rdf:li>rotate</rdf:li>
+            <rdf:li>smartphone</rdf:li>
+            <rdf:li>tablet</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
