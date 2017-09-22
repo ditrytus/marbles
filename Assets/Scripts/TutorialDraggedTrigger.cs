@@ -6,9 +6,9 @@ public class TutorialDraggedTrigger : MonoBehaviour
 {
 	public TutorialController tutorialController;
 	
-	void OnCollisionEnter(Collision other)
+	void OnTriggerEnter(Collider other)
 	{
-		if (other.collider.CompareTag(Tags.Marble))
+		if (other.CompareTag(Tags.Marble))
 		{
 			tutorialController.Dragged();
 		}	
