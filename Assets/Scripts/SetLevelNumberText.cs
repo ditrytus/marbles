@@ -14,7 +14,7 @@ public class SetLevelNumberText : MonoBehaviour {
 	void Start ()
 	{
 		if (levelNumber == null) levelNumber = GetComponent<LevelNumber>();
-		if (levelNumberText == null) levelNumberText = transform.FindChild(defaultLevelNumberObjectName).GetComponent<Text>();
+		if (levelNumberText == null) levelNumberText = transform.Find(defaultLevelNumberObjectName).GetComponent<Text>();
 
 		levelNumberText.text = levelNumber.LevelNum.ToString();
 	}

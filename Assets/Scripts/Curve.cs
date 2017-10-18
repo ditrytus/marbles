@@ -57,7 +57,7 @@ public class Curve : MonoBehaviour {
 
     private void RenderCurve()
     {
-        lineRenderer.numPositions = positions.Length;
+        lineRenderer.positionCount = positions.Length;
         for (int i = 0; i < positions.Length; i++)
         {
             lineRenderer.SetPosition(i, positions[i]);

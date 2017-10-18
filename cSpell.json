@@ -7,15 +7,16 @@
     // words - list of words to be always considered correct
     "words": [
         "Behaviour",
+        "collapsibles",
         "Collider",
         "IPausable",
         "Lerp",
         "Lerpify",
         "Mathf",
         "Pausable",
-        "Rect",
-        "collapsibles",
-        "pausables"
+        "pausables",
+        "Prefs",
+        "Rect"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.

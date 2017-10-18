@@ -60,7 +60,7 @@ public class LevelButtonStatusController : MonoBehaviour
 	void Start ()
 	{
 		if (levelThumb == null) levelThumb = gameObject.GetComponent<Image>();
-		if (lockIcon == null) lockIcon = transform.FindChild(defaultLockIconName).GetComponent<Text>();	
+		if (lockIcon == null) lockIcon = transform.Find(defaultLockIconName).GetComponent<Text>();	
 		if (button == null) button = GetComponent<Button>();
 	}
 
