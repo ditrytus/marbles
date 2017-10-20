@@ -18,9 +18,21 @@ public class TimeSpeedController : MonoBehaviour, IPointerDownHandler, IPointerU
 
     private bool isPressed = false;
 
+    public float audioSourcesLoadDelay = 5.0f;
+
     void Start()
     {
-        this.SetDefaultToName(ref rootWithAudio, defaultRootName); 
+        this.SetDefaultToName(ref rootWithAudio, defaultRootName);
+        StartCoroutine(LoadAudioSources());
+    }
+
+    public IEnumerator LoadAudioSources()
+    {
+        yield return new WaitForSecondsRealtime(audioSourcesLoadDelay);
+        audioSourcesWithPitch = rootWithAudio
+            .GetComponentsInChildren<AudioSource>()
+            .ToDictionary(a => a, a => a.pitch);
+        yield break;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -36,9 +48,6 @@ public class TimeSpeedController : MonoBehaviour, IPointerDownHandler, IPointerU
 
     private void IncreaseSoundPitch()
     {
-        audioSourcesWithPitch = rootWithAudio
-            .GetComponentsInChildren<AudioSource>()
-            .ToDictionary(a => a, a => a.pitch);       
         foreach (var audioWithPitch in audioSourcesWithPitch)
         {
             Debug.Log(string.Format("Pitch from: {0} to: {1}", audioWithPitch.Key.pitch, audioWithPitch.Value * pitchFactor));
