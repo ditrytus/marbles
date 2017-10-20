@@ -25,7 +25,7 @@ public class SpawnOnInterval : MonoBehaviour {
 
 	private float startTime;
 
-	private int count = 0;
+	public int count = 0;
 
 	void Start ()
 	{
