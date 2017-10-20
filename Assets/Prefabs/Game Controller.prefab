@@ -57,7 +57,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4531127627073144}
   - component: {fileID: 114115190823918850}
-  - component: {fileID: 114190665150436304}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -389,17 +388,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragCamera: {fileID: 0}
   dragAndDropController: {fileID: 114009383797534094}
---- !u!114 &114190665150436304
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1607437712747132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6fff7ac45a3549d5952b3e258501b99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114405466878515700
 MonoBehaviour:
   m_ObjectHideFlags: 1

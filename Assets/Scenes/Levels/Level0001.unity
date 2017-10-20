@@ -248,21 +248,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114446004711796350, guid: 12ab5ab286ffa4750a46517091120a90,
+    - target: {fileID: 114457621792185406, guid: 12ab5ab286ffa4750a46517091120a90,
         type: 2}
-      propertyPath: soundToggle
+      propertyPath: animator
       value: 
-      objectReference: {fileID: 157656565}
-    - target: {fileID: 114446004711796350, guid: 12ab5ab286ffa4750a46517091120a90,
-        type: 2}
-      propertyPath: musicToggle
-      value: 
-      objectReference: {fileID: 157656564}
-    - target: {fileID: 114175459286666106, guid: 12ab5ab286ffa4750a46517091120a90,
-        type: 2}
-      propertyPath: dragCamera
-      value: 
-      objectReference: {fileID: 165483878}
+      objectReference: {fileID: 1408092252}
     - target: {fileID: 114585552494925292, guid: 12ab5ab286ffa4750a46517091120a90,
         type: 2}
       propertyPath: objectsToDisable.Array.data[0]
@@ -273,11 +263,21 @@ Prefab:
       propertyPath: objectsToDisable.Array.data[1]
       value: 
       objectReference: {fileID: 1772747336}
-    - target: {fileID: 114457621792185406, guid: 12ab5ab286ffa4750a46517091120a90,
+    - target: {fileID: 114175459286666106, guid: 12ab5ab286ffa4750a46517091120a90,
         type: 2}
-      propertyPath: animator
+      propertyPath: dragCamera
       value: 
-      objectReference: {fileID: 1408092252}
+      objectReference: {fileID: 165483878}
+    - target: {fileID: 114446004711796350, guid: 12ab5ab286ffa4750a46517091120a90,
+        type: 2}
+      propertyPath: soundToggle
+      value: 
+      objectReference: {fileID: 157656565}
+    - target: {fileID: 114446004711796350, guid: 12ab5ab286ffa4750a46517091120a90,
+        type: 2}
+      propertyPath: musicToggle
+      value: 
+      objectReference: {fileID: 157656564}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12ab5ab286ffa4750a46517091120a90, type: 2}
   m_IsPrefabParent: 0
