@@ -1719,12 +1719,16 @@ Prefab:
     - target: {fileID: 224928354016049334, guid: 6376e5ca564a44a48b453670fc602a9e,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 713.23
+      value: 658.23
       objectReference: {fileID: 0}
     - target: {fileID: 224928354016049334, guid: 6376e5ca564a44a48b453670fc602a9e,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 667
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970121991585518, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
