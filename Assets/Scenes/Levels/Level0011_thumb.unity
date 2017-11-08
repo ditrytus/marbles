@@ -52,7 +52,7 @@ LightmapSettings:
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 0
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 9
     m_Resolution: 2
@@ -88,7 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 7cbf14df5ca614fcdb393378ba792c2c,
+  m_LightingDataAsset: {fileID: 112000050, guid: 44f631d4c7c6e4061a9925a0f10d2e6e,
     type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -3464,11 +3464,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4456852120463952, guid: b65594ee337e840cb814556225dd07d0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.02
       objectReference: {fileID: 0}
     - target: {fileID: 4456852120463952, guid: b65594ee337e840cb814556225dd07d0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 45
+      value: 5.08
       objectReference: {fileID: 0}
     - target: {fileID: 4456852120463952, guid: b65594ee337e840cb814556225dd07d0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3517,7 +3517,7 @@ Prefab:
     - target: {fileID: 20207692910656376, guid: b65594ee337e840cb814556225dd07d0,
         type: 2}
       propertyPath: orthographic size
-      value: 41.22
+      value: 57.91
       objectReference: {fileID: 0}
     - target: {fileID: 114949280858017578, guid: b65594ee337e840cb814556225dd07d0,
         type: 2}
@@ -3663,6 +3663,11 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20207692910656376, guid: b65594ee337e840cb814556225dd07d0,
+        type: 2}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: ab0ef40cbb581411797e2bb77d6c18d8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b65594ee337e840cb814556225dd07d0, type: 2}
   m_IsPrefabParent: 0
@@ -5250,7 +5255,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1306004369}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56ae16d740b7c4123aa8644b508c1e28, type: 3}
   m_Name: 
@@ -5484,6 +5489,10 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.y
       value: 667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891546165792254, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
