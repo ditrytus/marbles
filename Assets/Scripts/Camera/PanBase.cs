@@ -18,6 +18,8 @@ public abstract class PanBase : MonoBehaviour
 
     public AxesRanges boundary;
 
+    public float bounceDeceleration = 0.0f;
+
     public void Glide()
     {
         if (isGliding)
@@ -29,14 +31,16 @@ public abstract class PanBase : MonoBehaviour
             if (!boundary.Contains(glidedCamPos))
             {
                 var axesOutsideBoundary = glidedCamPos.GetAxesOutOfRangeOrOnEdge(boundary);
-                if (axesOutsideBoundary.HasAll)
-                {
-                    velocity = -velocity;
-                } 
-                else
-                {
-                    velocity = velocity.Constrain(axesOutsideBoundary);
-                }
+
+                var bounceVector = -Vector3.one.Filter(axesOutsideBoundary);
+
+                var decelerationFactor = (1.0f - bounceDeceleration);
+
+                velocity = new Vector3(
+                        bounceVector.x * velocity.x,
+                        bounceVector.y * velocity.y,
+                        bounceVector.z * velocity.z)
+                        * decelerationFactor;
                 
                 glidedCamPos = GetGlidedCamPos(velocity);
             }
