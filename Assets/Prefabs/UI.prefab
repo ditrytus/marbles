@@ -2769,7 +2769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeScaleRange:
     min: 3
-    max: 14
+    max: 7
   rootWithAudio: {fileID: 0}
   defaultRootName: Level
   pitchFactor: 2.3

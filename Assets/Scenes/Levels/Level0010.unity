@@ -1134,6 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerCount: 0
   containers: []
+  defaultContainersTag: DragSource
   objectToEnable: {fileID: 0}
   defaultObjectToEnableName: Restart Hint
 --- !u!1 &664026040
@@ -2338,6 +2339,11 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.y
       value: 667
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416712341744806, guid: 6376e5ca564a44a48b453670fc602a9e,
+        type: 2}
+      propertyPath: timeScaleRange.max
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
