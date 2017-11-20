@@ -10,11 +10,21 @@ public class EnableOnAnyContainerCount : RxBehaviour
 
 	public ContainerController[] containers;
 
+	public string defaultContainersTag = "DragSource";
+
 	public GameObject objectToEnable;
 	public string defaultObjectToEnableName = "Restart Hint";
 
 	void Start ()
 	{
+		if (containers == null || !containers.Any())
+		{
+			containers = GameObject.FindGameObjectsWithTag(defaultContainersTag)
+				.Cast<ContainerController>()
+				.Where(c => c != null)
+				.ToArray();
+		}
+
 		if (objectToEnable == null) objectToEnable = GameObject.Find(defaultObjectToEnableName);
 		
 		var triggeringCounts = Observable.CombineLatest(

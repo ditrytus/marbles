@@ -538,7 +538,7 @@ Prefab:
         type: 2}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 8400000, guid: ab0ef40cbb581411797e2bb77d6c18d8, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4691802601387672, guid: b65594ee337e840cb814556225dd07d0, type: 2}
       propertyPath: m_LocalPosition.y
       value: 3.9
@@ -568,9 +568,38 @@ Prefab:
       propertyPath: m_BackGroundColor.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 20095953335026290, guid: b65594ee337e840cb814556225dd07d0,
+        type: 2}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 0e726e54d5f294072bc4d62f7edc9dac, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b65594ee337e840cb814556225dd07d0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &760420362 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1031986024158392, guid: b65594ee337e840cb814556225dd07d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 760420361}
+--- !u!20 &760420363 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20095953335026290, guid: b65594ee337e840cb814556225dd07d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 760420361}
+--- !u!114 &760420364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 760420362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ae16d740b7c4123aa8644b508c1e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderTexture: {fileID: 8400000, guid: ab0ef40cbb581411797e2bb77d6c18d8, type: 2}
+  renderCamera: {fileID: 760420363}
+  snapshotKey: b
 --- !u!20 &772703049 stripped
 Camera:
   m_PrefabParentObject: {fileID: 20003129531122646, guid: b65594ee337e840cb814556225dd07d0,
@@ -826,7 +855,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1306004369}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56ae16d740b7c4123aa8644b508c1e28, type: 3}
   m_Name: 
