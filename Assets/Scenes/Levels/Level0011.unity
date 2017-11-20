@@ -2540,6 +2540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerCount: 0
   containers: []
+  defaultContainersTag: DragSource
   objectToEnable: {fileID: 0}
   defaultObjectToEnableName: Restart Hint
 --- !u!1 &563779090
@@ -2568,7 +2569,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 563779090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.46, y: -2.37, z: -0}
+  m_LocalPosition: {x: 4.46, y: -2.37, z: -13.2}
   m_LocalScale: {x: 2.51, y: 1.91, z: 4.0667562}
   m_Children: []
   m_Father: {fileID: 2124921019}
@@ -2599,7 +2600,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7459893, y: 3.3912945, z: 14.532285}
+  m_Size: {x: 2.7459893, y: 3.3912945, z: 20.72}
   m_Center: {x: -0.87347823, y: -1.1950595, z: 6.7662287}
 --- !u!1 &613452620
 GameObject:
@@ -5485,6 +5486,16 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 667
       objectReference: {fileID: 0}
+    - target: {fileID: 114416712341744806, guid: 6376e5ca564a44a48b453670fc602a9e,
+        type: 2}
+      propertyPath: timeScaleRange.max
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114416712341744806, guid: 6376e5ca564a44a48b453670fc602a9e,
+        type: 2}
+      propertyPath: timeScaleRange.min
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
   m_IsPrefabParent: 0
@@ -5526,7 +5537,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1406800175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.46, y: -2.37, z: -0}
+  m_LocalPosition: {x: 4.46, y: -2.08, z: -13.16}
   m_LocalScale: {x: 2.51, y: 1.91, z: 4.0667562}
   m_Children: []
   m_Father: {fileID: 1657634334}
@@ -5557,7 +5568,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7459893, y: 3.3912945, z: 14.532285}
+  m_Size: {x: 2.7459893, y: 3.3912945, z: 20.3}
   m_Center: {x: -0.87347823, y: -1.1950595, z: 6.7662287}
 --- !u!95 &1408092252 stripped
 Animator:
