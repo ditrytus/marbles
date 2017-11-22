@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 558157677}
   - component: {fileID: 558157679}
   - component: {fileID: 558157678}
+  - component: {fileID: 558157680}
   m_Layer: 5
   m_Name: Dispensers
   m_TagString: Untagged
@@ -509,8 +510,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerCount: 0
   containers: []
+  defaultContainersTag: DragSource
   objectToEnable: {fileID: 0}
   defaultObjectToEnableName: Restart Hint
+--- !u!114 &558157680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 558157676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd977256654dd4b0a81c0688064e8458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultComponentsTag: Dispenser
+  overlapTime: 2
 --- !u!1 &622145580
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +942,7 @@ Prefab:
     - target: {fileID: 224611011402689924, guid: 14916dbe2b7a4470893a2c438dc78bba,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 22.2
       objectReference: {fileID: 0}
     - target: {fileID: 224611011402689924, guid: 14916dbe2b7a4470893a2c438dc78bba,
         type: 2}
@@ -1210,6 +1225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 2
+  delay: 0
   maxCount: -1
   prefab: {fileID: 1739119305881630, guid: dcc99f9a8a81a49ecb6e7ee5d6ed9d5d, type: 2}
   spawnPoint: {fileID: 0}
@@ -1824,7 +1840,7 @@ Prefab:
     - target: {fileID: 224611011402689924, guid: 14916dbe2b7a4470893a2c438dc78bba,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 33.2
       objectReference: {fileID: 0}
     - target: {fileID: 224611011402689924, guid: 14916dbe2b7a4470893a2c438dc78bba,
         type: 2}
@@ -2221,7 +2237,7 @@ Prefab:
     - target: {fileID: 224611011402689924, guid: 14916dbe2b7a4470893a2c438dc78bba,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 224611011402689924, guid: 14916dbe2b7a4470893a2c438dc78bba,
         type: 2}

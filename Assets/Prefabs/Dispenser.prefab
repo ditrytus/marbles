@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 114220389384554828}
   m_Layer: 5
   m_Name: Dispenser
-  m_TagString: Untagged
+  m_TagString: Dispenser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1175,6 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 0.4
+  delay: 0
   maxCount: 10
   prefab: {fileID: 1739119305881630, guid: 4e4267ef1ac3145eebef4b3162438332, type: 2}
   spawnPoint: {fileID: 1978716016575502}

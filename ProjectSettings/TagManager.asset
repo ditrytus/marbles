@@ -9,6 +9,7 @@ TagManager:
   - DragSource
   - Glass
   - Metal
+  - Dispenser
   layers:
   - Default
   - TransparentFX

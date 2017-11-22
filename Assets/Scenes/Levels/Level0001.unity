@@ -669,6 +669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 558157677}
   - component: {fileID: 558157678}
+  - component: {fileID: 558157679}
   m_Layer: 5
   m_Name: Dispensers
   m_TagString: Untagged
@@ -704,6 +705,19 @@ MonoBehaviour:
   triggerCount: 0
   container: {fileID: 202271525}
   objectToEnable: {fileID: 235950140}
+--- !u!114 &558157679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 558157676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd977256654dd4b0a81c0688064e8458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultComponentsTag: Dispenser
+  overlapTime: 0
 --- !u!4 &635454885 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4222525045654778, guid: db04ac66570344ddf97919ccf11b1716,
@@ -1069,6 +1083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 2
+  delay: 0
   maxCount: -1
   prefab: {fileID: 1739119305881630, guid: dcc99f9a8a81a49ecb6e7ee5d6ed9d5d, type: 2}
   spawnPoint: {fileID: 0}
@@ -1186,6 +1201,16 @@ Prefab:
       propertyPath: sourceCamera
       value: 
       objectReference: {fileID: 190757981}
+    - target: {fileID: 114544471831948482, guid: 14916dbe2b7a4470893a2c438dc78bba,
+        type: 2}
+      propertyPath: delay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544471831948482, guid: 14916dbe2b7a4470893a2c438dc78bba,
+        type: 2}
+      propertyPath: interval
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14916dbe2b7a4470893a2c438dc78bba, type: 2}
   m_IsPrefabParent: 0

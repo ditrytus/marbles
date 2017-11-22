@@ -2,8 +2,10 @@
 using UniRx;
 using System;
 
-public class SpawnOnInterval : MonoBehaviour {
+public class SpawnOnInterval : MonoBehaviour, IDelayedInterval {
 	public float interval;
+
+	public float delay;
 
 	public int maxCount = -1;
 
@@ -21,7 +23,35 @@ public class SpawnOnInterval : MonoBehaviour {
 		}
 	}
 
-	private Subject<Unit> spawningFinished = new Subject<Unit>();
+    float IDelayedInterval.Interval
+    {
+        get
+        {
+            return interval;
+        }
+    }
+
+    float IDelayedInterval.Delay
+	{ 
+		get
+		{
+			return delay;
+		}
+		set
+		{
+			delay = value;
+		}
+	}
+
+    int IDelayedInterval.MaxCount
+    {
+        get
+        {
+            return maxCount;
+        }
+    }
+
+    private Subject<Unit> spawningFinished = new Subject<Unit>();
 
 	private float startTime;
 
@@ -29,7 +59,7 @@ public class SpawnOnInterval : MonoBehaviour {
 
 	void Start ()
 	{
-		startTime = PausableTime.Instance.Time;
+		startTime = PausableTime.Instance.Time + delay;
 	}
 
 	void Update()

@@ -2217,6 +2217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 2
+  delay: 0
   maxCount: -1
   prefab: {fileID: 1739119305881630, guid: dcc99f9a8a81a49ecb6e7ee5d6ed9d5d, type: 2}
   spawnPoint: {fileID: 0}
