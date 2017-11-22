@@ -50,7 +50,6 @@ public class TimeSpeedController : MonoBehaviour, IPointerDownHandler, IPointerU
     {
         foreach (var audioWithPitch in audioSourcesWithPitch)
         {
-            Debug.Log(string.Format("Pitch from: {0} to: {1}", audioWithPitch.Key.pitch, audioWithPitch.Value * pitchFactor));
             audioWithPitch.Key.pitch = audioWithPitch.Value * pitchFactor;
         }
     }
