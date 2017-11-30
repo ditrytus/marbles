@@ -19,6 +19,15 @@ public class FiloController : RxBehaviour
 
 	public float slowDownFactor = 0.1f;
 
+	public  AudioSource audioSource;
+
+	public float switchUpSoundDelay;
+
+	public float switchDownSoundDelay;
+	
+
+	public AudioClip audioClip;
+
 	private enum FiloState
 	{
 		Gathering,
@@ -53,11 +62,16 @@ public class FiloController : RxBehaviour
 	private Vector3 eulerAngles;
 
     void Start () {
+		this.SetDefaultFromThis(ref audioSource);
 		var sub1 = container.content.ObserveCountChanged(notifyCurrentCount:true)
 			.Subscribe(count => {
 				if (state == FiloState.Gathering && count >= maxCount)
 				{
 					state = FiloState.SettleBeforeSwitchingDown;
+					Observable.Timer(TimeSpan.FromSeconds(switchDownSoundDelay))
+						.Subscribe((l)=>{
+							audioSource.PlayOneShot(audioClip);						
+						});
 				}
 			});
 
@@ -67,6 +81,10 @@ public class FiloController : RxBehaviour
 				{
 					state = FiloState.SwitchingUp;
 					startTime = PausableTime.Instance.Time;
+					Observable.Timer(TimeSpan.FromSeconds(switchUpSoundDelay))
+						.Subscribe((l)=>{
+							audioSource.PlayOneShot(audioClip);						
+						});				
 				}
 			});
 
