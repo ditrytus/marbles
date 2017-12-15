@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ae16d740b7c4123aa8644b508c1e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderTexture: {fileID: 0}
+  renderTexture: {fileID: 8400000, guid: ab0ef40cbb581411797e2bb77d6c18d8, type: 2}
   renderCamera: {fileID: 20207692910656376}
   snapshotKey: s
 --- !u!114 &114024692170870424

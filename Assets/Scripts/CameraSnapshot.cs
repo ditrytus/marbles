@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using System.IO;
+using System.Linq;
  
 public class CameraSnapshot : MonoBehaviour
 {
@@ -22,23 +23,29 @@ public class CameraSnapshot : MonoBehaviour
 	}
 	
 	public IEnumerator SaveCameraView()
-    {
-        yield return new WaitForEndOfFrame();
+    {        
+        using (new PropertyRestorer<Camera>(renderCamera, c => c.targetTexture))
+        using (new Disabler(renderCamera.gameObject.GetChildren().ToArray()))
+        {
+            yield return new WaitForEndOfFrame();
 
-        RenderTexture rendText = RenderTexture.active;
-        RenderTexture.active = renderCamera.targetTexture;
+            renderCamera.targetTexture = renderTexture;
 
-        renderCamera.Render();
+            RenderTexture rendText = RenderTexture.active;
+            RenderTexture.active = renderCamera.targetTexture;
 
-        Texture2D cameraImage = new Texture2D(renderCamera.targetTexture.width, renderCamera.targetTexture.height, TextureFormat.ARGB32, false);
-        cameraImage.ReadPixels(new Rect(0, 0, renderCamera.targetTexture.width, renderCamera.targetTexture.height), 0, 0);
-        cameraImage.Apply();
-        RenderTexture.active = rendText;
+            renderCamera.Render();
 
-		var path = GetSnapshotPath();
-		Debug.Log("Screenshot saved to: " + path);
+            Texture2D cameraImage = new Texture2D(renderCamera.targetTexture.width, renderCamera.targetTexture.height, TextureFormat.ARGB32, false);
+            cameraImage.ReadPixels(new Rect(0, 0, renderCamera.targetTexture.width, renderCamera.targetTexture.height), 0, 0);
+            cameraImage.Apply();
+            RenderTexture.active = rendText;
 
-        File.WriteAllBytes(path, cameraImage.EncodeToPNG());
+            var path = GetSnapshotPath();
+            Debug.Log("Screenshot saved to: " + path);
+
+            File.WriteAllBytes(path, cameraImage.EncodeToPNG());
+        }
     }
 
     private string GetSnapshotPath()
