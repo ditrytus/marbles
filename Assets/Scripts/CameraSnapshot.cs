@@ -6,8 +6,6 @@ using System.Linq;
  
 public class CameraSnapshot : MonoBehaviour
 {
-	public RenderTexture renderTexture;
-
 	public Camera renderCamera;
 
 	public string snapshotKey = "s";
@@ -23,7 +21,8 @@ public class CameraSnapshot : MonoBehaviour
 	}
 	
 	public IEnumerator SaveCameraView()
-    {        
+    {
+        RenderTexture renderTexture = new RenderTexture(renderCamera.pixelWidth, renderCamera.pixelHeight, 24, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Default);
         using (new PropertyRestorer<Camera>(renderCamera, c => c.targetTexture))
         using (new Disabler(renderCamera.gameObject.GetChildren().ToArray()))
         {
