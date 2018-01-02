@@ -154,7 +154,7 @@ PlayerSettings:
     iOS: com.Gruszecki.draganddrop
     tvOS: com.Gruszecki.marbles
   buildNumber:
-    iOS: 20171122.1
+    iOS: 20180102
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
@@ -625,7 +625,8 @@ PlayerSettings:
   webGLUseWasm: 0
   webGLCompressionFormat: 1
   scriptingDefineSymbols: {}
-  platformArchitecture: {}
+  platformArchitecture:
+    iOS: 1
   scriptingBackend: {}
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
