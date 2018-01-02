@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 33571508145250002}
   - component: {fileID: 23855890840150914}
   - component: {fileID: 64392242321522244}
+  - component: {fileID: 114808050641929544}
   m_Layer: 0
   m_Name: Funnel
   m_TagString: Metal
@@ -161,8 +162,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1997677990111014}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.827566, y: 34.99, z: 2.9250946}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.6, y: 30.79, z: -27.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4903390156686694}
@@ -414,6 +415,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 1005533486449350}
   filterTag: Marble
+--- !u!114 &114808050641929544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1750440083730678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ad20e06a1c94334b45c0b39e76906d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorPool:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0.5232558, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0.034482956, g: 0, b: 1, a: 0}
+  - {r: 0.90344834, g: 1, b: 0, a: 0}
+  - {r: 0, g: 1, b: 1, a: 0}
+  - {r: 0.94482803, g: 0, b: 1, a: 0}
+  - {r: 0.2827587, g: 0, b: 1, a: 0}
+  brightness: 0.25
 --- !u!114 &114828493964444268
 MonoBehaviour:
   m_ObjectHideFlags: 1

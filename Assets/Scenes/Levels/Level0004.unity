@@ -1461,7 +1461,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ae16d740b7c4123aa8644b508c1e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderTexture: {fileID: 0}
   renderCamera: {fileID: 392843198}
   snapshotKey: s
 --- !u!1001 &1332453854
@@ -1654,6 +1653,10 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.y
       value: 667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891546165792254, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6376e5ca564a44a48b453670fc602a9e, type: 2}
@@ -2062,6 +2065,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1147227423}
     m_Modifications:
+    - target: {fileID: 114808050641929544, guid: f766dba04c86843eb9d21775756c5dec,
+        type: 2}
+      propertyPath: colorPool.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4396634032750766, guid: f766dba04c86843eb9d21775756c5dec, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.41
@@ -2101,6 +2109,21 @@ Prefab:
     - target: {fileID: 1997677990111014, guid: f766dba04c86843eb9d21775756c5dec, type: 2}
       propertyPath: m_Name
       value: Drop Funnel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808050641929544, guid: f766dba04c86843eb9d21775756c5dec,
+        type: 2}
+      propertyPath: colorPool.Array.data[7].r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808050641929544, guid: f766dba04c86843eb9d21775756c5dec,
+        type: 2}
+      propertyPath: colorPool.Array.data[7].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808050641929544, guid: f766dba04c86843eb9d21775756c5dec,
+        type: 2}
+      propertyPath: colorPool.Array.data[7].b
+      value: 0.13103461
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f766dba04c86843eb9d21775756c5dec, type: 2}
@@ -2148,10 +2171,6 @@ Prefab:
     - target: {fileID: 4396634032750766, guid: f766dba04c86843eb9d21775756c5dec, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4396634032750766, guid: f766dba04c86843eb9d21775756c5dec, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f766dba04c86843eb9d21775756c5dec, type: 2}
