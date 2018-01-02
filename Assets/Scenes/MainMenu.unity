@@ -463,7 +463,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 177774560}
+  m_TargetGraphic: {fileID: 1167909652}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -787,6 +787,11 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.y
       value: 131
+      objectReference: {fileID: 0}
+    - target: {fileID: 114511500403380824, guid: a66a75f5c7ac746afa237ba54edb644e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a66a75f5c7ac746afa237ba54edb644e, type: 2}
@@ -5092,7 +5097,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1713015464}
+  m_TargetGraphic: {fileID: 964781124}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -5556,7 +5561,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1849191261}
+  m_TargetGraphic: {fileID: 1123137365}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
