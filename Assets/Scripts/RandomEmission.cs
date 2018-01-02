@@ -13,7 +13,7 @@ public class RandomEmission : MonoBehaviour
 
 	void Start ()
 	{
-		if (usedColors == null)
+		if (usedColors == null || usedColors.Count == 0)
 		{
 			usedColors = Enumerable.Range(0, colorPool.Length).ToList();
 		}
