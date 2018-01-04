@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: 5d5340e1ba0a949a3ae21c63c0690305
+timeCreated: 1515090044
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: track_1_lev_1-2
+    100004: TriangleThickBevel
+    100006: track_2_lev_1-2
+    100008: TriangleThickBevel_0
+    100010: track_3_lev_1-2
+    100012: TriangleThickBevel_001
+    100014: track_2_lev_1-2_001
+    100016: TriangleThickBevel_002
+    100018: track_4_lev_1-2
+    100020: track_1_lev_2-3
+    100022: track_1_lev_3-e
+    100024: track_2_lev_2-3
+    100026: track_2_lev_3-e
+    100028: track_3_lev_2-3
+    100030: track_3_lev_3-e
+    100032: track_4_lev_2-3
+    100034: track_4_lev_3-e
+    100036: TriangleThickBevel_003
+    100038: TriangleThickBevel_004
+    100040: TriangleThickBevel_005
+    100042: TriangleThickBevel_006
+    100044: TriangleThickBevel_007
+    100046: TriangleThickBevel_008
+    100048: TriangleThickBevel_009
+    100050: TriangleThickBevel_010
+    400000: //RootNode
+    400002: track_1_lev_1-2
+    400004: TriangleThickBevel
+    400006: track_2_lev_1-2
+    400008: TriangleThickBevel_0
+    400010: track_3_lev_1-2
+    400012: TriangleThickBevel_001
+    400014: track_2_lev_1-2_001
+    400016: TriangleThickBevel_002
+    400018: track_4_lev_1-2
+    400020: track_1_lev_2-3
+    400022: track_1_lev_3-e
+    400024: track_2_lev_2-3
+    400026: track_2_lev_3-e
+    400028: track_3_lev_2-3
+    400030: track_3_lev_3-e
+    400032: track_4_lev_2-3
+    400034: track_4_lev_3-e
+    400036: TriangleThickBevel_003
+    400038: TriangleThickBevel_004
+    400040: TriangleThickBevel_005
+    400042: TriangleThickBevel_006
+    400044: TriangleThickBevel_007
+    400046: TriangleThickBevel_008
+    400048: TriangleThickBevel_009
+    400050: TriangleThickBevel_010
+    2300000: track_1_lev_1-2
+    2300002: TriangleThickBevel
+    2300004: track_2_lev_1-2
+    2300006: TriangleThickBevel_0
+    2300008: track_3_lev_1-2
+    2300010: TriangleThickBevel_001
+    2300012: track_2_lev_1-2_001
+    2300014: TriangleThickBevel_002
+    2300016: track_4_lev_1-2
+    2300018: track_1_lev_2-3
+    2300020: track_1_lev_3-e
+    2300022: track_2_lev_2-3
+    2300024: track_2_lev_3-e
+    2300026: track_3_lev_2-3
+    2300028: track_3_lev_3-e
+    2300030: track_4_lev_2-3
+    2300032: track_4_lev_3-e
+    2300034: TriangleThickBevel_003
+    2300036: TriangleThickBevel_004
+    2300038: TriangleThickBevel_005
+    2300040: TriangleThickBevel_006
+    2300042: TriangleThickBevel_007
+    2300044: TriangleThickBevel_008
+    2300046: TriangleThickBevel_009
+    2300048: TriangleThickBevel_010
+    3300000: track_1_lev_1-2
+    3300002: TriangleThickBevel
+    3300004: track_2_lev_1-2
+    3300006: TriangleThickBevel_0
+    3300008: track_3_lev_1-2
+    3300010: TriangleThickBevel_001
+    3300012: track_2_lev_1-2_001
+    3300014: TriangleThickBevel_002
+    3300016: track_4_lev_1-2
+    3300018: track_1_lev_2-3
+    3300020: track_1_lev_3-e
+    3300022: track_2_lev_2-3
+    3300024: track_2_lev_3-e
+    3300026: track_3_lev_2-3
+    3300028: track_3_lev_3-e
+    3300030: track_4_lev_2-3
+    3300032: track_4_lev_3-e
+    3300034: TriangleThickBevel_003
+    3300036: TriangleThickBevel_004
+    3300038: TriangleThickBevel_005
+    3300040: TriangleThickBevel_006
+    3300042: TriangleThickBevel_007
+    3300044: TriangleThickBevel_008
+    3300046: TriangleThickBevel_009
+    3300048: TriangleThickBevel_010
+    4300000: TriangleThickBevel
+    4300002: track_1_lev_1-2
+    4300004: TriangleThickBevel_0
+    4300006: track_2_lev_1-2
+    4300008: TriangleThickBevel_001
+    4300010: track_3_lev_1-2
+    4300012: TriangleThickBevel_002
+    4300014: track_2_lev_1-2_001
+    4300016: track_4_lev_1-2
+    4300018: TriangleThickBevel_003
+    4300020: track_3_lev_2-3
+    4300022: TriangleThickBevel_004
+    4300024: track_2_lev_2-3
+    4300026: TriangleThickBevel_005
+    4300028: track_1_lev_2-3
+    4300030: TriangleThickBevel_006
+    4300032: track_4_lev_2-3
+    4300034: TriangleThickBevel_007
+    4300036: track_3_lev_3-e
+    4300038: TriangleThickBevel_008
+    4300040: track_2_lev_3-e
+    4300042: TriangleThickBevel_009
+    4300044: track_1_lev_3-e
+    4300046: TriangleThickBevel_010
+    4300048: track_4_lev_3-e
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: unnamed
+    second: {fileID: 2100000, guid: ac613d242b2274ce592f8dca889dd8e1, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
