@@ -35,6 +35,9 @@ GameObject:
   - component: {fileID: 114389371890416424}
   - component: {fileID: 114098716852318764}
   - component: {fileID: 114429744829207436}
+  - component: {fileID: 82479189250717964}
+  - component: {fileID: 114435145043719754}
+  - component: {fileID: 114838670793468982}
   m_Layer: 0
   m_Name: Marble_blue
   m_TagString: Marble
@@ -191,6 +194,86 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &82479189250717964
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d30c525b1647b4401b22198023fbcfca, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1.5
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114098716852318764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adab0c38286f143e19f4cc23980a8790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 82449322222200280}
   velocityRange:
     min: 0
     max: 2
@@ -235,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c529e4524fc74b54a8ab212575fff67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 82449322222200280}
   clips:
   - {fileID: 8300000, guid: 8d9dcbf06eb484500bab74f0c64076f1, type: 3}
   - {fileID: 8300000, guid: 7749ed27c02aa47fa9d90701ab081529, type: 3}
@@ -278,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c529e4524fc74b54a8ab212575fff67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 82449322222200280}
   clips:
   - {fileID: 8300000, guid: bca79851412294a718d7bb5b31cb2857, type: 3}
   - {fileID: 8300000, guid: 9a31d955e93544934b03c303c8de5914, type: 3}
@@ -301,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6922fe2e891cb44d3b975cf38eba87b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 82449322222200280}
   tagFilter: Metal
 --- !u!114 &114429744829207436
 MonoBehaviour:
@@ -314,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c529e4524fc74b54a8ab212575fff67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 82449322222200280}
   clips:
   - {fileID: 8300000, guid: 904923bb73a6e44d48fc559e88b3b126, type: 3}
   - {fileID: 8300000, guid: 349db581bcc344c06abeebbf1ee91cd0, type: 3}
@@ -326,6 +409,19 @@ MonoBehaviour:
     max: 16
   vanishingIndex: 2
   volumeFactor: 1
+  tagFilter: Plastic
+--- !u!114 &114435145043719754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6922fe2e891cb44d3b975cf38eba87b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 82479189250717964}
   tagFilter: Plastic
 --- !u!114 &114533410480568030
 MonoBehaviour:
@@ -382,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c529e4524fc74b54a8ab212575fff67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 82449322222200280}
   clips:
   - {fileID: 8300000, guid: 0c1a63bcb04ac453da4f0da63509cae6, type: 3}
   - {fileID: 8300000, guid: f46a0c8708cdc4caba76687e5675d521, type: 3}
@@ -396,6 +492,27 @@ MonoBehaviour:
   vanishingIndex: 2
   volumeFactor: 1
   tagFilter: Glass
+--- !u!114 &114838670793468982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adab0c38286f143e19f4cc23980a8790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 82479189250717964}
+  velocityRange:
+    min: 0
+    max: 2
+  vanishingIndex: 1.75
+  volumeFactor: 0.75
+  axesFilter:
+    x: 1
+    y: 0
+    z: 1
 --- !u!135 &135378198450274258
 SphereCollider:
   m_ObjectHideFlags: 1
