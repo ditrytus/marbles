@@ -34,6 +34,7 @@ GameObject:
   - component: {fileID: 114321856960934864}
   - component: {fileID: 114389371890416424}
   - component: {fileID: 114098716852318764}
+  - component: {fileID: 114429744829207436}
   m_Layer: 0
   m_Name: Marble_blue
   m_TagString: Marble
@@ -63,6 +64,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -78,12 +80,14 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33500348145488254
 MeshFilter:
@@ -299,6 +303,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   tagFilter: Metal
+--- !u!114 &114429744829207436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1739119305881630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c529e4524fc74b54a8ab212575fff67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: 904923bb73a6e44d48fc559e88b3b126, type: 3}
+  - {fileID: 8300000, guid: 349db581bcc344c06abeebbf1ee91cd0, type: 3}
+  - {fileID: 8300000, guid: dcf6906eabe2c423fb76490368929a7e, type: 3}
+  - {fileID: 8300000, guid: 399cde284fd144f71bc1051dee41969e, type: 3}
+  - {fileID: 8300000, guid: 972f1267a3b7546b4b76e98041f14a87, type: 3}
+  velocityRange:
+    min: 0
+    max: 16
+  vanishingIndex: 2
+  volumeFactor: 1
+  tagFilter: Plastic
 --- !u!114 &114533410480568030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -340,6 +368,7 @@ MonoBehaviour:
     max: 0.5
   wiggleTime: 5
   audioSource: {fileID: 0}
+  velocityToVolume: {fileID: 0}
   wiggleSound: {fileID: 8300000, guid: 46e19edee3f4f490c8f7c87ff701631d, type: 3}
   volume: 1
 --- !u!114 &114639896641608888
