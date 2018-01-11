@@ -277,64 +277,6 @@ Camera:
   m_PrefabParentObject: {fileID: 20520654654074798, guid: 6376e5ca564a44a48b453670fc602a9e,
     type: 2}
   m_PrefabInternal: {fileID: 1366846294}
---- !u!1001 &213981153
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1083308243}
-    m_Modifications:
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 8.906002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.12000084
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.11457348
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.5009702
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.49902797
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.49902803
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.5009701
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.3000019
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.3000016
-      objectReference: {fileID: 0}
-    - target: {fileID: 1529172927159894, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_Name
-      value: Ring (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282494832323818, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.3000001
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ce4ad31b53047498294ec45308804e55, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &235950140 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1012164944094576, guid: 6376e5ca564a44a48b453670fc602a9e,
@@ -2391,7 +2333,7 @@ GameObject:
   - component: {fileID: 933216855}
   m_Layer: 0
   m_Name: NurbsPath (2)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4709,7 +4651,7 @@ GameObject:
   - component: {fileID: 1989672321}
   m_Layer: 0
   m_Name: NurbsPath (3)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4931,14 +4873,6 @@ Prefab:
     - target: {fileID: 4262929585393542, guid: a914f6b09df2243b0a2fd256e45a48a7, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4262929585393542, guid: a914f6b09df2243b0a2fd256e45a48a7, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.99999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 4262929585393542, guid: a914f6b09df2243b0a2fd256e45a48a7, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.99999994
       objectReference: {fileID: 0}
     - target: {fileID: 1738214183271146, guid: a914f6b09df2243b0a2fd256e45a48a7, type: 2}
       propertyPath: m_Name

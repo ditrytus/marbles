@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 731931381}
   m_Layer: 0
   m_Name: NurbsPath (1)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1023,7 +1023,7 @@ GameObject:
   - component: {fileID: 933216855}
   m_Layer: 0
   m_Name: NurbsPath (2)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1268,7 +1268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ae16d740b7c4123aa8644b508c1e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderTexture: {fileID: 0}
   renderCamera: {fileID: 392843198}
   snapshotKey: s
 --- !u!1001 &1366846294
