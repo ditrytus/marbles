@@ -14,8 +14,6 @@ public abstract class SpawnAtWithTimeout : RxBehaviour
 
 	public float timeout = 0.0f;
 
-    //private GameObject createdObject;
-
     public void Spawn()
     {
         var createdObject = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation, parent);
@@ -28,12 +26,6 @@ public abstract class SpawnAtWithTimeout : RxBehaviour
                 {
                     Destroy(obj);
                 });
-            // var sub = Observable
-            //     .Timer(TimeSpan.FromSeconds(timeout), new PausableMainThreadScheduler())
-            //     .Subscribe(_ => 
-            //     {
-            //         Destroy(createdObject);
-            //     });
             AddSubscriptions(sub);
         }
     }
