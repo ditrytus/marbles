@@ -86,7 +86,7 @@ namespace UniRx
 
             // delay action is run in StartCoroutine
             // Okay to action run synchronous and guaranteed run on MainThread
-            IEnumerator DelayAction(TimeSpan dueTime, Action action, ICancelable cancellation)
+            protected virtual IEnumerator DelayAction(TimeSpan dueTime, Action action, ICancelable cancellation)
             {
                 // zero == every frame
                 if (dueTime == TimeSpan.Zero)

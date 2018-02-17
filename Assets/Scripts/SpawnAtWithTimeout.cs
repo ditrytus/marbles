@@ -21,7 +21,7 @@ public abstract class SpawnAtWithTimeout : RxBehaviour
         {
             var sub = new[] { createdObject }
                 .ToObservable()
-                .Delay(TimeSpan.FromSeconds(timeout / PausableTime.Instance.TimeScale), new PausableMainThreadScheduler())
+                .Delay(TimeSpan.FromSeconds(timeout), new PausableMainThreadScheduler())
                 .Subscribe(obj => 
                 {
                     Destroy(obj);
