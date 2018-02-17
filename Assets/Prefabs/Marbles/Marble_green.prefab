@@ -420,11 +420,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478d62995df1549828bc22ef2f882906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 2
+  delay: 4
   radiusRange:
     min: 0
     max: 0.5
-  wiggleTime: 5
+  wiggleTime: 10
   audioSource: {fileID: 0}
   velocityToVolume: {fileID: 0}
   wiggleSound: {fileID: 8300000, guid: 46e19edee3f4f490c8f7c87ff701631d, type: 3}
