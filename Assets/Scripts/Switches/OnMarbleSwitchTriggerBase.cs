@@ -10,22 +10,17 @@ public abstract class OnMarbleSwitchTriggerBase : SwitchTriggerBase
 
     public float lastMarbleTimeout = 3.0f;
 
+    public float lastTriggeredTime;
+
 	protected void SwitchWithObject(GameObject triggeringObject)
     {
-        if (triggeringObject != lastMarble && triggeringObject.CompareTag(Tags.Marble))
+        if (triggeringObject != lastMarble
+        && (PausableTime.Instance.Time - lastTriggeredTime) >= lastMarbleTimeout
+        && triggeringObject.CompareTag(Tags.Marble))
         {
-            Trigger();
-
-            StopAllCoroutines();
+            lastTriggeredTime = PausableTime.Instance.Time;
             lastMarble = triggeringObject;
-            StartCoroutine(MarbleTimeout());
+            Trigger();
         }
-    }
-
-    IEnumerator MarbleTimeout()
-    {
-        yield return new WaitForSecondsRealtime(lastMarbleTimeout);
-        lastMarble = null;
-        yield break;
     }
 }

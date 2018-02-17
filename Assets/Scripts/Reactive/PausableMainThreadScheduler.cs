@@ -8,6 +8,6 @@ public class PausableMainThreadScheduler : Scheduler.MainThreadScheduler
 {
 	public override DateTimeOffset Now
 	{
-		get { return PausableTime.Instance.UnscaledUtcNow; }
+		get { return PausableTime.Instance.UtcNow; }
 	} 
 }

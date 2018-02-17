@@ -61,6 +61,14 @@ public class PausableTime : IPausable
 		}
 	}
 
+	public float TimeScale
+	{
+		get
+		{
+			return UnityEngine.Time.timeScale;
+		}
+	}
+
     public DateTimeOffset UtcNow
 	{
 		get

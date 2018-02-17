@@ -14,7 +14,7 @@ public class MoveAlongCurve : MonoBehaviour {
 	void Start () {
 		curve = GetComponentInParent<Curve>();
         duration = GetComponentInParent<SwitchTriggerBase>().delay;
-		startTime = PausableTime.Instance.UnscaledTime;	
+		startTime = PausableTime.Instance.Time;	
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class MoveAlongCurve : MonoBehaviour {
 			return;
 		}
 
-		var currentTime = PausableTime.Instance.UnscaledTime - startTime;
+		var currentTime = PausableTime.Instance.Time - startTime;
         var currentDistance = Mathf.Lerp(0.0f, curve.length, currentTime / duration);
 
 		var distanceSoFar = 0.0f;
