@@ -12,6 +12,13 @@ ModelImporter:
     100008: TriangleThickBevel_0
     100010: track_bottom_short
     100012: TriangleThickBevel_001
+    100014: track_1_high
+    100016: track_1_medium
+    100018: TriangleThickBevel_002
+    100020: TriangleThickBevel_003
+    100022: track_1_001
+    100024: TriangleThickBevel_004
+    100026: track_1_short
     400000: //RootNode
     400002: track_1
     400004: TriangleThickBevel
@@ -19,24 +26,52 @@ ModelImporter:
     400008: TriangleThickBevel_0
     400010: track_bottom_short
     400012: TriangleThickBevel_001
+    400014: track_1_high
+    400016: track_1_medium
+    400018: TriangleThickBevel_002
+    400020: TriangleThickBevel_003
+    400022: track_1_001
+    400024: TriangleThickBevel_004
+    400026: track_1_short
     2300000: track_1
     2300002: TriangleThickBevel
     2300004: track_bottom
     2300006: TriangleThickBevel_0
     2300008: track_bottom_short
     2300010: TriangleThickBevel_001
+    2300012: track_1_high
+    2300014: track_1_medium
+    2300016: TriangleThickBevel_002
+    2300018: TriangleThickBevel_003
+    2300020: track_1_001
+    2300022: TriangleThickBevel_004
+    2300024: track_1_short
     3300000: track_1
     3300002: TriangleThickBevel
     3300004: track_bottom
     3300006: TriangleThickBevel_0
     3300008: track_bottom_short
     3300010: TriangleThickBevel_001
+    3300012: track_1_high
+    3300014: track_1_medium
+    3300016: TriangleThickBevel_002
+    3300018: TriangleThickBevel_003
+    3300020: track_1_001
+    3300022: TriangleThickBevel_004
+    3300024: track_1_short
     4300000: TriangleThickBevel
     4300002: track_1
     4300004: TriangleThickBevel_0
     4300006: track_bottom
     4300008: TriangleThickBevel_001
     4300010: track_bottom_short
+    4300012: TriangleThickBevel_002
+    4300014: track_1_medium
+    4300016: TriangleThickBevel_003
+    4300018: track_1_high
+    4300020: TriangleThickBevel_004
+    4300022: track_1_001
+    4300024: track_1_short
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
