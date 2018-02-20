@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 138916817}
   m_Layer: 0
   m_Name: path_2_002 (1)
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 171372607}
   m_Layer: 0
   m_Name: path_2_002
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 572953602}
   m_Layer: 0
   m_Name: path_top
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2438,7 +2438,7 @@ GameObject:
   - component: {fileID: 1430214667}
   m_Layer: 0
   m_Name: NurbsCurve
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2785,7 +2785,7 @@ GameObject:
   - component: {fileID: 1566163907}
   m_Layer: 0
   m_Name: path_2_001
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2929,7 +2929,7 @@ GameObject:
   - component: {fileID: 1756744198}
   m_Layer: 0
   m_Name: path_2
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
