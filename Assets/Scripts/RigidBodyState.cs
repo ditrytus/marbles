@@ -42,6 +42,10 @@ public class RigidBodyState
 
 	public void Restore(Rigidbody rigidbody)
 	{
+		if (rigidbody == null)
+		{
+			return;
+		}
 		rigidbody.isKinematic = IsKinematic;
 		rigidbody.AddForce(Velocity, ForceMode.VelocityChange);
 		rigidbody.AddTorque(AngularVelocity, ForceMode.VelocityChange);
