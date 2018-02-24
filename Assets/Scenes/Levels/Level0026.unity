@@ -609,6 +609,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 82236694074606996, guid: 12ab5ab286ffa4750a46517091120a90,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12ab5ab286ffa4750a46517091120a90, type: 2}
   m_IsPrefabParent: 0
