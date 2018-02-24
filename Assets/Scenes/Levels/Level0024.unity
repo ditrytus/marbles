@@ -2532,6 +2532,7 @@ Transform:
   - {fileID: 2088195419}
   - {fileID: 48538975}
   - {fileID: 176798748}
+  - {fileID: 1976162799}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -384.777, z: 0}
@@ -3514,6 +3515,66 @@ Transform:
   m_PrefabParentObject: {fileID: 4155709677164504, guid: 410fc444beb9b44e3bc99d1beff03ad7,
     type: 2}
   m_PrefabInternal: {fileID: 1941244096}
+--- !u!1 &1976162798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1976162799}
+  - component: {fileID: 1976162801}
+  - component: {fileID: 1976162800}
+  m_Layer: 0
+  m_Name: No Collision Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1976162799
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1976162798}
+  m_LocalRotation: {x: -0, y: 0.2135049, z: -0, w: 0.976942}
+  m_LocalPosition: {x: 0, y: 24.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1147227423}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 24.656002, z: 0}
+--- !u!114 &1976162800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1976162798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05f13651cc1c428b8c44729264a7575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filterTag: Marble
+  onEnterLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  onExitLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!65 &1976162801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1976162798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 54.24644, y: 23.083534, z: 10}
+  m_Center: {x: -1.1893843, y: -0.3568306, z: -0.00000003405678}
 --- !u!1001 &2058414942
 Prefab:
   m_ObjectHideFlags: 0
