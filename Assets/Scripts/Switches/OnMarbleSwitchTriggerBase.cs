@@ -14,9 +14,11 @@ public abstract class OnMarbleSwitchTriggerBase : SwitchTriggerBase
 
 	protected void SwitchWithObject(GameObject triggeringObject)
     {
-        if (triggeringObject != lastMarble
-        && (PausableTime.Instance.Time - lastTriggeredTime) >= lastMarbleTimeout
-        && triggeringObject.CompareTag(Tags.Marble))
+        if ((
+                triggeringObject != lastMarble
+                || (PausableTime.Instance.Time - lastTriggeredTime) >= lastMarbleTimeout
+            )
+            && triggeringObject.CompareTag(Tags.Marble))
         {
             lastTriggeredTime = PausableTime.Instance.Time;
             lastMarble = triggeringObject;
