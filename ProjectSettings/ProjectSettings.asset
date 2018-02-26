@@ -8,9 +8,9 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 0
-  targetDevice: 2
+  targetDevice: 0
   useOnDemandResources: 0
-  accelerometerFrequency: 60
+  accelerometerFrequency: 0
   companyName: Gruszecki
   productName: drop
   defaultCursor: {fileID: 0}
@@ -154,7 +154,7 @@ PlayerSettings:
     iOS: com.Gruszecki.draganddrop
     tvOS: com.Gruszecki.marbles
   buildNumber:
-    iOS: 20180225
+    iOS: 20180226
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
