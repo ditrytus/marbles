@@ -3,6 +3,7 @@ guid: 8f9035708252c4b73af0b39ca8518e6e
 timeCreated: 1505495935
 licenseType: Free
 AudioImporter:
+  externalObjects: {}
   serializedVersion: 6
   defaultSettings:
     loadType: 0
@@ -30,6 +31,7 @@ AudioImporter:
   normalize: 1
   preloadAudioData: 1
   loadInBackground: 1
+  ambisonic: 0
   3D: 1
   userData: 
   assetBundleName: 
