@@ -57,7 +57,7 @@ LightmapSettings:
     serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
+    m_TextureWidth: 32
     m_TextureHeight: 1024
     m_AO: 0
     m_AOMaxDistance: 1
@@ -1556,7 +1556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ae16d740b7c4123aa8644b508c1e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderTexture: {fileID: 0}
   renderCamera: {fileID: 392843198}
   snapshotKey: s
 --- !u!1 &1313171825
