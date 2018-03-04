@@ -12,12 +12,9 @@ public class PlayRandomSoundOnCollision : PlayRandomSoundBase
 
 	public string tagFilter;
 
-	private Rigidbody body;
-
 	protected override void Start ()
 	{
 		base.Start();
-		body = GetComponent<Rigidbody>();
 	}
 
 	void OnCollisionEnter(Collision other)
