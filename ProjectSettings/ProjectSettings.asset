@@ -256,8 +256,8 @@ PlayerSettings:
   appleEnableAutomaticSigning: 0
   clonedFromGUID: 00000000000000000000000000000000
   AndroidTargetArchitectures: 5
-  AndroidSplashScreenScale: 0
-  androidSplashScreen: {fileID: 0}
+  AndroidSplashScreenScale: 2
+  androidSplashScreen: {fileID: 2800000, guid: 2cac4baef1a3d4303a5078baed1b0c9f, type: 3}
   AndroidKeystoreName: /Users/jakubgruszecki/Documents/android-keystore/user.keystore
   AndroidKeyaliasName: com.gruszecki.drop
   AndroidTVCompatibility: 1
